@@ -665,6 +665,31 @@ footer {
     .pricing-card.featured { transform: none; }
     .cta-box { padding: 60px 24px; }
     .cta-box h2 { font-size: 2rem; }
+    
+    /* FIX: Botones móviles - evitar corte */
+    .btn-primary, .btn-secondary {
+        padding: 16px 24px;
+        font-size: 0.95rem;
+        width: 100%;
+        text-align: center;
+        white-space: normal;
+        word-wrap: break-word;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        padding: 0 16px;
+    }
+    
+    .btn-header {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+    
+    /* Asegurar espacio al final */
+    body {
+        padding-bottom: 40px;
+    }
 }
     </style>
 </head>
