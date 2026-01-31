@@ -642,15 +642,19 @@ function pickVersion(v) {
     var info = VERSION_INFO[v];
     document.querySelector(".logo").textContent = "English Mastery " + v.toUpperCase();
     document.querySelector(".tagline").textContent = info.level + " - " + info.words.toLocaleString() + " Palabras";
+    var total = 0, cats = Object.keys(VOCABULARY);
+    cats.forEach(function(c) { total += VOCABULARY[c].length; });
+    var icons = {verbs:"🏃",nouns:"📦",adjectives:"🎨",phrases:"💬",phrasal:"🔗",thematic:"🌍",extra:"➕",expressions:"💬",complement:"✨",collocations:"🔄",corporate:"🏢",finance:"💰",marketing:"📢",negotiations:"🤝",meetings:"📋",emails:"✉️",hr:"👥",idioms:"💡"};
+    var h = "<option value=\"all\">📚 Todas (" + total + ")</option>";
+    cats.forEach(function(c) { h += "<option value=\"" + c + "\">" + (icons[c]||"📝") + " " + c.charAt(0).toUpperCase() + c.slice(1) + " (" + VOCABULARY[c].length + ")</option>"; });
+    
+    // Actualizar dropdown de Vocabulario
     var sel = document.getElementById("categorySelect");
-    if (sel) {
-        var total = 0, cats = Object.keys(VOCABULARY);
-        cats.forEach(function(c) { total += VOCABULARY[c].length; });
-        var icons = {verbs:"🏃",nouns:"📦",adjectives:"🎨",phrases:"💬",phrasal:"🔗",thematic:"🌍",extra:"➕",expressions:"💬",complement:"✨",collocations:"🔄",corporate:"🏢",finance:"💰",marketing:"📢",negotiations:"🤝",meetings:"📋",emails:"✉️",hr:"👥",idioms:"💡"};
-        var h = "<option value=\"all\">Todas (" + total + ")</option>";
-        cats.forEach(function(c) { h += "<option value=\"" + c + "\">" + (icons[c]||"📝") + " " + c + " (" + VOCABULARY[c].length + ")</option>"; });
-        sel.innerHTML = h;
-    }
+    if (sel) sel.innerHTML = h;
+    
+    // Actualizar dropdown de Quiz (FIX: evita error "No hay suficientes palabras")
+    var quizSel = document.getElementById("quizCategory");
+    if (quizSel) quizSel.innerHTML = h;
     document.getElementById("vsOverlay").classList.add("hidden");
     if (typeof loadProgress === "function") loadProgress();
     if (typeof updateStats === "function") updateStats();
@@ -3409,14 +3413,34 @@ function rateCard(rating){
 
 // QUIZ
 let quizQuestions=[],quizIndex=0,quizScore=0,quizAnswered=false;
+
+// Fisher-Yates shuffle - algoritmo correcto para mezclar aleatoriamente
+function shuffle(array){
+    const arr=[...array];
+    for(let i=arr.length-1;i>0;i--){
+        const j=Math.floor(Math.random()*(i+1));
+        [arr[i],arr[j]]=[arr[j],arr[i]];
+    }
+    return arr;
+}
+
 function generateQuiz(category){
     const w=getAllWords(category);
     if(w.length<4)return[];
-    const sel=[...w].sort(()=>Math.random()-0.5).slice(0,Math.min(10,w.length));
+    const sel=shuffle(w).slice(0,Math.min(10,w.length));
     return sel.map(word=>{
-        const wrongs=w.filter(x=>x.id!==word.id).sort(()=>Math.random()-0.5).slice(0,3).map(x=>x.es);
-        const opts=[word.es,...wrongs].sort(()=>Math.random()-0.5);
-        return{word:word.word,cat:word.cat,question:'¿Qué significa "'+word.word+'"?',options:opts,correct:opts.indexOf(word.es)}
+        const wrongs=shuffle(w.filter(x=>x.id!==word.id)).slice(0,3).map(x=>x.es);
+        // FIX: Crear array con índice explícito para la respuesta correcta
+        const correctAnswer = word.es;
+        const allOptions = [correctAnswer, ...wrongs];
+        // Crear array con índices para rastrear la posición correcta
+        const indexedOptions = allOptions.map((opt, idx) => ({opt, isCorrect: idx === 0}));
+        // Mezclar las opciones indexadas
+        const shuffledIndexed = shuffle(indexedOptions);
+        // Extraer opciones y encontrar índice correcto
+        const opts = shuffledIndexed.map(item => item.opt);
+        const correctIdx = shuffledIndexed.findIndex(item => item.isCorrect);
+        return{word:word.word,cat:word.cat,question:'¿Qué significa "'+word.word+'"?',options:opts,correct:correctIdx}
     })
 }
 
