@@ -984,10 +984,7 @@ footer {
                 return;
             }
             
-            // Aquí conectarías con tu servicio de email (LemonSqueezy, Mailchimp, etc.)
-            console.log('Email capturado:', email);
-            
-            // Guardar en localStorage por ahora
+            // Guardar email
             const emails = JSON.parse(localStorage.getItem('capturedEmails') || '[]');
             emails.push({ email, date: new Date().toISOString() });
             localStorage.setItem('capturedEmails', JSON.stringify(emails));
@@ -996,7 +993,7 @@ footer {
             document.getElementById('formSection').style.display = 'none';
             document.getElementById('successSection').classList.add('show');
             
-            // Abrir la app gratis en nueva pestaña después de 2 segundos
+            // Abrir la app gratis después de 2 segundos
             setTimeout(() => {
                 window.open('english-mastery-pwa.html', '_blank');
             }, 2000);
