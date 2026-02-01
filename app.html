@@ -627,7 +627,7 @@ function renderVersionCards() {
         card.className = "vs-card" + (isLocked ? " locked" : "");
         card.setAttribute("data-v", v);
         card.onclick = function() { pickVersion(v); };
-        var statusText = v === "v1" ? "GRATIS" : (isLocked ? "USD " + info.price : "ACTIVO");
+        var statusText = v === "v1" ? "GRATIS" : (isLocked ? "Incluido en Pack" : "ACTIVO");
         var statusColor = (v === "v1" || !isLocked) ? "var(--accent-success)" : "var(--accent-energy)";
         card.innerHTML = "<div class=\"icon\">" + info.icon + "</div><div class=\"name\">" + info.name + "</div><div class=\"level\">" + info.level + "</div><div class=\"words\">" + info.words.toLocaleString() + "</div><div class=\"status\" style=\"color:" + statusColor + "\">" + statusText + "</div>";
         grid.appendChild(card);
