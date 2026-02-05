@@ -672,6 +672,22 @@ body {
 </div>
 <script>
 
+// ═══════════════════════════════════════════════════════════════
+// CONFIGURACIÓN Y CONSTANTES
+// ═══════════════════════════════════════════════════════════════
+
+// Código de prueba para testing (eliminar en producción)
+const DEMO_CODES = {
+  "EM-TEST-2026": ["v2", "v3", "v4"]
+};
+
+// Endpoint para captura de emails (configurar con tu Formspree Form ID)
+const EMAIL_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID"; 
+// Reemplaza YOUR_FORM_ID con tu ID real de Formspree
+
+// ═══════════════════════════════════════════════════════════════
+
+
 var ALL_VOCAB = {
 "v1":{"verbs":[
 {id:"v001",word:"be",ipa:"/biː/",type:"verb",es:"ser/estar",ex:"I want to be happy.",exEs:"Quiero ser feliz.",cat:"Esenciales"},
@@ -15729,8 +15745,20 @@ function pickVersion(v) {
     var info = VERSION_INFO[v];
     document.querySelector(".logo").textContent = "English Mastery " + v.toUpperCase();
     document.querySelector(".tagline").textContent = info.level + " - " + info.words.toLocaleString() + " Palabras";
-    var total = 0, cats = Object.keys(VOCABULARY);
-    cats.forEach(function(c) { total += VOCABULARY[c].length; });
+    
+    // Calcular total ACUMULADO de palabras hasta esta versión
+    var total = 0;
+    var versionOrder = ["v1", "v2", "v3", "v4"];
+    var currentIndex = versionOrder.indexOf(v);
+    for (var i = 0; i <= currentIndex; i++) {
+        var vKey = versionOrder[i];
+        if (ALL_VOCAB[vKey]) {
+            var cats = Object.keys(ALL_VOCAB[vKey]);
+            cats.forEach(function(c) { total += ALL_VOCAB[vKey][c].length; });
+        }
+    }
+    
+    var cats = Object.keys(VOCABULARY);
     var icons = {verbs:"🏃",nouns:"📦",adjectives:"🎨",phrases:"💬",phrasal:"🔗",thematic:"🌍",extra:"➕",expressions:"💬",complement:"✨",collocations:"🔄",corporate:"🏢",finance:"💰",marketing:"📢",negotiations:"🤝",meetings:"📋",emails:"✉️",hr:"👥",idioms:"💡"};
     var h = "<option value=\"all\">📚 Todas (" + total + ")</option>";
     cats.forEach(function(c) { h += "<option value=\"" + c + "\">" + (icons[c]||"📝") + " " + c.charAt(0).toUpperCase() + c.slice(1) + " (" + VOCABULARY[c].length + ")</option>"; });
@@ -15790,6 +15818,31 @@ function doRegister() {
     var regData = { name: name, email: email, date: new Date().toISOString() };
     localStorage.setItem(REG_KEY, JSON.stringify(regData));
     
+    // Enviar email a Formspree para captura
+    fetch(EMAIL_ENDPOINT, {
+        method: 'POST',
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            nombre: regData.name,
+            email: regData.email,
+            fecha_registro: regData.date,
+            app: 'English Master',
+            version_inicial: 'V1 Basic'
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            console.log('✅ Email registrado exitosamente en Formspree');
+        }
+    })
+    .catch(err => {
+        // Silently fail - we already saved locally
+        console.log('⚠️ Email collection failed (offline or endpoint not configured)', err);
+    });
+    
     document.getElementById("regOverlay").classList.add("hidden");
     document.getElementById("vsOverlay").classList.remove("hidden");
     renderVersionCards();
@@ -15838,6 +15891,17 @@ async function doActivate() {
     var code = document.getElementById("licInput").value.trim();
     if (!code) {
         alert("Por favor ingresa un código de licencia");
+        return;
+    }
+    
+    // Verificar códigos de prueba primero (para QA y testing)
+    if (DEMO_CODES[code]) {
+        unlockedVers = ["v1"].concat(DEMO_CODES[code]);
+        saveLicense();
+        localStorage.setItem("emLicenseKey", code);
+        renderVersionCards();
+        closeLicModal();
+        alert("✅ Código de prueba activado correctamente\n\nAcceso desbloqueado a: " + DEMO_CODES[code].map(v => v.toUpperCase()).join(", "));
         return;
     }
     
