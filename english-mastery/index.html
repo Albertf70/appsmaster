@@ -59,13 +59,13 @@
         }
         .header-nav a:hover { color: var(--text); }
         .btn-sm {
-            padding: 8px 18px; border-radius: 8px; border: none;
+            padding: 10px 22px; border-radius: 8px; border: 2px solid var(--accent-light);
             background: var(--accent); color: white;
-            font-size: 0.82rem; font-weight: 700;
+            font-size: 0.85rem; font-weight: 700;
             text-decoration: none; cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.3s; display: inline-block; box-shadow: 0 0 15px rgba(99,102,241,0.4);
         }
-        .btn-sm:hover { background: var(--accent-light); }
+        .btn-sm:hover { background: var(--accent-light); box-shadow: 0 0 25px rgba(99,102,241,0.6); }
 
         /* Hero */
         .hero {
@@ -96,7 +96,7 @@
             padding: 14px 28px; border-radius: 14px; border: none;
             font-size: 1rem; font-weight: 700;
             text-decoration: none; cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.3s; display: inline-block; box-shadow: 0 0 15px rgba(99,102,241,0.4);
         }
         .btn-big:hover { transform: translateY(-2px); }
         .btn-big.primary {
@@ -148,12 +148,14 @@
         .ver-card {
             background: var(--bg-card); border: 1px solid var(--border);
             border-radius: 16px; padding: 24px 20px; text-align: center;
-            transition: all 0.3s; position: relative;
+            transition: all 0.3s; position: relative; cursor: pointer;
         }
         .ver-card:hover {
             border-color: var(--accent);
             box-shadow: var(--glow);
+            transform: translateY(-3px);
         }
+        .ver-card.free:hover { border-color: var(--green); box-shadow: 0 0 30px rgba(34,197,94,0.2); }
         .ver-card.free { border-color: rgba(34,197,94,0.3); }
         .ver-card.free .ver-price { color: var(--green); }
         .ver-card .ver-icon { font-size: 2rem; margin-bottom: 8px; }
@@ -230,7 +232,7 @@
             width: 100%; padding: 16px; border-radius: 14px; border: none;
             background: linear-gradient(135deg, #7c3aed, #2563eb);
             color: white; font-size: 1.05rem; font-weight: 800;
-            cursor: pointer; transition: all 0.3s;
+            cursor: pointer; transition: all 0.3s; display: inline-block; box-shadow: 0 0 15px rgba(99,102,241,0.4);
             text-decoration: none;
         }
         .btn-checkout:hover {
@@ -336,7 +338,7 @@
 <!-- Hero -->
 <section class="hero">
     <div class="container">
-        <div class="hero-flags">📚 🇬🇧 🇺🇸</div>
+        <div class="hero-flags">📚 <img src="https://flagcdn.com/w40/gb.png" alt="UK" style="height:22px;border-radius:3px;vertical-align:middle;margin:0 2px;"> <img src="https://flagcdn.com/w40/us.png" alt="US" style="height:22px;border-radius:3px;vertical-align:middle;margin:0 2px;"></div>
         <h1>Domina el inglés con<br><span class="grad">15,000 palabras</span></h1>
         <p class="hero-sub">4 niveles progresivos · De A1 a C1 + Business English · Flashcards, quizzes y progreso — todo offline en tu celular.</p>
         <div class="hero-cta">
@@ -374,37 +376,41 @@
         <div class="section-title">4 Niveles Progresivos</div>
         <div class="section-sub">Empieza gratis con V1 Básico y desbloquea todo cuando estés listo</div>
         <div class="versions-grid">
-            <div class="ver-card free">
+            <a href="app.html" class="ver-card free" style="text-decoration:none;color:inherit;">
                 <div class="ver-icon">📗</div>
                 <div class="ver-name">V1 Básico</div>
                 <div class="ver-level">A1-A2</div>
                 <div class="ver-words">2,588 palabras</div>
                 <div class="ver-price">GRATIS</div>
-            </div>
-            <div class="ver-card">
+                <div class="ver-cta" style="margin-top:8px;color:var(--green);font-weight:700;font-size:0.85rem;">▶ Abrir App Gratis</div>
+            </a>
+            <a href="https://appsmaster.lemonsqueezy.com/checkout/buy/1d8e0569-1433-4d04-a6d3-26d6eb2399f8" target="_blank" class="ver-card" style="text-decoration:none;color:inherit;">
                 <div class="ver-icon">📘</div>
                 <div class="ver-name">V2 Intermedio</div>
                 <div class="ver-level">B1-B2</div>
-                <div class="ver-words">4,334 palabras</div>
+                <div class="ver-words">4,138 palabras</div>
                 <div class="ver-price">Incluido en Premium</div>
                 <div class="ver-lock">🔒 Requiere suscripción</div>
-            </div>
-            <div class="ver-card">
+                <div class="ver-cta" style="margin-top:8px;color:var(--accent-light);font-weight:700;font-size:0.85rem;">💳 Suscribirme</div>
+            </a>
+            <a href="https://appsmaster.lemonsqueezy.com/checkout/buy/1d8e0569-1433-4d04-a6d3-26d6eb2399f8" target="_blank" class="ver-card" style="text-decoration:none;color:inherit;">
                 <div class="ver-icon">📙</div>
                 <div class="ver-name">V3 Avanzado</div>
                 <div class="ver-level">C1</div>
-                <div class="ver-words">4,334 palabras</div>
+                <div class="ver-words">4,138 palabras</div>
                 <div class="ver-price">Incluido en Premium</div>
                 <div class="ver-lock">🔒 Requiere suscripción</div>
-            </div>
-            <div class="ver-card">
+                <div class="ver-cta" style="margin-top:8px;color:var(--accent-light);font-weight:700;font-size:0.85rem;">💳 Suscribirme</div>
+            </a>
+            <a href="https://appsmaster.lemonsqueezy.com/checkout/buy/1d8e0569-1433-4d04-a6d3-26d6eb2399f8" target="_blank" class="ver-card" style="text-decoration:none;color:inherit;">
                 <div class="ver-icon">📕</div>
                 <div class="ver-name">V4 Business</div>
                 <div class="ver-level">B2-C1</div>
-                <div class="ver-words">4,334 palabras</div>
+                <div class="ver-words">4,138 palabras</div>
                 <div class="ver-price">Incluido en Premium</div>
                 <div class="ver-lock">🔒 Requiere suscripción</div>
-            </div>
+                <div class="ver-cta" style="margin-top:8px;color:var(--accent-light);font-weight:700;font-size:0.85rem;">💳 Suscribirme</div>
+            </a>
         </div>
     </div>
 </section>
@@ -462,9 +468,9 @@
             <div class="pricing-amount">$299 MXN <span>/año</span></div>
             <div class="pricing-monthly">Solo $24.90/mes · Menos de $1 USD/día</div>
             <div class="pricing-features">
-                <div class="pricing-feat"><span>✅</span><span>V2 Intermedio — 4,334 palabras (B1-B2)</span></div>
-                <div class="pricing-feat"><span>✅</span><span>V3 Avanzado — 4,334 palabras (C1)</span></div>
-                <div class="pricing-feat"><span>✅</span><span>V4 Business — 4,334 palabras (B2-C1)</span></div>
+                <div class="pricing-feat"><span>✅</span><span>V2 Intermedio — 4,138 palabras (B1-B2)</span></div>
+                <div class="pricing-feat"><span>✅</span><span>V3 Avanzado — 4,138 palabras (C1)</span></div>
+                <div class="pricing-feat"><span>✅</span><span>V4 Business — 4,138 palabras (B2-C1)</span></div>
                 <div class="pricing-feat"><span>✅</span><span>Acceso ilimitado por 12 meses</span></div>
                 <div class="pricing-feat"><span>✅</span><span>Todas las actualizaciones incluidas</span></div>
                 <div class="pricing-feat"><span>🔄</span><span>Cancela cuando quieras</span></div>
