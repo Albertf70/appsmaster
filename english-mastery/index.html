@@ -3,1064 +3,523 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Mastery Pro - Domina el Inglés con 15,000 Palabras</title>
-    <meta name="description" content="Aprende inglés con 15,000 palabras organizadas en 4 niveles. Flashcards, Quiz, Progreso. Pago único, acceso de por vida.">
+    <title>English Mastery Pro — Domina el Inglés con 15,000 Palabras</title>
+    <meta name="description" content="Aprende inglés con 15,000 palabras organizadas en 4 niveles. Flashcards, quizzes, funciona offline. V1 Básico GRATIS.">
+    <meta name="theme-color" content="#0f0f1a">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
-:root {
-    --bg-dark: #0a0a1a;
-    --bg-card: #12122a;
-    --bg-elevated: #1a1a3a;
-    --blue: #4facfe;
-    --purple: #7c3aed;
-    --pink: #ec4899;
-    --green: #10b981;
-    --yellow: #fbbf24;
-    --orange: #f97316;
-    --text: #ffffff;
-    --text-muted: #94a3b8;
-    --gradient-main: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f97316 100%);
-    --gradient-cta: linear-gradient(135deg, #f97316 0%, #ec4899 100%);
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-
-body {
-    font-family: 'Inter', -apple-system, sans-serif;
-    background: var(--bg-dark);
-    color: var(--text);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-.bg-effects {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: -1;
-}
-
-.bg-effects::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at 20% 30%, rgba(102, 126, 234, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(236, 72, 153, 0.1) 0%, transparent 40%);
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
-}
-
-/* Header */
-header {
-    padding: 20px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background: rgba(10, 10, 26, 0.9);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    background: var(--gradient-main);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.nav-links {
-    display: flex;
-    gap: 32px;
-    list-style: none;
-}
-
-.nav-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover { color: var(--text); }
-
-.btn-header {
-    padding: 10px 24px;
-    background: var(--gradient-cta);
-    border: none;
-    border-radius: 8px;
-    color: white;
-    font-weight: 600;
-    font-size: 0.9rem;
-    cursor: pointer;
-    text-decoration: none;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.btn-header:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3);
-}
-
-/* Hero */
-.hero {
-    padding: 160px 0 100px;
-    text-align: center;
-}
-
-.hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
-    background: rgba(16, 185, 129, 0.15);
-    border: 1px solid rgba(16, 185, 129, 0.3);
-    border-radius: 50px;
-    font-size: 0.85rem;
-    color: var(--green);
-    margin-bottom: 24px;
-}
-
-.hero h1 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 24px;
-}
-
-.hero h1 span {
-    background: var(--gradient-main);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero-subtitle {
-    font-size: 1.25rem;
-    color: var(--text-muted);
-    max-width: 600px;
-    margin: 0 auto 40px;
-}
-
-.hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 48px;
-    margin-bottom: 48px;
-    flex-wrap: wrap;
-}
-
-.hero-stat {
-    text-align: center;
-}
-
-.hero-stat-value {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    background: var(--gradient-main);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero-stat-label {
-    font-size: 1.1rem;
-    color: var(--text);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.hero-cta {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
-.btn-primary {
-    padding: 18px 40px;
-    background: var(--gradient-cta);
-    border: none;
-    border-radius: 12px;
-    color: white;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 700;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.3s;
-    box-shadow: 0 8px 30px rgba(249, 115, 22, 0.3);
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 40px rgba(249, 115, 22, 0.4);
-}
-
-.btn-secondary {
-    padding: 18px 40px;
-    background: transparent;
-    border: 2px solid rgba(255,255,255,0.2);
-    border-radius: 12px;
-    color: white;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-
-.btn-secondary:hover {
-    border-color: var(--blue);
-    background: rgba(79, 172, 254, 0.1);
-}
-
-/* Versions */
-.versions {
-    padding: 100px 0;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.section-title h2 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 16px;
-}
-
-.section-title p {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-}
-
-.versions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
-}
-
-.version-card {
-    background: var(--bg-card);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 20px;
-    padding: 32px 24px;
-    text-align: center;
-    transition: all 0.3s;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.version-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--card-color);
-}
-
-.version-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(255,255,255,0.15);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-}
-
-.version-card.v1 { --card-color: var(--green); }
-.version-card.v2 { --card-color: var(--blue); }
-.version-card.v3 { --card-color: var(--purple); }
-.version-card.v4 { --card-color: var(--orange); }
-
-.version-icon { font-size: 3.5rem; margin-bottom: 16px; }
-.version-name { font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
-.version-level { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px; }
-.version-words { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 700; color: var(--card-color); margin-bottom: 4px; }
-.version-words-label { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 20px; }
-.version-price { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; }
-.version-price.free { color: var(--green); }
-
-/* Features */
-.features {
-    padding: 100px 0;
-    background: var(--bg-card);
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 32px;
-}
-
-.feature-card {
-    padding: 32px;
-    background: var(--bg-elevated);
-    border-radius: 16px;
-    border: 1px solid rgba(255,255,255,0.05);
-}
-
-.feature-icon {
-    width: 56px;
-    height: 56px;
-    background: var(--gradient-main);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.feature-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; }
-.feature-desc { color: var(--text-muted); font-size: 0.95rem; }
-
-/* Pricing */
-.pricing {
-    padding: 100px 0;
-}
-
-.pricing-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 32px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.pricing-card {
-    background: var(--bg-card);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 24px;
-    padding: 40px 32px;
-    text-align: center;
-    position: relative;
-}
-
-.pricing-card.featured {
-    border: 2px solid var(--orange);
-    transform: scale(1.05);
-}
-
-.pricing-card.featured::before {
-    content: '🔥 MÁS POPULAR';
-    position: absolute;
-    top: -14px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 6px 20px;
-    background: var(--gradient-cta);
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 700;
-}
-
-.pricing-name { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; }
-.pricing-desc { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px; }
-.pricing-price { font-family: 'Space Grotesk', sans-serif; font-size: 3.5rem; font-weight: 700; margin-bottom: 8px; }
-.pricing-price span { font-size: 1rem; color: var(--text-muted); }
-.pricing-original { color: var(--text-muted); text-decoration: line-through; font-size: 1.1rem; margin-bottom: 8px; }
-
-.pricing-savings {
-    display: inline-block;
-    padding: 6px 16px;
-    background: rgba(16, 185, 129, 0.15);
-    border-radius: 20px;
-    color: var(--green);
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 32px;
-}
-
-.pricing-features {
-    list-style: none;
-    text-align: left;
-    margin-bottom: 32px;
-}
-
-.pricing-features li {
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 0.95rem;
-}
-
-.pricing-features li::before {
-    content: '✓';
-    color: var(--green);
-    font-weight: 700;
-}
-
-.btn-pricing {
-    width: 100%;
-    padding: 16px;
-    border-radius: 12px;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s;
-    text-decoration: none;
-    display: block;
-    border: none;
-}
-
-.btn-pricing.primary {
-    background: var(--gradient-cta);
-    color: white;
-}
-
-.btn-pricing.secondary {
-    background: transparent;
-    border: 2px solid rgba(255,255,255,0.2);
-    color: white;
-}
-
-/* FAQ */
-.faq {
-    padding: 100px 0;
-    background: var(--bg-card);
-}
-
-.faq-list {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.faq-item {
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.faq-question {
-    width: 100%;
-    padding: 24px 0;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-align: left;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.faq-question::after {
-    content: '+';
-    font-size: 1.5rem;
-    color: var(--text-muted);
-    transition: transform 0.3s;
-}
-
-.faq-item.open .faq-question::after { transform: rotate(45deg); }
-
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s;
-}
-
-.faq-item.open .faq-answer { max-height: 200px; }
-
-.faq-answer p {
-    padding-bottom: 24px;
-    color: var(--text-muted);
-    font-size: 0.95rem;
-}
-
-/* CTA Section */
-.cta-section {
-    padding: 100px 0;
-    text-align: center;
-}
-
-.cta-box {
-    background: var(--gradient-main);
-    border-radius: 32px;
-    padding: 80px 40px;
-    position: relative;
-    overflow: hidden;
-}
-
-.cta-box h2 { font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; }
-.cta-box p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 32px; }
-.cta-box .btn-primary { background: white; color: #764ba2; }
-
-/* Footer */
-footer {
-    padding: 60px 0 30px;
-    border-top: 1px solid rgba(255,255,255,0.05);
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 24px;
-}
-
-.footer-copy { color: var(--text-muted); font-size: 0.9rem; }
-
-.footer-links {
-    display: flex;
-    gap: 24px;
-}
-
-.footer-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-
-.footer-links a:hover { color: white; }
-
-/* Modal */
-.modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.85);
-    z-index: 10000;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.modal-overlay.show { display: flex; }
-
-.modal-box {
-    background: var(--bg-card);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 24px;
-    padding: 40px;
-    max-width: 480px;
-    width: 100%;
-    text-align: center;
-    animation: modalIn 0.3s ease;
-}
-
-@keyframes modalIn {
-    from { opacity: 0; transform: scale(0.9) translateY(20px); }
-    to { opacity: 1; transform: scale(1) translateY(0); }
-}
-
-.modal-box h3 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.8rem;
-    margin-bottom: 12px;
-}
-
-.modal-box p {
-    color: var(--text-muted);
-    margin-bottom: 24px;
-}
-
-.modal-box input {
-    width: 100%;
-    padding: 16px;
-    background: var(--bg-elevated);
-    border: 2px solid rgba(255,255,255,0.1);
-    border-radius: 12px;
-    color: white;
-    font-size: 1rem;
-    margin-bottom: 16px;
-    text-align: center;
-}
-
-.modal-box input:focus {
-    outline: none;
-    border-color: var(--blue);
-}
-
-.modal-box .btn-submit {
-    width: 100%;
-    padding: 16px;
-    background: var(--gradient-cta);
-    border: none;
-    border-radius: 12px;
-    color: white;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    margin-bottom: 12px;
-}
-
-.modal-box .btn-close {
-    background: none;
-    border: none;
-    color: var(--text-muted);
-    cursor: pointer;
-    font-size: 0.9rem;
-}
-
-.modal-box .privacy-note {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    margin-top: 16px;
-}
-
-.modal-success {
-    display: none;
-}
-
-.modal-success.show {
-    display: block;
-}
-
-.modal-success .icon {
-    font-size: 4rem;
-    margin-bottom: 16px;
-}
-
-/* Referral section in modal */
-.referral-section {
-    margin-top: 24px;
-    padding-top: 24px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-.referral-section h4 {
-    font-size: 1rem;
-    margin-bottom: 8px;
-    color: var(--yellow);
-}
-
-.referral-section p {
-    font-size: 0.85rem;
-    margin-bottom: 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .nav-links { display: none; }
-    .hero { padding: 120px 0 60px; }
-    .hero-stats { gap: 24px; }
-    .hero-stat-value { font-size: 2rem; }
-    .pricing-card.featured { transform: none; }
-    .cta-box { padding: 60px 24px; }
-    .cta-box h2 { font-size: 2rem; }
-    
-    /* FIX: Botones móviles - evitar corte */
-    .btn-primary, .btn-secondary {
-        padding: 16px 24px;
-        font-size: 0.95rem;
-        width: 100%;
-        text-align: center;
-        white-space: normal;
-        word-wrap: break-word;
-    }
-    
-    .hero-cta {
-        flex-direction: column;
-        padding: 0 16px;
-    }
-    
-    .btn-header {
-        padding: 10px 16px;
-        font-size: 0.85rem;
-    }
-    
-    /* Asegurar espacio al final */
-    body {
-        padding-bottom: 40px;
-    }
-}
+        :root {
+            --bg: #0f0f1a;
+            --bg-card: #171728;
+            --bg-elevated: #1e1e35;
+            --accent: #6366f1;
+            --accent-light: #818cf8;
+            --green: #22c55e;
+            --yellow: #eab308;
+            --red: #ef4444;
+            --text: #f1f5f9;
+            --text-dim: #94a3b8;
+            --text-muted: #64748b;
+            --border: rgba(99,102,241,0.15);
+            --glow: 0 0 40px rgba(99,102,241,0.15);
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            background: var(--bg); color: var(--text);
+            line-height: 1.6; min-height: 100vh;
+        }
+        body::before {
+            content: '';
+            position: fixed; inset: 0;
+            background: radial-gradient(ellipse at 30% 0%, rgba(99,102,241,0.08), transparent 60%),
+                        radial-gradient(ellipse at 70% 100%, rgba(34,197,94,0.05), transparent 50%);
+            pointer-events: none; z-index: -1;
+        }
+        .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        .header {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 18px 0;
+        }
+        .header-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem; font-weight: 700;
+            color: var(--text-dim); text-decoration: none;
+            transition: color 0.3s;
+        }
+        .header-logo:hover { color: var(--text); }
+        .header-nav { display: flex; gap: 16px; align-items: center; }
+        .header-nav a {
+            color: var(--text-muted); text-decoration: none; font-size: 0.85rem;
+            font-weight: 500; transition: color 0.3s;
+        }
+        .header-nav a:hover { color: var(--text); }
+        .btn-sm {
+            padding: 8px 18px; border-radius: 8px; border: none;
+            background: var(--accent); color: white;
+            font-size: 0.82rem; font-weight: 700;
+            text-decoration: none; cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-sm:hover { background: var(--accent-light); }
+
+        /* Hero */
+        .hero {
+            padding: 60px 0 50px; text-align: center;
+        }
+        .hero-flags {
+            font-size: 2.8rem; margin-bottom: 16px;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+        }
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800; line-height: 1.15; margin-bottom: 14px;
+        }
+        .hero h1 .grad {
+            background: linear-gradient(135deg, var(--accent-light), #a78bfa, var(--green));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .hero-sub {
+            color: var(--text-dim); font-size: 1.05rem;
+            max-width: 540px; margin: 0 auto 28px;
+        }
+        .hero-cta {
+            display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+        }
+        .btn-big {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 28px; border-radius: 14px; border: none;
+            font-size: 1rem; font-weight: 700;
+            text-decoration: none; cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-big:hover { transform: translateY(-2px); }
+        .btn-big.primary {
+            background: linear-gradient(135deg, var(--accent), #7c3aed);
+            color: white;
+            box-shadow: 0 4px 20px rgba(99,102,241,0.3);
+        }
+        .btn-big.secondary {
+            background: var(--bg-card); color: var(--text-dim);
+            border: 1px solid var(--border);
+        }
+        .btn-big.secondary:hover { border-color: var(--accent); color: var(--text); }
+
+        /* Stats Bar */
+        .stats-row {
+            display: grid; grid-template-columns: repeat(4, 1fr);
+            gap: 12px; padding: 40px 0;
+        }
+        .stat-box {
+            text-align: center; padding: 20px 12px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 14px;
+        }
+        .stat-num {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem; font-weight: 800;
+            color: var(--accent-light);
+        }
+        .stat-lbl {
+            font-size: 0.72rem; color: var(--text-muted);
+            text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px;
+        }
+
+        /* Versions */
+        .versions-section { padding: 40px 0; }
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.6rem; font-weight: 800;
+            text-align: center; margin-bottom: 8px;
+        }
+        .section-sub {
+            text-align: center; color: var(--text-dim);
+            font-size: 0.95rem; margin-bottom: 32px;
+        }
+        .versions-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 14px;
+        }
+        .ver-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 16px; padding: 24px 20px; text-align: center;
+            transition: all 0.3s; position: relative;
+        }
+        .ver-card:hover {
+            border-color: var(--accent);
+            box-shadow: var(--glow);
+        }
+        .ver-card.free { border-color: rgba(34,197,94,0.3); }
+        .ver-card.free .ver-price { color: var(--green); }
+        .ver-card .ver-icon { font-size: 2rem; margin-bottom: 8px; }
+        .ver-card .ver-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700; font-size: 1rem; margin-bottom: 4px;
+        }
+        .ver-card .ver-level { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 6px; }
+        .ver-card .ver-words { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 10px; }
+        .ver-card .ver-price { font-family: 'Space Grotesk', sans-serif; font-weight: 800; font-size: 1.1rem; }
+        .ver-card .ver-lock { font-size: 0.7rem; color: var(--text-muted); margin-top: 4px; }
+
+        /* Features */
+        .features-section { padding: 50px 0; }
+        .features-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+        .feat-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 14px; padding: 24px;
+            transition: border-color 0.3s;
+        }
+        .feat-card:hover { border-color: var(--accent); }
+        .feat-card .feat-icon { font-size: 1.8rem; margin-bottom: 12px; }
+        .feat-card .feat-title { font-weight: 700; margin-bottom: 6px; }
+        .feat-card .feat-desc { color: var(--text-dim); font-size: 0.88rem; }
+
+        /* Pricing */
+        .pricing-section { padding: 50px 0; }
+        .pricing-card {
+            background: var(--bg-card);
+            border: 2px solid var(--accent);
+            border-radius: 24px;
+            padding: 40px 32px; text-align: center;
+            max-width: 480px; margin: 0 auto;
+            position: relative; overflow: hidden;
+        }
+        .pricing-card::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--green), var(--accent));
+        }
+        .pricing-badge {
+            display: inline-block; padding: 4px 14px; border-radius: 12px;
+            background: rgba(34,197,94,0.12); color: var(--green);
+            font-size: 0.78rem; font-weight: 700; margin-bottom: 16px;
+        }
+        .pricing-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem; font-weight: 800; margin-bottom: 8px;
+        }
+        .pricing-desc {
+            color: var(--text-dim); font-size: 0.9rem; margin-bottom: 20px;
+        }
+        .pricing-amount {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem; font-weight: 800; margin-bottom: 4px;
+        }
+        .pricing-amount span { font-size: 1rem; font-weight: 500; color: var(--text-muted); }
+        .pricing-monthly {
+            color: var(--text-muted); font-size: 0.88rem; margin-bottom: 24px;
+        }
+        .pricing-features {
+            text-align: left; margin-bottom: 28px;
+        }
+        .pricing-feat {
+            display: flex; align-items: center; gap: 10px;
+            padding: 8px 0; color: var(--text-dim); font-size: 0.9rem;
+        }
+        .pricing-feat span:first-child { color: var(--green); font-size: 1.1rem; }
+        .btn-checkout {
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            width: 100%; padding: 16px; border-radius: 14px; border: none;
+            background: linear-gradient(135deg, #7c3aed, #2563eb);
+            color: white; font-size: 1.05rem; font-weight: 800;
+            cursor: pointer; transition: all 0.3s;
+            text-decoration: none;
+        }
+        .btn-checkout:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(99,102,241,0.35);
+        }
+        .pricing-note {
+            color: var(--text-muted); font-size: 0.75rem; margin-top: 16px;
+        }
+        .pricing-free-note {
+            margin-top: 20px; padding: 16px; border-radius: 12px;
+            background: rgba(34,197,94,0.06); border: 1px solid rgba(34,197,94,0.15);
+            color: var(--text-dim); font-size: 0.88rem;
+        }
+
+        /* FAQ */
+        .faq-section { padding: 50px 0; }
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+        }
+        .faq-q {
+            font-weight: 700; font-size: 1rem; margin-bottom: 8px;
+            cursor: pointer;
+        }
+        .faq-a { color: var(--text-dim); font-size: 0.9rem; }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            display: flex; align-items: center; justify-content: space-between;
+            flex-wrap: wrap; gap: 16px;
+        }
+        .footer-copy { color: var(--text-muted); font-size: 0.8rem; }
+        .footer-links { display: flex; gap: 20px; }
+        .footer-links a {
+            color: var(--text-muted); text-decoration: none; font-size: 0.8rem;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover { color: var(--text); }
+
+        /* Email Modal */
+        .modal-overlay {
+            position: fixed; inset: 0; background: rgba(0,0,0,0.7);
+            z-index: 1000; display: none; align-items: center; justify-content: center;
+            padding: 20px; backdrop-filter: blur(4px);
+        }
+        .modal-overlay.show { display: flex; }
+        .modal-box {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 20px; padding: 36px 28px;
+            max-width: 400px; width: 100%; text-align: center;
+        }
+        .modal-box h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; margin-bottom: 8px; }
+        .modal-box p { color: var(--text-dim); font-size: 0.88rem; margin-bottom: 20px; }
+        .modal-box input {
+            width: 100%; padding: 12px 16px; border-radius: 10px;
+            border: 1px solid var(--border); background: var(--bg-elevated);
+            color: var(--text); font-size: 0.95rem;
+            margin-bottom: 10px; outline: none;
+        }
+        .modal-box input:focus { border-color: var(--accent); }
+        .modal-box input::placeholder { color: var(--text-muted); }
+        .modal-box .btn-submit {
+            width: 100%; padding: 14px; border: none; border-radius: 12px;
+            background: linear-gradient(135deg, var(--accent), #7c3aed);
+            color: white; font-size: 1rem; font-weight: 700;
+            cursor: pointer; margin-top: 4px;
+        }
+        .modal-box .close-btn {
+            position: absolute; top: 16px; right: 16px;
+            background: none; border: none; color: var(--text-muted);
+            font-size: 1.3rem; cursor: pointer;
+        }
+        .modal-success { display: none; }
+        .modal-success.show { display: block; }
+        .modal-form.hide { display: none; }
+        .modal-privacy { color: var(--text-muted); font-size: 0.73rem; margin-top: 12px; }
+
+        @media (max-width: 600px) {
+            .hero { padding: 40px 0 30px; }
+            .stats-row { grid-template-columns: repeat(2, 1fr); }
+            .hero-cta { flex-direction: column; align-items: center; }
+            .btn-big { width: 100%; justify-content: center; }
+            footer { flex-direction: column; text-align: center; }
+        }
     </style>
 </head>
 <body>
-    <div class="bg-effects"></div>
 
-    <!-- Header -->
-    <header>
-        <div class="container header-content">
-            <div class="logo">📚 English Mastery</div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#versions">Versiones</a></li>
-                    <li><a href="#features">Características</a></li>
-                    <li><a href="#pricing">Precios</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                </ul>
-            </nav>
-            <a href="https://appsmaster.lemonsqueezy.com/checkout/buy/1d8e0569-1433-4d04-a6d3-26d6eb2399f8" class="btn-header">Comprar Ahora</a>
-        </div>
+<div class="container">
+    <header class="header">
+        <a href="/" class="header-logo">⚡ AppsMaster</a>
+        <nav class="header-nav">
+            <a href="#pricing">Precio</a>
+            <a href="https://wa.me/522205575636">Contacto</a>
+            <a href="app.html" class="btn-sm">Abrir App</a>
+        </nav>
     </header>
+</div>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-badge">
-                <span>🎉</span>
-                <span>Lanzamiento especial - 51% de descuento</span>
-            </div>
-            <h1>Domina el Inglés con<br><span>15,000 Palabras</span></h1>
-            <p class="hero-subtitle">La app de vocabulario más completa. 4 niveles, desde básico hasta business. Pago único, acceso de por vida.</p>
-            
-            <div class="hero-stats">
-                <div class="hero-stat">
-                    <div class="hero-stat-value">15,000</div>
-                    <div class="hero-stat-label">Palabras</div>
-                </div>
-                <div class="hero-stat">
-                    <div class="hero-stat-value">4</div>
-                    <div class="hero-stat-label">Niveles</div>
-                </div>
-                <div class="hero-stat">
-                    <div class="hero-stat-value">28</div>
-                    <div class="hero-stat-label">Categorías</div>
-                </div>
-                <div class="hero-stat">
-                    <div class="hero-stat-value">∞</div>
-                    <div class="hero-stat-label">Acceso</div>
-                </div>
-            </div>
-
-            <div class="hero-cta">
-                <a href="https://appsmaster.lemonsqueezy.com/checkout/buy/1d8e0569-1433-4d04-a6d3-26d6eb2399f8" class="btn-primary">🚀 Obtener Pack Completo - $299 MXN</a>
-                <button onclick="openDemoModal()" class="btn-secondary">Probar V1 Gratis</button>
-            </div>
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-flags">📚 🇬🇧 🇺🇸</div>
+        <h1>Domina el inglés con<br><span class="grad">15,000 palabras</span></h1>
+        <p class="hero-sub">4 niveles progresivos · De A1 a C1 + Business English · Flashcards, quizzes y progreso — todo offline en tu celular.</p>
+        <div class="hero-cta">
+            <a href="app.html" class="btn-big primary">🚀 Empezar Gratis</a>
+            <a href="#pricing" class="btn-big secondary">Ver Precio Premium</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Versions -->
-    <section class="versions" id="versions">
-        <div class="container">
-            <div class="section-title">
-                <h2>4 Niveles para tu Progreso</h2>
-                <p>Desde principiante absoluto hasta inglés de negocios</p>
-            </div>
-            
-            <div class="versions-grid">
-                <div class="version-card v1" onclick="openDemoModal()">
-                    <div class="version-icon">📗</div>
-                    <div class="version-name">V1 Basic</div>
-                    <div class="version-level">Nivel A1-A2</div>
-                    <div class="version-words">2,000</div>
-                    <div class="version-words-label">palabras</div>
-                    <div class="version-price free">GRATIS</div>
-                </div>
-                
-                <div class="version-card v2" onclick="window.location.href='https://appsmaster.lemonsqueezy.com/checkout/buy/1d8e0569-1433-4d04-a6d3-26d6eb2399f8'">
-                    <div class="version-icon">📘</div>
-                    <div class="version-name">V2 Intermediate</div>
-                    <div class="version-level">Nivel B1-B2</div>
-                    <div class="version-words">2,000</div>
-                    <div class="version-words-label">palabras</div>
-                    <div class="version-price" style="font-size: 1rem; color: var(--blue);">Incluido en Pack</div>
-                </div>
-                
-                <div class="version-card v3" onclick="window.location.href='https://appsmaster.lemonsqueezy.com/checkout/buy/1d8e0569-1433-4d04-a6d3-26d6eb2399f8'">
-                    <div class="version-icon">📙</div>
-                    <div class="version-name">V3 Advanced</div>
-                    <div class="version-level">Nivel C1</div>
-                    <div class="version-words">2,000</div>
-                    <div class="version-words-label">palabras</div>
-                    <div class="version-price" style="font-size: 1rem; color: var(--purple);">Incluido en Pack</div>
-                </div>
-                
-                <div class="version-card v4" onclick="window.location.href='https://appsmaster.lemonsqueezy.com/checkout/buy/1d8e0569-1433-4d04-a6d3-26d6eb2399f8'">
-                    <div class="version-icon">📕</div>
-                    <div class="version-name">V4 Business</div>
-                    <div class="version-level">Nivel B2-C1</div>
-                    <div class="version-words">2,507</div>
-                    <div class="version-words-label">palabras</div>
-                    <div class="version-price" style="font-size: 1rem; color: var(--orange);">Incluido en Pack</div>
-                </div>
-            </div>
+<!-- Stats -->
+<div class="container">
+    <div class="stats-row">
+        <div class="stat-box">
+            <div class="stat-num">15,000</div>
+            <div class="stat-lbl">Palabras</div>
         </div>
-    </section>
-
-    <!-- Features -->
-    <section class="features" id="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>Todo lo que Necesitas</h2>
-                <p>Herramientas diseñadas para aprender de verdad</p>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎴</div>
-                    <div class="feature-title">Flashcards Interactivas</div>
-                    <div class="feature-desc">Sistema de repetición espaciada con flip 3D. Escucha la pronunciación y califica tu conocimiento.</div>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <div class="feature-title">Quiz Inteligente</div>
-                    <div class="feature-desc">Preguntas generadas automáticamente que se adaptan a tu nivel y refuerzan tu aprendizaje.</div>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <div class="feature-title">Seguimiento de Progreso</div>
-                    <div class="feature-desc">XP, rachas diarias y estadísticas detalladas para mantener tu motivación.</div>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <div class="feature-title">Funciona Offline</div>
-                    <div class="feature-desc">Instálala como app en tu celular. Aprende en cualquier lugar, sin necesidad de internet.</div>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🔊</div>
-                    <div class="feature-title">Audio Nativo</div>
-                    <div class="feature-desc">Pronunciación con text-to-speech de alta calidad para cada palabra y ejemplo.</div>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <div class="feature-title">Diseño para Aprender</div>
-                    <div class="feature-desc">Colores psicológicos optimizados para concentración y retención de memoria.</div>
-                </div>
-            </div>
+        <div class="stat-box">
+            <div class="stat-num">4</div>
+            <div class="stat-lbl">Niveles</div>
         </div>
-    </section>
-
-    <!-- Pricing -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="section-title">
-                <h2>Inversión Única, Acceso Eterno</h2>
-                <p>Sin suscripciones. Sin pagos mensuales. Para siempre.</p>
-            </div>
-            
-            <div class="pricing-cards">
-                <div class="pricing-card">
-                    <div class="pricing-name">V1 Basic Gratis</div>
-                    <div class="pricing-desc">Empieza sin costo</div>
-                    <div class="pricing-price" style="color: var(--green);">GRATIS</div>
-                    <div class="pricing-savings" style="background: rgba(16,185,129,0.15);">2,000 palabras</div>
-                    <ul class="pricing-features">
-                        <li>Nivel A1-A2 completo</li>
-                        <li>Flashcards y Quiz</li>
-                        <li>Progreso guardado</li>
-                        <li>Funciona offline</li>
-                    </ul>
-                    <button onclick="openDemoModal()" class="btn-pricing secondary">Obtener Gratis</button>
-                </div>
-                
-                <div class="pricing-card featured">
-                    <div class="pricing-name">Pack Completo</div>
-                    <div class="pricing-desc">Las 4 versiones premium</div>
-                    <div class="pricing-original">$599 MXN</div>
-                    <div class="pricing-price">$299 <span>MXN</span></div>
-                    <div class="pricing-savings">🔥 Ahorra 51%</div>
-                    <ul class="pricing-features">
-                        <li>15,000 palabras totales</li>
-                        <li>4 niveles completos (A1→C1)</li>
-                        <li>Incluye Business English</li>
-                        <li>28 categorías temáticas</li>
-                        <li>Soporte prioritario</li>
-                    </ul>
-                    <a href="https://appsmaster.lemonsqueezy.com/checkout/buy/1d8e0569-1433-4d04-a6d3-26d6eb2399f8" class="btn-pricing primary">🚀 Comprar Pack Completo</a>
-                </div>
-            </div>
+        <div class="stat-box">
+            <div class="stat-num">28</div>
+            <div class="stat-lbl">Categorías</div>
         </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="section-title">
-                <h2>Preguntas Frecuentes</h2>
-            </div>
-            
-            <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-question">¿Funciona en mi celular?</button>
-                    <div class="faq-answer">
-                        <p>Sí, es una Progressive Web App (PWA). Funciona en iPhone, Android, y cualquier navegador moderno. Puedes instalarla como app nativa.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question">¿Necesito internet para usarla?</button>
-                    <div class="faq-answer">
-                        <p>Solo para la descarga inicial. Después funciona 100% offline. Perfecta para aprender en el metro, avión o donde sea.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question">¿Hay pagos mensuales?</button>
-                    <div class="faq-answer">
-                        <p>No. Es un pago único. Una vez que compras, tienes acceso de por vida a todo el contenido y futuras actualizaciones.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question">¿Qué incluye cada palabra?</button>
-                    <div class="faq-answer">
-                        <p>Cada palabra incluye: pronunciación fonética (IPA), traducción, oración de ejemplo en inglés, traducción del ejemplo, y categoría temática.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question">¿Puedo probar antes de comprar?</button>
-                    <div class="faq-answer">
-                        <p>¡Claro! La versión V1 Basic con 2,000 palabras es completamente gratis. Pruébala y decide si quieres las versiones avanzadas.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="stat-box">
+            <div class="stat-num">100%</div>
+            <div class="stat-lbl">Offline</div>
         </div>
-    </section>
+    </div>
+</div>
 
-    <!-- CTA -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-box">
-                <h2>¿Listo para Dominar el Inglés?</h2>
-                <p>Únete a miles de estudiantes que ya están mejorando su vocabulario</p>
-                <a href="https://appsmaster.lemonsqueezy.com/checkout/buy/1d8e0569-1433-4d04-a6d3-26d6eb2399f8" class="btn-primary">Comenzar Ahora - $299 MXN</a>
+<!-- Versions -->
+<section class="versions-section">
+    <div class="container">
+        <div class="section-title">4 Niveles Progresivos</div>
+        <div class="section-sub">Empieza gratis con V1 Básico y desbloquea todo cuando estés listo</div>
+        <div class="versions-grid">
+            <div class="ver-card free">
+                <div class="ver-icon">📗</div>
+                <div class="ver-name">V1 Básico</div>
+                <div class="ver-level">A1-A2</div>
+                <div class="ver-words">2,588 palabras</div>
+                <div class="ver-price">GRATIS</div>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-copy">© 2024 AppsMaster. Todos los derechos reservados.</div>
-            <div class="footer-links">
-                <a href="#">Términos</a>
-                <a href="#">Privacidad</a>
-                <a href="#">Contacto</a>
+            <div class="ver-card">
+                <div class="ver-icon">📘</div>
+                <div class="ver-name">V2 Intermedio</div>
+                <div class="ver-level">B1-B2</div>
+                <div class="ver-words">4,334 palabras</div>
+                <div class="ver-price">Incluido en Premium</div>
+                <div class="ver-lock">🔒 Requiere suscripción</div>
             </div>
-        </div>
-    </footer>
-
-    <!-- Modal Demo Gratis -->
-    <div class="modal-overlay" id="demoModal">
-        <div class="modal-box">
-            <div id="formSection">
-                <h3>📗 Obtén V1 Basic Gratis</h3>
-                <p>Ingresa tu email para recibir acceso inmediato a 2,000 palabras</p>
-                <input type="email" id="emailInput" placeholder="tu@email.com" required>
-                <button class="btn-submit" onclick="submitEmail()">Obtener Acceso Gratis</button>
-                <button class="btn-close" onclick="closeModal()">Cancelar</button>
-                
-                <div class="referral-section">
-                    <h4>🎁 ¡Gana el Pack Completo!</h4>
-                    <p>Recomienda English Mastery a 5 amigos. Cuando compren, les preguntaremos quién los refirió. ¡Al llegar a 5, te regalamos el Pack!</p>
-                    <p style="margin-top: 10px;"><a href="https://wa.me/522205575636" style="color: #25D366;">💬 ¿Dudas? Escríbenos</a></p>
-                </div>
-                
-                <p class="privacy-note">🔒 Tu email está seguro. Solo recibirás contenido de valor y ofertas exclusivas. Puedes darte de baja cuando quieras.</p>
+            <div class="ver-card">
+                <div class="ver-icon">📙</div>
+                <div class="ver-name">V3 Avanzado</div>
+                <div class="ver-level">C1</div>
+                <div class="ver-words">4,334 palabras</div>
+                <div class="ver-price">Incluido en Premium</div>
+                <div class="ver-lock">🔒 Requiere suscripción</div>
             </div>
-            
-            <div id="successSection" class="modal-success">
-                <div class="icon">🎉</div>
-                <h3>¡Listo!</h3>
-                <p>Tu acceso a V1 Basic se abrirá en unos segundos...</p>
-                <button class="btn-submit" onclick="closeModal()">Cerrar</button>
+            <div class="ver-card">
+                <div class="ver-icon">📕</div>
+                <div class="ver-name">V4 Business</div>
+                <div class="ver-level">B2-C1</div>
+                <div class="ver-words">4,334 palabras</div>
+                <div class="ver-price">Incluido en Premium</div>
+                <div class="ver-lock">🔒 Requiere suscripción</div>
             </div>
         </div>
     </div>
+</section>
 
-    <script>
-        // FAQ Toggle
-        document.querySelectorAll('.faq-question').forEach(btn => {
-            btn.addEventListener('click', () => {
-                btn.parentElement.classList.toggle('open');
-            });
-        });
+<!-- Features -->
+<section class="features-section">
+    <div class="container">
+        <div class="section-title">¿Qué incluye?</div>
+        <div class="section-sub">Todo lo que necesitas para aprender vocabulario en inglés</div>
+        <div class="features-grid">
+            <div class="feat-card">
+                <div class="feat-icon">🎴</div>
+                <div class="feat-title">Flashcards Interactivas</div>
+                <div class="feat-desc">Desliza para aprender. Cada palabra con pronunciación IPA, traducción y ejemplo bilingüe.</div>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">🎯</div>
+                <div class="feat-title">Quizzes Adaptativos</div>
+                <div class="feat-desc">Opciones múltiples que se adaptan a tu nivel. Gana XP y mantén tu racha diaria.</div>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">📱</div>
+                <div class="feat-title">App Instalable (PWA)</div>
+                <div class="feat-desc">Instálala en tu celular como app nativa. Funciona 100% offline sin internet.</div>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">📊</div>
+                <div class="feat-title">Seguimiento de Progreso</div>
+                <div class="feat-desc">Estadísticas de precisión, palabras aprendidas, racha y XP acumulado.</div>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">💼</div>
+                <div class="feat-title">Business English</div>
+                <div class="feat-desc">Vocabulario corporativo, finanzas, marketing, negociaciones, HR y más.</div>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">🌐</div>
+                <div class="feat-title">Inglés → Español</div>
+                <div class="feat-desc">Cada palabra con traducción al español y oraciones de ejemplo en ambos idiomas.</div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        // Modal functions
-        function openDemoModal() {
-            document.getElementById('demoModal').classList.add('show');
-            document.getElementById('formSection').style.display = 'block';
-            document.getElementById('successSection').classList.remove('show');
-            document.getElementById('emailInput').focus();
-        }
+<!-- Pricing -->
+<section class="pricing-section" id="pricing">
+    <div class="container">
+        <div class="section-title">Plan Premium</div>
+        <div class="section-sub">Una suscripción, todo desbloqueado</div>
 
-        function closeModal() {
-            document.getElementById('demoModal').classList.remove('show');
-        }
+        <div class="pricing-card">
+            <div class="pricing-badge">🍋 Oferta de Lanzamiento</div>
+            <div class="pricing-title">Pack Completo Premium</div>
+            <div class="pricing-desc">Desbloquea V2 + V3 + V4 — 12,414 palabras adicionales</div>
+            <div class="pricing-amount">$299 MXN <span>/año</span></div>
+            <div class="pricing-monthly">Solo $24.90/mes · Menos de $1 USD/día</div>
+            <div class="pricing-features">
+                <div class="pricing-feat"><span>✅</span><span>V2 Intermedio — 4,334 palabras (B1-B2)</span></div>
+                <div class="pricing-feat"><span>✅</span><span>V3 Avanzado — 4,334 palabras (C1)</span></div>
+                <div class="pricing-feat"><span>✅</span><span>V4 Business — 4,334 palabras (B2-C1)</span></div>
+                <div class="pricing-feat"><span>✅</span><span>Acceso ilimitado por 12 meses</span></div>
+                <div class="pricing-feat"><span>✅</span><span>Todas las actualizaciones incluidas</span></div>
+                <div class="pricing-feat"><span>🔄</span><span>Cancela cuando quieras</span></div>
+            </div>
+            <a href="https://appsmaster.lemonsqueezy.com/checkout/buy/1d8e0569-1433-4d04-a6d3-26d6eb2399f8" class="btn-checkout" target="_blank">🍋 Suscribirse — $299 MXN/año</a>
+            <div class="pricing-note">🔒 Pagos seguros via LemonSqueezy · Cancela cuando quieras</div>
+            <div class="pricing-free-note">
+                💡 <strong>¿Aún no estás seguro?</strong> Empieza gratis con V1 Básico (2,588 palabras) sin compromiso.
+                <a href="app.html" style="color:var(--green);font-weight:600;text-decoration:none"> Probar gratis →</a>
+            </div>
+        </div>
+    </div>
+</section>
 
-        function submitEmail() {
-            const email = document.getElementById('emailInput').value;
-            if (!email || !email.includes('@')) {
-                alert('Por favor ingresa un email válido');
-                return;
-            }
-            
-            // Deshabilitar botón mientras envía
-            const btn = document.querySelector('#formSection .btn-submit');
-            btn.disabled = true;
-            btn.textContent = 'Enviando...';
-            
-            // Enviar email via FormSubmit.co
-            fetch('https://formsubmit.co/ajax/costingpro.mkt@gmail.com', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify({
-                    email: email,
-                    _subject: '🎉 Nuevo registro - English Mastery V1 Gratis',
-                    producto: 'English Mastery V1 Basic',
-                    fecha: new Date().toLocaleString('es-MX')
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                showSuccess();
-            })
-            .catch(error => {
-                // Si falla, igual mostrar éxito (no perder usuario)
-                showSuccess();
-            });
-            
-            function showSuccess() {
-                document.getElementById('formSection').style.display = 'none';
-                document.getElementById('successSection').classList.add('show');
-                
-                // Abrir la app después de 2 segundos
-                setTimeout(() => {
-                    window.open('app.html', '_blank');
-                }, 2000);
-            }
-        }
+<!-- FAQ -->
+<section class="faq-section">
+    <div class="container">
+        <div class="section-title">Preguntas Frecuentes</div>
+        <div class="section-sub">Todo lo que necesitas saber</div>
 
-        // Cerrar modal con Escape
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeModal();
-        });
+        <div class="faq-item">
+            <div class="faq-q">¿Puedo probar la app gratis?</div>
+            <div class="faq-a">Sí. V1 Básico con 2,588 palabras (nivel A1-A2) es completamente gratis después de registrarte con tu email. Sin tarjeta de crédito.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">¿Cómo funciona la suscripción?</div>
+            <div class="faq-a">Pagas $299 MXN una vez al año y se desbloquean las versiones V2, V3 y V4 inmediatamente. Al pagar recibes un código de licencia por email que ingresas en la app.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">¿Puedo cancelar?</div>
+            <div class="faq-a">Sí, puedes cancelar en cualquier momento desde tu cuenta de LemonSqueezy. Mantienes el acceso hasta que termine tu periodo pagado.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">¿Funciona sin internet?</div>
+            <div class="faq-a">Sí. La app es una PWA (Progressive Web App) que se instala en tu celular y funciona 100% offline. Todo el vocabulario está incluido en la app.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">¿Qué métodos de pago aceptan?</div>
+            <div class="faq-a">A través de LemonSqueezy aceptamos tarjetas de crédito/débito (Visa, Mastercard, Amex) y PayPal.</div>
+        </div>
+    </div>
+</section>
 
-        // Cerrar modal al hacer clic fuera
-        document.getElementById('demoModal').addEventListener('click', (e) => {
-            if (e.target.id === 'demoModal') closeModal();
-        });
-    </script>
+<!-- Footer -->
+<div class="container">
+    <footer>
+        <div class="footer-copy">© 2025 AppsMaster. Todos los derechos reservados.</div>
+        <div class="footer-links">
+            <a href="/">Hub</a>
+            <a href="#">Términos</a>
+            <a href="#">Privacidad</a>
+            <a href="https://wa.me/522205575636">WhatsApp</a>
+        </div>
+    </footer>
+</div>
+
 </body>
 </html>
