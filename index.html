@@ -3,499 +3,326 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AppsMaster - Apps Educativas Premium</title>
-    <meta name="description" content="Descubre apps educativas premium. Aprende idiomas, desarrolla habilidades y domina nuevos conocimientos con nuestras aplicaciones.">
+    <title>AppsMaster — Apps Educativas Premium</title>
+    <meta name="description" content="Apps educativas premium. Domina el inglés con 15,000 palabras.">
+    <meta name="theme-color" content="#0f0f1a">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-base: #0a0a0f;
-            --bg-card: #12121a;
-            --bg-elevated: #1a1a25;
-            --accent-primary: #6366f1;
-            --accent-secondary: #ec4899;
-            --accent-tertiary: #f97316;
-            --gradient-main: linear-gradient(135deg, #6366f1 0%, #ec4899 50%, #f97316 100%);
-            --gradient-card: linear-gradient(145deg, rgba(99,102,241,0.1) 0%, rgba(236,72,153,0.05) 100%);
-            --text-primary: #ffffff;
-            --text-secondary: #a1a1aa;
-            --text-muted: #71717a;
-            --border-subtle: rgba(255,255,255,0.08);
-            --shadow-glow: 0 0 60px rgba(99,102,241,0.15);
+            --bg: #0f0f1a;
+            --bg-card: #171728;
+            --bg-elevated: #1e1e35;
+            --accent: #6366f1;
+            --accent-light: #818cf8;
+            --green: #22c55e;
+            --yellow: #eab308;
+            --text: #f1f5f9;
+            --text-dim: #94a3b8;
+            --text-muted: #64748b;
+            --border: rgba(99,102,241,0.15);
+            --glow: 0 0 40px rgba(99,102,241,0.15);
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior: smooth; }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg-base);
-            color: var(--text-primary);
-            min-height: 100vh;
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.6;
+            min-height: 100vh;
         }
-
-        /* Animated background */
-        .bg-gradient {
-            position: fixed;
-            inset: 0;
-            background: 
-                radial-gradient(ellipse at 20% 20%, rgba(99,102,241,0.15) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 80%, rgba(236,72,153,0.1) 0%, transparent 50%),
-                radial-gradient(ellipse at 50% 50%, rgba(249,115,22,0.05) 0%, transparent 70%);
-            pointer-events: none;
-            z-index: -1;
+        body::before {
+            content: '';
+            position: fixed; inset: 0;
+            background: radial-gradient(ellipse at 30% 0%, rgba(99,102,241,0.08), transparent 60%),
+                        radial-gradient(ellipse at 70% 100%, rgba(34,197,94,0.05), transparent 50%);
+            pointer-events: none; z-index: -1;
         }
 
         /* Header */
-        header {
-            padding: 20px 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
+        .header {
+            display: flex; align-items: center; justify-content: space-between;
+            max-width: 960px; margin: 0 auto; padding: 20px 24px;
         }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            width: 42px;
-            height: 42px;
-            background: var(--gradient-main);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.4rem;
-        }
-
-        .logo-text {
+        .header-logo {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: var(--gradient-main);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 1.3rem; font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-light), var(--green));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
+        .header-contact {
+            color: var(--text-dim); text-decoration: none; font-size: 0.85rem;
+            padding: 8px 16px; border: 1px solid var(--border); border-radius: 8px;
+            transition: all 0.3s;
+        }
+        .header-contact:hover { border-color: var(--accent); color: var(--text); }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
+            max-width: 960px; margin: 0 auto; padding: 60px 24px 40px;
             text-align: center;
-            padding: 60px 24px 40px;
-            max-width: 800px;
-            margin: 0 auto;
         }
-
         .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 16px;
-            background: var(--bg-elevated);
-            border: 1px solid var(--border-subtle);
-            border-radius: 100px;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            margin-bottom: 24px;
+            display: inline-block; padding: 6px 16px; border-radius: 20px;
+            background: rgba(99,102,241,0.1); border: 1px solid var(--border);
+            color: var(--accent-light); font-size: 0.8rem; font-weight: 600;
+            margin-bottom: 20px; letter-spacing: 0.5px;
         }
-
-        .hero-badge span {
-            color: var(--accent-primary);
-        }
-
         .hero h1 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 20px;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 800; line-height: 1.15; margin-bottom: 16px;
         }
-
-        .hero h1 .gradient {
-            background: var(--gradient-main);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--accent-light), #a78bfa, var(--green));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
-
         .hero p {
-            font-size: 1.15rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
+            color: var(--text-dim); font-size: 1.05rem; max-width: 520px;
+            margin: 0 auto 32px;
         }
 
         /* Apps Grid */
         .apps-section {
-            padding: 40px 24px 80px;
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 960px; margin: 0 auto; padding: 0 24px 60px;
         }
-
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 32px;
-        }
-
-        .section-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-
-        .apps-count {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        .apps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 24px;
+        .section-label {
+            font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 2px; color: var(--accent-light); margin-bottom: 24px;
         }
 
         /* App Card */
         .app-card {
             background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
+            border: 1px solid var(--border);
             border-radius: 20px;
             overflow: hidden;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: block;
+            transition: all 0.4s;
+            margin-bottom: 24px;
         }
-
         .app-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(99,102,241,0.3);
-            box-shadow: var(--shadow-glow);
+            border-color: var(--accent);
+            box-shadow: var(--glow);
+            transform: translateY(-2px);
         }
-
-        .app-card-image {
-            height: 180px;
-            background: var(--gradient-card);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .app-card-image::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(99,102,241,0.2) 0%, rgba(236,72,153,0.1) 100%);
-        }
-
-        .app-icon {
-            font-size: 4rem;
-            z-index: 1;
-        }
-
-        .app-icon-group {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-            z-index: 1;
-        }
-
-        .flags {
-            display: flex;
-            gap: 8px;
-        }
-
-        .app-badge {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            padding: 6px 12px;
-            background: rgba(34,197,94,0.2);
-            color: #22c55e;
-            border-radius: 100px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            z-index: 1;
-        }
-
-        .app-badge.new {
-            background: rgba(99,102,241,0.2);
-            color: #818cf8;
-        }
-
-        .app-badge.sale {
-            background: rgba(249,115,22,0.2);
-            color: #fb923c;
-        }
-
-        .app-card-content {
-            padding: 24px;
-        }
-
-        .app-category {
-            font-size: 0.8rem;
-            color: var(--accent-primary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-
-        .app-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .app-description {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 16px;
-            line-height: 1.5;
-        }
-
-        .app-stats {
-            display: flex;
-            gap: 16px;
+        .app-card-inner { padding: 32px; }
+        .app-card-header {
+            display: flex; align-items: flex-start; justify-content: space-between;
             margin-bottom: 20px;
         }
-
+        .app-icon {
+            width: 64px; height: 64px; border-radius: 16px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2rem;
+            background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(34,197,94,0.1));
+            border: 1px solid var(--border);
+        }
+        .app-badge-live {
+            padding: 4px 12px; border-radius: 12px;
+            background: rgba(34,197,94,0.12); color: var(--green);
+            font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .app-badge-soon {
+            padding: 4px 12px; border-radius: 12px;
+            background: rgba(234,179,8,0.12); color: var(--yellow);
+            font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .app-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;
+        }
+        .app-desc {
+            color: var(--text-dim); font-size: 0.92rem; margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .app-stats {
+            display: flex; gap: 24px; margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
         .app-stat {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.85rem;
-            color: var(--text-muted);
+            display: flex; flex-direction: column;
         }
-
         .app-stat-value {
-            color: var(--text-primary);
-            font-weight: 600;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem; font-weight: 700; color: var(--accent-light);
         }
-
+        .app-stat-label {
+            font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .app-features {
+            display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px;
+        }
+        .app-feat {
+            padding: 5px 12px; border-radius: 8px;
+            background: rgba(99,102,241,0.08);
+            color: var(--text-dim); font-size: 0.78rem; font-weight: 500;
+        }
         .app-pricing {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-top: 16px;
-            border-top: 1px solid var(--border-subtle);
+            display: flex; align-items: center; justify-content: space-between;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
         }
-
-        .app-price {
-            display: flex;
-            align-items: baseline;
-            gap: 8px;
-        }
-
-        .price-current {
+        .app-price-main {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-primary);
+            font-size: 1.6rem; font-weight: 800; color: var(--text);
         }
-
-        .price-old {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            text-decoration: line-through;
+        .app-price-main span {
+            font-size: 0.8rem; font-weight: 500; color: var(--text-muted);
         }
-
-        .app-cta {
-            padding: 10px 20px;
-            background: var(--gradient-main);
-            border: none;
-            border-radius: 10px;
-            color: white;
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
+        .app-price-sub {
+            font-size: 0.78rem; color: var(--text-muted);
         }
-
-        .app-cta:hover {
-            transform: scale(1.05);
+        .app-price-free {
+            font-size: 0.85rem; color: var(--green); font-weight: 600;
         }
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 12px 24px; border-radius: 12px; border: none;
+            background: linear-gradient(135deg, var(--accent), #7c3aed);
+            color: white; font-size: 0.92rem; font-weight: 700;
+            text-decoration: none; cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 24px rgba(99,102,241,0.35);
+        }
+        .btn-outline {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 12px 24px; border-radius: 12px;
+            border: 1px solid var(--border);
+            background: transparent; color: var(--text-dim);
+            font-size: 0.92rem; font-weight: 600;
+            text-decoration: none; cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-outline:hover { border-color: var(--accent); color: var(--text); }
 
         /* Coming Soon Card */
-        .app-card.coming-soon {
-            opacity: 0.6;
-            pointer-events: none;
-        }
-
-        .app-card.coming-soon .app-card-image {
-            filter: grayscale(0.5);
-        }
+        .app-card.coming-soon { opacity: 0.6; }
+        .app-card.coming-soon:hover { transform: none; box-shadow: none; }
 
         /* Footer */
         footer {
-            padding: 40px 24px;
-            border-top: 1px solid var(--border-subtle);
-            text-align: center;
+            max-width: 960px; margin: 0 auto; padding: 40px 24px;
+            border-top: 1px solid var(--border);
+            display: flex; align-items: center; justify-content: space-between;
+            flex-wrap: wrap; gap: 16px;
         }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 32px;
-            margin-bottom: 20px;
-        }
-
+        .footer-copy { color: var(--text-muted); font-size: 0.8rem; }
+        .footer-links { display: flex; gap: 20px; }
         .footer-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s;
+            color: var(--text-muted); text-decoration: none; font-size: 0.8rem;
+            transition: color 0.3s;
         }
+        .footer-links a:hover { color: var(--text); }
 
-        .footer-links a:hover {
-            color: var(--text-primary);
-        }
-
-        .footer-copy {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 640px) {
-            .apps-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero {
-                padding: 40px 20px 30px;
-            }
-
-            .section-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 8px;
-            }
-
-            .footer-links {
-                flex-direction: column;
-                gap: 16px;
-            }
+        @media (max-width: 600px) {
+            .hero { padding: 40px 20px 30px; }
+            .app-card-inner { padding: 24px; }
+            .app-pricing { flex-direction: column; align-items: flex-start; gap: 16px; }
+            footer { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
-    <div class="bg-gradient"></div>
 
-    <header>
-        <a href="/" class="logo">
-            <div class="logo-icon">🚀</div>
-            <span class="logo-text">AppsMaster</span>
-        </a>
-    </header>
+<header class="header">
+    <div class="header-logo">⚡ AppsMaster</div>
+    <a href="https://wa.me/522205575636" class="header-contact">💬 Contacto</a>
+</header>
 
-    <section class="hero">
-        <div class="hero-badge">
-            ✨ <span>Nuevas apps cada mes</span>
-        </div>
-        <h1>Apps Educativas<br><span class="gradient">Premium</span></h1>
-        <p>Aprende idiomas, desarrolla habilidades y domina nuevos conocimientos con nuestras aplicaciones. Pago único, acceso de por vida.</p>
-    </section>
+<section class="hero">
+    <div class="hero-badge">🚀 Apps Educativas Premium</div>
+    <h1>Aprende más rápido con<br><span>apps diseñadas para ti</span></h1>
+    <p>Herramientas de aprendizaje enfocadas en resultados. Sin distracciones, sin suscripciones infladas.</p>
+</section>
 
-    <section class="apps-section">
-        <div class="section-header">
-            <h2 class="section-title">Nuestras Apps</h2>
-            <span class="apps-count">1 app disponible</span>
-        </div>
+<section class="apps-section">
+    <div class="section-label">📱 Nuestras Apps</div>
 
-        <div class="apps-grid">
-            <!-- English Mastery -->
-            <a href="/english-mastery/" class="app-card">
-                <div class="app-card-image" style="background: linear-gradient(135deg, rgba(99,102,241,0.3) 0%, rgba(168,85,247,0.2) 100%);">
-                    <div class="app-icon-group">
-                        <span style="font-size:3rem">📚</span>
-                        <div class="flags">
-                            <img src="https://flagcdn.com/w80/gb.png" alt="UK" style="width:32px;height:auto;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.3)">
-                            <img src="https://flagcdn.com/w80/us.png" alt="US" style="width:32px;height:auto;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.3)">
-                        </div>
-                    </div>
-                    <span class="app-badge sale">-51%</span>
+    <!-- English Mastery Card -->
+    <div class="app-card">
+        <div class="app-card-inner">
+            <div class="app-card-header">
+                <div class="app-icon">📚</div>
+                <div class="app-badge-live">● Disponible</div>
+            </div>
+            <div class="app-title">English Mastery Pro</div>
+            <div class="app-desc">
+                Domina el inglés con 15,000 palabras organizadas en 4 niveles progresivos. Flashcards interactivas, quizzes adaptativos y funciona 100% offline como app instalable.
+            </div>
+            <div class="app-stats">
+                <div class="app-stat">
+                    <div class="app-stat-value">15,000</div>
+                    <div class="app-stat-label">Palabras</div>
                 </div>
-                <div class="app-card-content">
-                    <div class="app-category">Idiomas</div>
-                    <h3 class="app-title">English Mastery</h3>
-                    <p class="app-description">Domina el inglés con 15,000 palabras. 4 niveles desde básico hasta business. Flashcards, quizzes y más.</p>
-                    <div class="app-stats">
-                        <div class="app-stat">
-                            <span class="app-stat-value">15,000</span> palabras
-                        </div>
-                        <div class="app-stat">
-                            <span class="app-stat-value">4</span> niveles
-                        </div>
-                        <div class="app-stat">
-                            <span class="app-stat-value">28</span> categorías
-                        </div>
-                    </div>
-                    <div class="app-pricing">
-                        <div class="app-price">
-                            <span class="price-current">$299 MXN</span>
-                            <span class="price-old">$599 MXN</span>
-                        </div>
-                        <span class="app-cta">Ver más →</span>
-                    </div>
+                <div class="app-stat">
+                    <div class="app-stat-value">4</div>
+                    <div class="app-stat-label">Niveles</div>
                 </div>
-            </a>
-
-            <!-- Coming Soon Placeholder -->
-            <div class="app-card coming-soon">
-                <div class="app-card-image" style="background: linear-gradient(135deg, rgba(34,197,94,0.2) 0%, rgba(16,185,129,0.1) 100%);">
-                    <span class="app-icon">🎯</span>
-                    <span class="app-badge new">Próximamente</span>
+                <div class="app-stat">
+                    <div class="app-stat-value">A1→C1</div>
+                    <div class="app-stat-label">Cobertura</div>
                 </div>
-                <div class="app-card-content">
-                    <div class="app-category">Productividad</div>
-                    <h3 class="app-title">Próxima App</h3>
-                    <p class="app-description">Estamos trabajando en nuevas apps educativas. ¡Mantente atento!</p>
-                    <div class="app-stats">
-                        <div class="app-stat">
-                            <span class="app-stat-value">—</span>
-                        </div>
-                    </div>
-                    <div class="app-pricing">
-                        <div class="app-price">
-                            <span class="price-current">Próximamente</span>
-                        </div>
-                    </div>
+                <div class="app-stat">
+                    <div class="app-stat-value">🇬🇧 🇺🇸</div>
+                    <div class="app-stat-label">EN → ES</div>
+                </div>
+            </div>
+            <div class="app-features">
+                <span class="app-feat">🎴 Flashcards</span>
+                <span class="app-feat">🎯 Quizzes</span>
+                <span class="app-feat">📱 PWA Offline</span>
+                <span class="app-feat">📊 Progreso</span>
+                <span class="app-feat">💼 Business English</span>
+            </div>
+            <div class="app-pricing">
+                <div>
+                    <div class="app-price-free">✅ V1 Básico — GRATIS (2,588 palabras)</div>
+                    <div class="app-price-main" style="margin-top:8px">$299 MXN <span>/año</span></div>
+                    <div class="app-price-sub">Pack Premium V2+V3+V4 · Solo $24.90/mes</div>
+                </div>
+                <div style="display:flex;gap:10px;flex-wrap:wrap">
+                    <a href="/english-mastery/" class="btn-primary">Ver más →</a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="#">Términos</a>
-                <a href="#">Privacidad</a>
-                <a href="https://wa.me/522205575636">Contacto</a>
+    <!-- Coming Soon Card -->
+    <div class="app-card coming-soon">
+        <div class="app-card-inner">
+            <div class="app-card-header">
+                <div class="app-icon" style="background:linear-gradient(135deg,rgba(234,179,8,0.2),rgba(234,179,8,0.05))">🧮</div>
+                <div class="app-badge-soon">Próximamente</div>
             </div>
-            <p class="footer-copy">© 2025 AppsMaster. Todos los derechos reservados.</p>
+            <div class="app-title">Próxima App</div>
+            <div class="app-desc">
+                Estamos trabajando en más herramientas de aprendizaje. ¡Mantente atento!
+            </div>
+            <div class="app-stats">
+                <div class="app-stat">
+                    <div class="app-stat-value">—</div>
+                    <div class="app-stat-label">En desarrollo</div>
+                </div>
+            </div>
         </div>
-    </footer>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-copy">© 2025 AppsMaster. Todos los derechos reservados.</div>
+    <div class="footer-links">
+        <a href="#">Términos</a>
+        <a href="#">Privacidad</a>
+        <a href="https://wa.me/522205575636">Contacto</a>
+    </div>
+</footer>
+
 </body>
 </html>
