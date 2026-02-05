@@ -456,7 +456,7 @@ body {
 <div class="app">
     <header class="header">
         <h1 class="logo">English Mastery V1</h1>
-        <p class="tagline">Básico • 2500 Palabras</p>
+        <p class="tagline">Básico • 2000 Palabras</p>
     </header>
 <button class="btn-back" onclick="goBackToVersions()">← Cambiar version</button>
     <div class="stats-bar">
@@ -589,7 +589,7 @@ body {
             </div>
         </div>
     </section>
-    <footer class="footer"><p>English Mastery V1 Básico - 2500 Palabras</p><p>By <strong>Carlos Alberto Téllez Flores</strong></p></footer>
+    <footer class="footer"><p>English Mastery V1 Básico - 2000 Palabras</p><p>By <strong>Albertf70</strong></p></footer>
 </div>
 <script>
 
@@ -597,9 +597,9 @@ var ALL_VOCAB = {"v1":{"verbs":[{"id":"v001","word":"be","ipa":"/biː/","type":"
 
 var VERSION_INFO = {
     v1: { name: "V1 Basic", level: "A1-A2", icon: "📗", words: 2588, price: 0 },
-    v2: { name: "V2 Intermediate", level: "B1-B2", icon: "📘", words: 2500, price: 7.99 },
-    v3: { name: "V3 Advanced", level: "C1", icon: "📙", words: 2500, price: 7.99 },
-    v4: { name: "V4 Business", level: "B2-C1", icon: "📕", words: 2507, price: 7.99 }
+    v2: { name: "V2 Intermediate", level: "B1-B2", icon: "📘", words: 4,334, price: 7.99 },
+    v3: { name: "V3 Advanced", level: "C1", icon: "📙", words: 4,334, price: 7.99 },
+    v4: { name: "V4 Business", level: "B2-C1", icon: "📕", words: 4,334, price: 7.99 }
 };
 
 var LICENSE_KEY = "emPro2024Lic";
@@ -676,7 +676,7 @@ function closeLicModal() {
 
 function doActivate() {
     var code = document.getElementById("licInput").value.toUpperCase().trim();
-    if (code === "EM-DEMO01-PREMIUM1" || code === "PREMIUM2024") {
+    if (code === "EM-DEMO01-PREMIUM1" || code === "PREMIUM2026") {
         unlockedVers = ["v1","v2","v3","v4"];
         saveLicense();
         renderVersionCards();
@@ -15723,7 +15723,7 @@ let VOCABULARY = {
 // ================================================================
 
 // STATE
-const STORAGE_KEY='englishMasteryV1Basic_2500';
+const STORAGE_KEY='englishMasteryV1Basic_2000';
 let state={xp:0,streak:0,lastStudy:null,wordsLearned:0,correctAnswers:0,totalAttempts:0,vocabulary:{},settings:{autoPlay:true,speechRate:0.85}};
 
 function loadState(){try{const s=localStorage.getItem(STORAGE_KEY);if(s)state={...state,...JSON.parse(s)}}catch(e){}checkStreak();updateStatsUI()}
