@@ -1,13 +1,13 @@
-f<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>English Mastery Pro</title>
+    <title>SpeakFast Pro - Domina inglés rápido</title>
     <!-- PWA Meta Tags -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="English Mastery">
+    <meta name="apple-mobile-web-app-title" content="SpeakFast">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#1a1a2e">
     <meta name="msapplication-TileColor" content="#1a1a2e">
@@ -18,7 +18,7 @@ f<!DOCTYPE html>
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxODAgMTgwIj48cmVjdCBmaWxsPSIjMWExYTJlIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgcng9IjQwIi8+PHRleHQgeD0iOTAiIHk9IjExNSIgZm9udC1zaXplPSI4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+8J+TmjwvdGV4dD48L3N2Zz4=">
     
     <!-- Manifest -->
-    <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiRW5nbGlzaCBNYXN0ZXJ5IFBybyIsInNob3J0X25hbWUiOiJFbmdsaXNoIFBybyIsImRlc2NyaXB0aW9uIjoiRG9taW5hIGVsIGluZ2zDqXMgY29uIDEwLDA5NSBwYWxhYnJhcyIsInN0YXJ0X3VybCI6Ii4iLCJkaXNwbGF5Ijoic3RhbmRhbG9uZSIsIm9yaWVudGF0aW9uIjoicG9ydHJhaXQiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiIzFhMWEyZSIsInRoZW1lX2NvbG9yIjoiIzFhMWEyZSIsImljb25zIjpbeyJzcmMiOiJkYXRhOmltYWdlL3N2Zyt4bWwsPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxOTIgMTkyJz48cmVjdCBmaWxsPSclMjMxYTFhMmUnIHdpZHRoPScxOTInIGhlaWdodD0nMTkyJyByeD0nNDAnLz48dGV4dCB4PSc5NicgeT0nMTI1JyBmb250LXNpemU9JzkwJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJz7wn5OaPC90ZXh0Pjwvc3ZnPiIsInNpemVzIjoiMTkyeDE5MiIsInR5cGUiOiJpbWFnZS9zdmcreG1sIn0seyJzcmMiOiJkYXRhOmltYWdlL3N2Zyt4bWwsPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA1MTIgNTEyJz48cmVjdCBmaWxsPSclMjMxYTFhMmUnIHdpZHRoPSc1MTInIGhlaWdodD0nNTEyJyByeD0nMTAwJy8+PHRleHQgeD0nMjU2JyB5PSczMzAnIGZvbnQtc2l6ZT0nMjQwJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJz7wn5OaPC90ZXh0Pjwvc3ZnPiIsInNpemVzIjoiNTEyeDUxMiIsInR5cGUiOiJpbWFnZS9zdmcreG1sIn1dfQ==">
+    <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiU3BlYWtGYXN0IFBybyIsInNob3J0X25hbWUiOiJTcGVha0Zhc3QiLCJkZXNjcmlwdGlvbiI6IkRvbWluYSBpbmdsw6lzIHLDoXBpZG8gY29uIDE1LDAwMCBwYWxhYnJhcyIsInN0YXJ0X3VybCI6Ii4iLCJkaXNwbGF5Ijoic3RhbmRhbG9uZSIsIm9yaWVudGF0aW9uIjoicG9ydHJhaXQiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiIzFhMWEyZSIsInRoZW1lX2NvbG9yIjoiIzFhMWEyZSIsImljb25zIjpbeyJzcmMiOiJkYXRhOmltYWdlL3N2Zyt4bWwsPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxOTIgMTkyJz48cmVjdCBmaWxsPSclMjMxYTFhMmUnIHdpZHRoPScxOTInIGhlaWdodD0nMTkyJyByeD0nNDAnLz48dGV4dCB4PSc5NicgeT0nMTI1JyBmb250LXNpemU9JzkwJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJz7wn5OaPC90ZXh0Pjwvc3ZnPiIsInNpemVzIjoiMTkyeDE5MiIsInR5cGUiOiJpbWFnZS9zdmcreG1sIn0seyJzcmMiOiJkYXRhOmltYWdlL3N2Zyt4bWwsPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA1MTIgNTEyJz48cmVjdCBmaWxsPSclMjMxYTFhMmUnIHdpZHRoPSc1MTInIGhlaWdodD0nNTEyJyByeD0nMTAwJy8+PHRleHQgeD0nMjU2JyB5PSczMzAnIGZvbnQtc2l6ZT0nMjQwJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJz7wn5OaPC90ZXh0Pjwvc3ZnPiIsInNpemVzIjoiNTEyeDUxMiIsInR5cGUiOiJpbWFnZS9zdmcreG1sIn1dfQ==">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -447,6 +447,48 @@ body {
 }
 .btn-license-alt:hover { border-color: var(--text-secondary); }
 
+/* Email Popup Styles */
+.email-popup-overlay {
+    position: fixed; top:0; left:0; right:0; bottom:0;
+    background: rgba(0,0,0,0.8); z-index: 9999;
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px; animation: fadeIn 0.3s;
+}
+.email-popup-overlay.hidden { display: none; }
+.email-popup {
+    background: var(--bg-card); border-radius: 20px;
+    padding: 32px 24px; max-width: 380px; width: 100%;
+    text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    position: relative; animation: slideUp 0.3s;
+}
+.email-close {
+    position: absolute; top: 12px; right: 12px;
+    background: rgba(255,255,255,0.1); border: none;
+    color: var(--text-muted); width: 32px; height: 32px;
+    border-radius: 50%; cursor: pointer; font-size: 1.2rem;
+    transition: all 0.2s;
+}
+.email-close:hover { background: rgba(255,255,255,0.2); color: var(--text-primary); }
+.email-icon { font-size: 3rem; margin-bottom: 12px; }
+.email-popup h3 { color: var(--text-primary); font-size: 1.3rem; margin-bottom: 8px; }
+.email-popup p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px; }
+.btn-popup-submit {
+    flex: 1; padding: 12px; border: none; border-radius: 10px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: white; font-size: 0.95rem; font-weight: 700; cursor: pointer;
+    transition: transform 0.2s;
+}
+.btn-popup-submit:active { transform: scale(0.97); }
+.btn-popup-later {
+    flex: 1; padding: 12px; border-radius: 10px;
+    background: transparent; border: 1px solid var(--bg-tertiary);
+    color: var(--text-muted); font-size: 0.95rem; cursor: pointer;
+    transition: border-color 0.2s;
+}
+.btn-popup-later:hover { border-color: var(--text-secondary); }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
 </style>
 </head>
 <body>
@@ -454,7 +496,7 @@ body {
 <!-- Splash Screen -->
 <div class="splash-screen" id="splashScreen">
     <div class="splash-logo">📚</div>
-    <div class="splash-title">English Mastery Pro</div>
+    <div class="splash-title">SpeakFast Pro</div>
     <div class="splash-sub">15,000 palabras para dominar el ingles</div>
     <div class="splash-loader"></div>
 </div>
@@ -468,7 +510,7 @@ body {
 <div class="install-banner" id="installBanner">
     <div class="install-banner-icon">📲</div>
     <div class="install-banner-text">
-        <b>Instalar English Mastery</b>
+        <b>📲 Instalar SpeakFast</b>
         <span>Acceso rapido desde tu pantalla de inicio</span>
     </div>
     <button class="install-banner-btn" onclick="installApp()">Instalar</button>
@@ -476,35 +518,11 @@ body {
 </div>
 
 
-<div class="reg-overlay" id="regOverlay">
-<div class="reg-box">
-<div class="reg-logo">📚</div>
-<h2>English Mastery</h2>
-<p class="reg-sub">Accede gratis a 2,588 palabras en inglés</p>
-<div class="reg-benefits">
-<div class="reg-benefit"><span>✅</span><span>V1 Básico completo (A1-A2) — GRATIS</span></div>
-<div class="reg-benefit"><span>🎴</span><span>Flashcards interactivas con audio</span></div>
-<div class="reg-benefit"><span>🎯</span><span>Quizzes y seguimiento de progreso</span></div>
-<div class="reg-benefit"><span>📱</span><span>Funciona offline como app</span></div>
-</div>
-<form id="regForm" action="https://formsubmit.co/contacto@myappsmaster.com" method="POST" target="_blank" style="width:100%">
-<input type="hidden" name="_subject" value="Nuevo registro - English Mastery">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_captcha" value="true">
-<input type="text" id="regName" name="nombre" placeholder="Tu nombre" autocomplete="given-name" required style="width:100%;padding:14px;margin-bottom:12px;border:1px solid rgba(255,255,255,0.1);border-radius:10px;background:rgba(255,255,255,0.05);color:#f1f5f9;font-size:0.95rem">
-<input type="email" id="regEmail" name="email" placeholder="Tu email" autocomplete="email" required style="width:100%;padding:14px;margin-bottom:16px;border:1px solid rgba(255,255,255,0.1);border-radius:10px;background:rgba(255,255,255,0.05);color:#f1f5f9;font-size:0.95rem">
-<input type="hidden" name="app" value="English Master">
-<input type="hidden" name="version_inicial" value="V1 Basic">
-<button type="submit" class="btn-reg">🚀 Obtener Acceso Gratis</button>
-</form>
-<div class="reg-error" id="regError"></div>
-<p class="reg-privacy">🔒 No spam. Solo para tu cuenta de English Mastery.</p>
-</div>
-</div>
+<!-- Registro opcional eliminado - acceso directo a V1 -->
 
 <div class="vs-overlay" id="vsOverlay">
 <div class="vs-box">
-<div class="vs-title">English Mastery Pro</div>
+<div class="vs-title">SpeakFast Pro</div>
 <div class="vs-sub">Domina el ingles con 15,000 palabras</div>
 <div class="vs-stats">
 <div class="vs-stat"><b>15,000</b><span>Palabras</span></div>
@@ -539,9 +557,32 @@ body {
 </div>
 </div>
 
+<!-- Popup Opcional de Emails -->
+<div class="email-popup-overlay hidden" id="emailPopup">
+<div class="email-popup">
+<button class="email-close" onclick="closeEmailPopup()">✕</button>
+<div class="email-icon">💌</div>
+<h3>¿Te está gustando SpeakFast?</h3>
+<p>Recibe tips de inglés gratis cada semana</p>
+<form id="emailForm" action="https://formsubmit.co/contacto@myappsmaster.com" method="POST" target="_blank" style="width:100%">
+<input type="hidden" name="_subject" value="Suscripción - SpeakFast Tips">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="true">
+<input type="hidden" name="app" value="SpeakFast">
+<input type="hidden" name="tipo" value="Suscripción Newsletter">
+<input type="email" name="email" placeholder="tu@email.com" required style="width:100%;padding:14px;margin-bottom:12px;border:1px solid rgba(255,255,255,0.1);border-radius:10px;background:rgba(255,255,255,0.05);color:#f1f5f9;font-size:0.95rem">
+<div style="display:flex;gap:10px">
+<button type="submit" class="btn-popup-submit">✅ Suscribirme</button>
+<button type="button" class="btn-popup-later" onclick="closeEmailPopup()">Ahora no</button>
+</div>
+</form>
+<p style="font-size:0.75rem;color:var(--text-muted);margin-top:12px">🔒 Sin spam. Cancela cuando quieras.</p>
+</div>
+</div>
+
 <div class="app">
     <header class="header">
-        <h1 class="logo">English Mastery V1</h1>
+        <h1 class="logo">SpeakFast V1</h1>
         <p class="tagline">Básico • 2,588 Palabras</p>
     </header>
 <button class="btn-back" onclick="goBackToVersions()">← Cambiar version</button>
@@ -675,7 +716,7 @@ body {
             </div>
         </div>
     </section>
-    <footer class="footer"><p>English Mastery V1 Básico - 2,588 Palabras</p><p>By <strong>Albertf70</strong></p></footer>
+    <footer class="footer"><p>SpeakFast V1 Básico - 2,588 Palabras</p><p>By <strong>Albertf70</strong></p></footer>
 </div>
 <script>
 
@@ -15750,7 +15791,7 @@ function pickVersion(v) {
     if (unlockedVers.indexOf(v) === -1) { openLicModal(); return; }
     VOCABULARY = ALL_VOCAB[v];
     var info = VERSION_INFO[v];
-    document.querySelector(".logo").textContent = "English Mastery " + v.toUpperCase();
+    document.querySelector(".logo").textContent = "SpeakFast " + v.toUpperCase();
     document.querySelector(".tagline").textContent = info.level + " - " + info.words.toLocaleString() + " Palabras";
     
     // Calcular total de palabras de ESTA versión solamente (no acumulado)
@@ -15802,52 +15843,75 @@ function closeLicModal() {
     document.getElementById("licModal").classList.remove("show");
 }
 
-// ====== EMAIL REGISTRATION ======
-var REG_KEY = "emRegUser";
+// ====== EMAIL NEWSLETTER OPCIONAL ======
+var EMAIL_POPUP_KEY = "emEmailPopupShown";
+var EMAIL_TRIGGERS = {
+    flashcardsStudied: 0,
+    quizzesCompleted: 0,
+    minutesInApp: 0,
+    triggeredAt: null
+};
 
-function isRegistered() {
-    try {
-        var data = localStorage.getItem(REG_KEY);
-        return data ? JSON.parse(data) : null;
-    } catch(e) { return null; }
+function checkEmailPopupTriggers() {
+    // No mostrar si ya se mostró antes
+    if (localStorage.getItem(EMAIL_POPUP_KEY)) return;
+    
+    // Trigger 1: Después de 10 flashcards
+    if (EMAIL_TRIGGERS.flashcardsStudied >= 10) {
+        showEmailPopup();
+        return;
+    }
+    
+    // Trigger 2: Después de completar 1 quiz
+    if (EMAIL_TRIGGERS.quizzesCompleted >= 1) {
+        showEmailPopup();
+        return;
+    }
+    
+    // Trigger 3: Después de 5 minutos en la app
+    if (EMAIL_TRIGGERS.minutesInApp >= 5) {
+        showEmailPopup();
+        return;
+    }
 }
 
-// Interceptar envío del formulario de registro
+function showEmailPopup() {
+    var popup = document.getElementById('emailPopup');
+    if (popup && !localStorage.getItem(EMAIL_POPUP_KEY)) {
+        popup.classList.remove('hidden');
+        localStorage.setItem(EMAIL_POPUP_KEY, 'true');
+    }
+}
+
+function closeEmailPopup() {
+    var popup = document.getElementById('emailPopup');
+    if (popup) {
+        popup.classList.add('hidden');
+    }
+}
+
+// Contador de tiempo en app
+setInterval(function() {
+    EMAIL_TRIGGERS.minutesInApp += (1/60); // Incrementa cada segundo
+    checkEmailPopupTriggers();
+}, 1000);
+
+// Manejador del formulario de email
 document.addEventListener('DOMContentLoaded', function() {
-    var regForm = document.getElementById('regForm');
-    if (regForm) {
-        regForm.addEventListener('submit', function(e) {
-            var name = document.getElementById("regName").value.trim();
-            var email = document.getElementById("regEmail").value.trim();
-            
-            // Guardar en localStorage para acceso inmediato
-            var regData = { name: name, email: email, date: new Date().toISOString() };
-            localStorage.setItem(REG_KEY, JSON.stringify(regData));
-            
-            // Cerrar overlay de registro y mostrar versiones
-            document.getElementById("regOverlay").classList.add("hidden");
-            document.getElementById("vsOverlay").classList.remove("hidden");
-            renderVersionCards();
-            
-            // El formulario se enviará normalmente a FormSubmit en nueva pestaña
-            // El usuario completará el CAPTCHA allí
+    var emailForm = document.getElementById('emailForm');
+    if (emailForm) {
+        emailForm.addEventListener('submit', function(e) {
+            // El formulario se enviará a FormSubmit en nueva pestaña
+            setTimeout(function() {
+                closeEmailPopup();
+            }, 500);
         });
     }
 });
 
-function doRegister() {
-    // Esta función ya no se usa - el formulario HTML maneja todo
-    document.getElementById('regForm').submit();
-}
-
 function checkRegistration() {
-    var reg = isRegistered();
-    if (reg) {
-        document.getElementById("regOverlay").classList.add("hidden");
-        return true;
-    }
-    document.getElementById("regOverlay").classList.remove("hidden");
-    return false;
+    // Acceso directo - sin registro obligatorio
+    return true;
 }
 
 // ====== LEMONSQUEEZY INTEGRATION ======
@@ -16039,7 +16103,13 @@ function rateCard(rating){
     else if(rating===4){prog.interval=prog.interval===0?4:Math.round(prog.interval*prog.ef*1.3);prog.ef=Math.min(3.0,prog.ef+0.15);prog.next=Date.now()+prog.interval*DAY;prog.status='mastered'}
     prog.reviews++;setWordProgress(card.id,prog);state.totalAttempts++;
     if(isCorrect){state.correctAnswers++;if(isFirst)state.wordsLearned++}
-    addXP([0,2,5,10,15][rating]);if(rating===1){document.querySelector('.flashcard').classList.remove('flipped');return}vocabIndex++;displayCard()
+    addXP([0,2,5,10,15][rating]);
+    
+    // Trigger para popup de email
+    EMAIL_TRIGGERS.flashcardsStudied++;
+    checkEmailPopupTriggers();
+    
+    if(rating===1){document.querySelector('.flashcard').classList.remove('flipped');return}vocabIndex++;displayCard()
 }
 
 // QUIZ
@@ -16123,7 +16193,11 @@ function showQuizResults(){
     document.getElementById('resultWrong').textContent=quizQuestions.length-correct;
     document.getElementById('resultIcon').textContent=pct>=90?'🏆':pct>=70?'🎉':pct>=50?'👍':'💪';
     document.getElementById('resultTitle').textContent=pct>=90?'¡Perfecto!':pct>=70?'¡Muy bien!':pct>=50?'¡Buen esfuerzo!':'Sigue practicando';
-    addXP(quizScore)
+    addXP(quizScore);
+    
+    // Trigger para popup de email
+    EMAIL_TRIGGERS.quizzesCompleted++;
+    checkEmailPopupTriggers();
 }
 
 function resetQuiz(){
@@ -16169,7 +16243,7 @@ document.getElementById('resetDataBtn').addEventListener('click',()=>{if(confirm
 // INIT
 loadState();
 const totalWords=getAllWords('all').length;
-console.log('🎓 English Mastery V1 Básico');
+console.log('🎓 SpeakFast V1 Básico');
 console.log('📚 Total palabras:',totalWords);
 
 
