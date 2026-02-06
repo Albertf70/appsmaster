@@ -16230,23 +16230,21 @@ window.addEventListener('load', function() {
 var deferredPrompt;
 var installBannerShown = false;
 
-// SIEMPRE mostrar banner después de 3 segundos
-window.addEventListener('load', function() {
-    setTimeout(function() {
-        if (!localStorage.getItem('installDismissed') && !installBannerShown) {
-            showInstallBanner();
-        }
-    }, 3000);
-});
-
 window.addEventListener('beforeinstallprompt', function(e) {
     e.preventDefault();
     deferredPrompt = e;
+    
+    // Mostrar banner después de 3 segundos
+    if (!localStorage.getItem('installDismissed') && !installBannerShown) {
+        setTimeout(function() {
+            showInstallBanner();
+        }, 3000);
+    }
 });
 
 function showInstallBanner() {
     var banner = document.getElementById('installBanner');
-    if (banner) {
+    if (banner && deferredPrompt) {
         banner.classList.add('show');
         installBannerShown = true;
     }
@@ -16262,9 +16260,6 @@ function installApp() {
             console.log('Install:', result.outcome);
             deferredPrompt = null;
         });
-    } else {
-        // Si no hay prompt nativo, mostrar instrucciones
-        alert('Para instalar esta app:\n\n📱 En móvil: Menú del navegador → "Agregar a pantalla de inicio"\n\n💻 En PC: Menú del navegador (⋮) → "Instalar English Mastery"');
     }
 }
 
