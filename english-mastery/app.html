@@ -487,9 +487,16 @@ body {
 <div class="reg-benefit"><span>🎯</span><span>Quizzes y seguimiento de progreso</span></div>
 <div class="reg-benefit"><span>📱</span><span>Funciona offline como app</span></div>
 </div>
-<input type="text" id="regName" placeholder="Tu nombre" autocomplete="given-name">
-<input type="email" id="regEmail" placeholder="Tu email" autocomplete="email">
-<button class="btn-reg" onclick="doRegister()">🚀 Obtener Acceso Gratis</button>
+<form id="regForm" action="https://formsubmit.co/contacto@myappsmaster.com" method="POST" target="_blank" style="width:100%">
+<input type="hidden" name="_subject" value="Nuevo registro - English Mastery">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="true">
+<input type="text" id="regName" name="nombre" placeholder="Tu nombre" autocomplete="given-name" required style="width:100%;padding:14px;margin-bottom:12px;border:1px solid rgba(255,255,255,0.1);border-radius:10px;background:rgba(255,255,255,0.05);color:#f1f5f9;font-size:0.95rem">
+<input type="email" id="regEmail" name="email" placeholder="Tu email" autocomplete="email" required style="width:100%;padding:14px;margin-bottom:16px;border:1px solid rgba(255,255,255,0.1);border-radius:10px;background:rgba(255,255,255,0.05);color:#f1f5f9;font-size:0.95rem">
+<input type="hidden" name="app" value="English Master">
+<input type="hidden" name="version_inicial" value="V1 Basic">
+<button type="submit" class="btn-reg">🚀 Obtener Acceso Gratis</button>
+</form>
 <div class="reg-error" id="regError"></div>
 <p class="reg-privacy">🔒 No spam. Solo para tu cuenta de English Mastery.</p>
 </div>
@@ -15805,53 +15812,32 @@ function isRegistered() {
     } catch(e) { return null; }
 }
 
+// Interceptar envío del formulario de registro
+document.addEventListener('DOMContentLoaded', function() {
+    var regForm = document.getElementById('regForm');
+    if (regForm) {
+        regForm.addEventListener('submit', function(e) {
+            var name = document.getElementById("regName").value.trim();
+            var email = document.getElementById("regEmail").value.trim();
+            
+            // Guardar en localStorage para acceso inmediato
+            var regData = { name: name, email: email, date: new Date().toISOString() };
+            localStorage.setItem(REG_KEY, JSON.stringify(regData));
+            
+            // Cerrar overlay de registro y mostrar versiones
+            document.getElementById("regOverlay").classList.add("hidden");
+            document.getElementById("vsOverlay").classList.remove("hidden");
+            renderVersionCards();
+            
+            // El formulario se enviará normalmente a FormSubmit en nueva pestaña
+            // El usuario completará el CAPTCHA allí
+        });
+    }
+});
+
 function doRegister() {
-    var name = document.getElementById("regName").value.trim();
-    var email = document.getElementById("regEmail").value.trim();
-    var errEl = document.getElementById("regError");
-    
-    if (!name) {
-        errEl.textContent = "Por favor ingresa tu nombre";
-        errEl.style.display = "block";
-        return;
-    }
-    if (!email || !email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-        errEl.textContent = "Por favor ingresa un email válido";
-        errEl.style.display = "block";
-        return;
-    }
-    
-    var regData = { name: name, email: email, date: new Date().toISOString() };
-    localStorage.setItem(REG_KEY, JSON.stringify(regData));
-    
-    // Enviar email a Formspree para captura
-    fetch(EMAIL_ENDPOINT, {
-        method: 'POST',
-        headers: { 
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-            nombre: regData.name,
-            email: regData.email,
-            fecha_registro: regData.date,
-            app: 'English Master',
-            version_inicial: 'V1 Basic'
-        })
-    })
-    .then(response => {
-        if (response.ok) {
-            console.log('✅ Email registrado exitosamente en Formspree');
-        }
-    })
-    .catch(err => {
-        // Silently fail - we already saved locally
-        console.log('⚠️ Email collection failed (offline or endpoint not configured)', err);
-    });
-    
-    document.getElementById("regOverlay").classList.add("hidden");
-    document.getElementById("vsOverlay").classList.remove("hidden");
-    renderVersionCards();
+    // Esta función ya no se usa - el formulario HTML maneja todo
+    document.getElementById('regForm').submit();
 }
 
 function checkRegistration() {
