@@ -15761,7 +15761,22 @@ function pickVersion(v) {
     // Actualizar dropdown de Quiz (FIX: evita error "No hay suficientes palabras")
     var quizSel = document.getElementById("quizCategory");
     if (quizSel) quizSel.innerHTML = h;
+    
+    // RESET de las secciones activas al cambiar de versión
+    // Ocultar contenido activo y mostrar pantallas de setup
+    var vocabSetup = document.getElementById('vocabSetup');
+    var vocabCards = document.getElementById('vocabCards');
+    if (vocabSetup) vocabSetup.style.display = 'block';
+    if (vocabCards) vocabCards.style.display = 'none';
+    
+    var quizSetup = document.getElementById('quizSetup');
+    var quizActive = document.getElementById('quizActive');
+    if (quizSetup) quizSetup.style.display = 'block';
+    if (quizActive) quizActive.style.display = 'none';
+    
+    // Cerrar overlay de versiones
     document.getElementById("vsOverlay").classList.add("hidden");
+    
     if (typeof loadProgress === "function") loadProgress();
     if (typeof updateStats === "function") updateStats();
 }
