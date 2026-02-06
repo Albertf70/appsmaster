@@ -548,7 +548,7 @@ body {
         <button class="nav-btn active" data-section="vocab"><span>🎴</span><span>Vocabulario</span></button>
         <button class="nav-btn" data-section="quiz"><span>🎯</span><span>Quiz</span></button>
         <button class="nav-btn" data-section="progress"><span>📊</span><span>Progreso</span></button>
-        <button class="nav-btn" id="installBtn" style="display:none;"><span>📱</span><span>Instalar App</span></button>
+        <button class="nav-btn" id="installBtn"><span>📱</span><span>Instalar</span></button>
     </nav>
     <section class="section active" id="sec-vocab">
         <div id="vocabSetup">
@@ -16269,6 +16269,26 @@ function dismissInstallBanner() {
     if (banner) banner.classList.remove('show');
     localStorage.setItem('installDismissed', 'true');
 }
+
+// Install Button Click Handler
+document.addEventListener('DOMContentLoaded', function() {
+    var installBtn = document.getElementById('installBtn');
+    if (installBtn) {
+        installBtn.addEventListener('click', function() {
+            if (deferredPrompt) {
+                // Si hay prompt disponible, usarlo
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then(function(result) {
+                    console.log('Install:', result.outcome);
+                    deferredPrompt = null;
+                });
+            } else {
+                // Si no hay prompt, mostrar instrucciones
+                alert('Para instalar esta app:\n\n📱 En móvil: Usa el menú del navegador y selecciona "Agregar a pantalla de inicio" o "Instalar app"\n\n💻 En computadora: Busca el ícono de instalación en la barra de direcciones o usa el menú del navegador');
+            }
+        });
+    }
+});
 
 // Offline Detection
 window.addEventListener('online', function() {
