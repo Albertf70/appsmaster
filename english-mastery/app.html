@@ -15747,19 +15747,10 @@ function pickVersion(v) {
     document.querySelector(".logo").textContent = "English Mastery " + v.toUpperCase();
     document.querySelector(".tagline").textContent = info.level + " - " + info.words.toLocaleString() + " Palabras";
     
-    // Calcular total ACUMULADO de palabras hasta esta versión
+    // Calcular total de palabras de ESTA versión solamente (no acumulado)
     var total = 0;
-    var versionOrder = ["v1", "v2", "v3", "v4"];
-    var currentIndex = versionOrder.indexOf(v);
-    for (var i = 0; i <= currentIndex; i++) {
-        var vKey = versionOrder[i];
-        if (ALL_VOCAB[vKey]) {
-            var cats = Object.keys(ALL_VOCAB[vKey]);
-            cats.forEach(function(c) { total += ALL_VOCAB[vKey][c].length; });
-        }
-    }
-    
     var cats = Object.keys(VOCABULARY);
+    cats.forEach(function(c) { total += VOCABULARY[c].length; });
     var icons = {verbs:"🏃",nouns:"📦",adjectives:"🎨",phrases:"💬",phrasal:"🔗",thematic:"🌍",extra:"➕",expressions:"💬",complement:"✨",collocations:"🔄",corporate:"🏢",finance:"💰",marketing:"📢",negotiations:"🤝",meetings:"📋",emails:"✉️",hr:"👥",idioms:"💡"};
     var h = "<option value=\"all\">📚 Todas (" + total + ")</option>";
     cats.forEach(function(c) { h += "<option value=\"" + c + "\">" + (icons[c]||"📝") + " " + c.charAt(0).toUpperCase() + c.slice(1) + " (" + VOCABULARY[c].length + ")</option>"; });
