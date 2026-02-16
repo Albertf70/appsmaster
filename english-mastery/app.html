@@ -16293,8 +16293,8 @@ function generateQuiz(category){
 }
 
 function startQuiz(){
-    trackQuizStarted(currentActiveVersion, selectedCategory);
     const category=document.getElementById('quizCategory').value;
+    trackQuizStarted(currentActiveVersion, category);
     quizQuestions=generateQuiz(category);
     if(!quizQuestions.length){alert('No hay suficientes palabras. Selecciona otra categoría.');return}
     quizIndex=0;quizScore=0;quizAnswered=false;
