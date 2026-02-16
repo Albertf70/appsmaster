@@ -16063,11 +16063,16 @@ function checkRegistration() {
 var LEMONSQUEEZY_CHECKOUT_URL = "https://appsmaster.lemonsqueezy.com/checkout/buy/1d8e0569-1433-4d04-a6d3-26d6eb2399f8";
 
 function openLemonSqueezy() {
-    var reg = isRegistered();
     var checkoutUrl = LEMONSQUEEZY_CHECKOUT_URL;
-    if (reg && reg.email) {
-        checkoutUrl += "?checkout[email]=" + encodeURIComponent(reg.email) + "&checkout[name]=" + encodeURIComponent(reg.name);
-    }
+    try {
+        var reg = localStorage.getItem('sf_registration');
+        if (reg) {
+            reg = JSON.parse(reg);
+            if (reg && reg.email) {
+                checkoutUrl += "?checkout[email]=" + encodeURIComponent(reg.email) + "&checkout[name]=" + encodeURIComponent(reg.name || "");
+            }
+        }
+    } catch(e) {}
     trackPurchaseIntent('premium');
     window.location.href = checkoutUrl;
 }
@@ -16554,4 +16559,3 @@ if (document.referrer.includes('android-app://')) {
 </script>
 </body>
 </html>
-  
