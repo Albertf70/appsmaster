@@ -1,48 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
-            <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FMEEV58M8L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-FMEEV58M8L');
-</script>
-<!-- End Google Analytics -->
-<!-- SEO Metadata -->
-<title>Aprende Inglés - 15,000 Palabras A1 a C1 - SpeakFast</title>
-<meta name="description" content="App de inglés para hispanohablantes. 15,000 palabras, flashcards y quiz. Versión gratis disponible. 299 MXN/año sin anuncios.">
-<meta name="keywords" content="aprender inglés, vocabulario inglés, app inglés español, flashcards inglés, quiz inglés, A1 A2 B1 B2 C1, TOEFL, IELTS">
-
-<!-- Schema.org para Google -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "SpeakFast - Domina Inglés Rápido",
-  "operatingSystem": "Web",
-  "applicationCategory": "EducationalApplication",
-  "offers": {
-    "@type": "Offer",
-    "price": "299",
-    "priceCurrency": "MXN"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "8"
-  }
-}
-</script>            
-            
-    <meta property="og:image" content="https://myappsmaster.com/speakfast/assets/speakfast-og-image.png">    
-            
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpeakFast Pro — Domina el Inglés con 15,000 Palabras</title>
-    <meta name="description" content="Aprende inglés con 15,000 palabras organizadas en 4 niveles. Flashcards, quizzes, funciona offline. V1 Básico GRATIS.">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMEEV58M8L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FMEEV58M8L');
+    </script>
+    <!-- End Google Analytics -->
+    
+    <!-- SEO Metadata -->
+    <title>Aprende Inglés - 15,000 Palabras A1 a C1 - SpeakFast</title>
+    <meta name="description" content="App de inglés para hispanohablantes. 15,000 palabras, flashcards y quiz. Versión gratis disponible. 299 MXN/año sin anuncios.">
+    <meta name="keywords" content="aprender inglés, vocabulario inglés, app inglés español, flashcards inglés, quiz inglés, A1 A2 B1 B2 C1, TOEFL, IELTS">
     <meta name="theme-color" content="#0f0f1a">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="SpeakFast - Domina Inglés Rápido con 15,000 Palabras">
+    <meta property="og:description" content="App de inglés para hispanohablantes. 15,000 palabras, flashcards y quiz. Versión gratis disponible. 299 MXN/año.">
+    <meta property="og:image" content="https://myappsmaster.com/speakfast/assets/speakfast-og-image.png">
+    <meta property="og:url" content="https://myappsmaster.com/speakfast/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SpeakFast - Domina Inglés Rápido">
+    <meta name="twitter:description" content="15,000 palabras de inglés. A1 a C1. 299 MXN/año.">
+    <meta name="twitter:image" content="https://myappsmaster.com/speakfast/assets/speakfast-og-image.png">
+    
+    <!-- Schema.org para Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SpeakFast - Domina Inglés Rápido",
+      "operatingSystem": "Web",
+      "applicationCategory": "EducationalApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "299",
+        "priceCurrency": "MXN"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "8"
+      }
+    }
+    </script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -311,44 +322,6 @@
             transition: color 0.3s;
         }
         .footer-links a:hover { color: var(--text); }
-
-        /* Email Modal */
-        .modal-overlay {
-            position: fixed; inset: 0; background: rgba(0,0,0,0.7);
-            z-index: 1000; display: none; align-items: center; justify-content: center;
-            padding: 20px; backdrop-filter: blur(4px);
-        }
-        .modal-overlay.show { display: flex; }
-        .modal-box {
-            background: var(--bg-card); border: 1px solid var(--border);
-            border-radius: 20px; padding: 36px 28px;
-            max-width: 400px; width: 100%; text-align: center;
-        }
-        .modal-box h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; margin-bottom: 8px; }
-        .modal-box p { color: var(--text-dim); font-size: 0.88rem; margin-bottom: 20px; }
-        .modal-box input {
-            width: 100%; padding: 12px 16px; border-radius: 10px;
-            border: 1px solid var(--border); background: var(--bg-elevated);
-            color: var(--text); font-size: 0.95rem;
-            margin-bottom: 10px; outline: none;
-        }
-        .modal-box input:focus { border-color: var(--accent); }
-        .modal-box input::placeholder { color: var(--text-muted); }
-        .modal-box .btn-submit {
-            width: 100%; padding: 14px; border: none; border-radius: 12px;
-            background: linear-gradient(135deg, var(--accent), #7c3aed);
-            color: white; font-size: 1rem; font-weight: 700;
-            cursor: pointer; margin-top: 4px;
-        }
-        .modal-box .close-btn {
-            position: absolute; top: 16px; right: 16px;
-            background: none; border: none; color: var(--text-muted);
-            font-size: 1.3rem; cursor: pointer;
-        }
-        .modal-success { display: none; }
-        .modal-success.show { display: block; }
-        .modal-form.hide { display: none; }
-        .modal-privacy { color: var(--text-muted); font-size: 0.73rem; margin-top: 12px; }
 
         @media (max-width: 600px) {
             .hero { padding: 40px 0 30px; }
