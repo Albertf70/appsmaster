@@ -16069,7 +16069,7 @@ function openLemonSqueezy() {
         checkoutUrl += "?checkout[email]=" + encodeURIComponent(reg.email) + "&checkout[name]=" + encodeURIComponent(reg.name);
     }
     trackPurchaseIntent('premium');
-    window.open(checkoutUrl, "_blank");
+    window.location.href = checkoutUrl;
 }
 
 // Validar licencia de LemonSqueezy
@@ -16554,3 +16554,4 @@ if (document.referrer.includes('android-app://')) {
 </script>
 </body>
 </html>
+  
