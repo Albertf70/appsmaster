@@ -277,9 +277,9 @@ body::before { content:''; position:fixed; inset:0; background:radial-gradient(e
 .footer strong { background:var(--gradient-warm); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
 @media (max-width:400px) { html{font-size:16px} .word-main{font-size:1.8rem} .meaning-main{font-size:1.5rem} .flashcard-wrapper{height:320px} .stats-bar{grid-template-columns:repeat(2,1fr)} }
     
-.vs-overlay{position:fixed;inset:0;background:var(--bg-base);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;overflow-y:auto}
+.vs-overlay{position:fixed;inset:0;background:var(--bg-base);z-index:9999;display:flex;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto}
 .vs-overlay.hidden{display:none}
-.vs-box{max-width:420px;width:100%}
+.vs-box{max-width:420px;width:100%;margin:auto}
 .vs-title{font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;background:var(--gradient-warm);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-align:center;margin-bottom:6px}
 .vs-sub{text-align:center;font-size:0.8rem;color:var(--text-muted);margin-bottom:20px}
 .vs-stats{display:flex;justify-content:center;gap:32px;background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:14px;padding:16px;margin-bottom:20px}
