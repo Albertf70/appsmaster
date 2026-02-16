@@ -1,3 +1,4 @@
+<!-- FILE: index.html | LOCATION: /english-mastery/ | PAGE: Landing SpeakFast -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -19,6 +20,7 @@
     <meta name="description" content="App de inglés para hispanohablantes. 15,000 palabras, flashcards y quiz. Versión gratis disponible. 299 MXN/año sin anuncios.">
     <meta name="keywords" content="aprender inglés, vocabulario inglés, app inglés español, flashcards inglés, quiz inglés, A1 A2 B1 B2 C1, TOEFL, IELTS">
     <meta name="theme-color" content="#0f0f1a">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%230f0f1a' width='32' height='32' rx='6'/><text x='16' y='24' font-size='22' text-anchor='middle'>📚</text></svg>" type="image/svg+xml">
     
     <!-- Open Graph -->
     <meta property="og:title" content="SpeakFast - Domina Inglés Rápido con 15,000 Palabras">
@@ -88,24 +90,24 @@
         }
         .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
 
-        /* er */
-        .er {
+        /* Header */
+        .header {
             display: flex; align-items: center; justify-content: space-between;
             padding: 18px 0;
         }
-        .er-logo {
+        .header-logo {
             font-family: 'Space Grotesk', sans-serif;
             font-size: 1.1rem; font-weight: 700;
             color: var(--text-dim); text-decoration: none;
             transition: color 0.3s;
         }
-        .er-logo:hover { color: var(--text); }
-        .er-nav { display: flex; gap: 16px; align-items: center; }
-        .er-nav a {
+        .header-logo:hover { color: var(--text); }
+        .header-nav { display: flex; gap: 16px; align-items: center; }
+        .header-nav a {
             color: var(--text-muted); text-decoration: none; font-size: 0.85rem;
             font-weight: 500; transition: color 0.3s;
         }
-        .er-nav a:hover { color: var(--text); }
+        .header-nav a:hover { color: var(--text); }
         .btn-sm {
             padding: 10px 22px; border-radius: 8px; border: 2px solid var(--accent-light);
             background: var(--accent); color: #ffffff !important;
@@ -324,14 +326,24 @@
         .footer-links a:hover { color: var(--text); }
 
         @media (max-width: 600px) {
+            .container { padding: 0 16px; }
+            .header { gap: 8px; padding: 14px 0; }
+            .header-logo { font-size: 0.95rem; }
+            .header-nav { gap: 12px; }
+            .header-nav a:not(.btn-sm) { font-size: 0.8rem; }
+            .btn-sm { padding: 8px 16px; font-size: 0.8rem; }
             .hero { padding: 40px 0 30px; }
             .stats-row { grid-template-columns: repeat(2, 1fr); }
             .hero-cta { flex-direction: column; align-items: center; }
             .btn-big { width: 100%; justify-content: center; }
+            .versions-grid { grid-template-columns: repeat(2, 1fr); }
             footer { flex-direction: column; text-align: center; }
         }
+        @media (max-width: 380px) {
+            .header-nav a:not(.btn-sm) { display: none; }
+        }
     </style>
-</>
+</head>
 <body>
 
 <div class="container">
