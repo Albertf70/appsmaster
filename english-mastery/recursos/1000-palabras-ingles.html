@@ -1,348 +1,1191 @@
+<!-- FILE: 1000-palabras-ingles.html | LOCATION: /english-mastery/recursos/ | PAGE: Lead Magnet SEO -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1000 Palabras Más Comunes en Inglés - PDF Gratis | SpeakFast</title>
-    <meta name="description" content="Descarga gratis las 1000 palabras más usadas en inglés con traducción al español. Lista completa organizada por frecuencia de uso. PDF descargable.">
-    <meta name="keywords" content="1000 palabras inglés, vocabulario inglés español, palabras más comunes inglés, aprender inglés gratis, lista vocabulario inglés">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="1000 Palabras Más Comunes en Inglés - Gratis">
-    <meta property="og:description" content="Lista completa de las 1000 palabras más usadas en inglés con traducción al español. Descarga gratis.">
-    <meta property="og:type" content="article">
+    <title>1000 Palabras Más Comunes en Inglés con Traducción - Gratis | SpeakFast</title>
+    <meta name="description" content="Lista completa de las 1000 palabras más usadas en inglés con traducción al español. Organizadas por frecuencia. Descarga gratis como PDF.">
+    <meta name="keywords" content="1000 palabras en inglés, vocabulario inglés español, palabras más comunes inglés, lista palabras inglés, aprender inglés vocabulario, inglés básico">
+    <meta name="theme-color" content="#0f0f1a">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%230f0f1a' width='32' height='32' rx='6'/><text x='16' y='24' font-size='22' text-anchor='middle'>📚</text></svg>" type="image/svg+xml">
+    <meta property="og:title" content="1000 Palabras Más Comunes en Inglés - Lista Gratis">
+    <meta property="og:description" content="Descarga gratis las 1000 palabras más usadas en inglés con traducción al español.">
     <meta property="og:url" content="https://myappsmaster.com/english-mastery/recursos/1000-palabras-ingles.html">
+    <meta property="og:type" content="article">
+    <link rel="canonical" href="https://myappsmaster.com/english-mastery/recursos/1000-palabras-ingles.html">
     
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMEEV58M8L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FMEEV58M8L');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg:#0f0f1a; --card:#171728; --accent:#6366f1; --accent-l:#818cf8; --green:#22c55e; --text:#f1f5f9; --dim:#94a3b8; --muted:#64748b; --border:rgba(99,102,241,0.15); }
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+        .container{max-width:860px;margin:0 auto;padding:0 24px}
         
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
+        /* Header */
+        .page-header{text-align:center;padding:50px 0 30px}
+        .page-header h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;margin-bottom:12px}
+        .page-header h1 .grad{background:linear-gradient(135deg,var(--accent-l),#a78bfa,var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .page-header p{color:var(--dim);max-width:540px;margin:0 auto 24px;font-size:0.95rem}
+        .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:16px}
+        .breadcrumb a{color:var(--accent-l);text-decoration:none}
+        
+        /* CTA Buttons */
+        .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+        .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:12px;border:none;font-size:0.9rem;font-weight:700;text-decoration:none;cursor:pointer;transition:all 0.3s}
+        .btn-primary{background:linear-gradient(135deg,var(--accent),#7c3aed);color:#fff}
+        .btn-secondary{background:var(--card);color:var(--dim);border:1px solid var(--border)}
+        .btn:hover{transform:translateY(-2px)}
+        
+        /* Word Table */
+        .section-label{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:700;margin:40px 0 16px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+        .word-table{width:100%;border-collapse:collapse;margin-bottom:32px}
+        .word-table th{text-align:left;padding:10px 12px;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid var(--border)}
+        .word-table td{padding:8px 12px;font-size:0.88rem;border-bottom:1px solid rgba(255,255,255,0.04)}
+        .word-table tr:hover{background:rgba(99,102,241,0.05)}
+        .word-table .num{color:var(--muted);font-size:0.78rem;width:40px}
+        .word-table .en{font-weight:600;color:var(--accent-l)}
+        .word-table .es{color:var(--dim)}
+        
+        /* Sticky CTA */
+        .sticky-cta{position:sticky;bottom:0;background:linear-gradient(to top,var(--bg) 60%,transparent);padding:20px 0 16px;text-align:center;z-index:10}
+        .sticky-cta .btn{box-shadow:0 4px 20px rgba(99,102,241,0.3)}
+        
+        /* Footer */
+        .page-footer{text-align:center;padding:40px 0;border-top:1px solid var(--border);color:var(--muted);font-size:0.8rem;margin-top:40px}
+        .page-footer a{color:var(--accent-l);text-decoration:none}
+        
+        /* Print */
+        @media print{
+            body{background:#fff;color:#000}
+            .sticky-cta,.cta-row,.no-print{display:none!important}
+            .word-table .en{color:#1e40af}
+            .word-table td,.word-table th{border-bottom:1px solid #ddd}
+            .page-header h1 .grad{-webkit-text-fill-color:#1e40af}
         }
-        
-        /* NO PRINT - Solo web */
-        .no-print {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        
-        .no-print h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .no-print p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin-bottom: 30px;
-        }
-        
-        .btn-container {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .btn {
-            padding: 15px 30px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: transform 0.2s;
-        }
-        
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-        
-        .btn-primary {
-            background: #22c55e;
-            color: white;
-        }
-        
-        .btn-secondary {
-            background: white;
-            color: #667eea;
-        }
-        
-        /* CONTAINER */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-        }
-        
-        /* PRINT - Header para PDF */
-        .print-header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #667eea;
-        }
-        
-        .print-header h1 {
-            color: #667eea;
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-        
-        .print-header p {
-            color: #666;
-            font-size: 0.95rem;
-        }
-        
-        /* WORD TABLE */
-        .words-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 8px;
-            margin-top: 30px;
-        }
-        
-        .word-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 8px 12px;
-            border-bottom: 1px solid #e5e7eb;
-            font-size: 0.9rem;
-        }
-        
-        .word-item:nth-child(even) {
-            background: #f9fafb;
-        }
-        
-        .word-en {
-            font-weight: 600;
-            color: #1f2937;
-        }
-        
-        .word-es {
-            color: #6b7280;
-        }
-        
-        /* SECTION HEADERS */
-        .section {
-            margin-top: 40px;
-            page-break-inside: avoid;
-        }
-        
-        .section h2 {
-            color: #667eea;
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #e5e7eb;
-        }
-        
-        /* PRINT STYLES */
-        @media print {
-            body {
-                background: white;
-            }
-            
-            .no-print {
-                display: none !important;
-            }
-            
-            .container {
-                padding: 20px;
-                max-width: 100%;
-            }
-            
-            .words-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 4px;
-            }
-            
-            .word-item {
-                font-size: 8pt;
-                padding: 4px 8px;
-            }
-            
-            .section {
-                page-break-inside: avoid;
-            }
-            
-            h2 {
-                page-break-after: avoid;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .words-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .no-print h1 {
-                font-size: 1.8rem;
-            }
+        @media(max-width:600px){
+            .word-table{font-size:0.82rem}
+            .word-table td,.word-table th{padding:6px 8px}
         }
     </style>
 </head>
 <body>
-
-<!-- HEADER WEB (no se imprime) -->
-<div class="no-print">
-    <h1>📚 1000 Palabras Más Comunes en Inglés</h1>
-    <p>Lista completa con traducción al español • Descarga gratis en PDF</p>
-    <div class="btn-container">
-        <button onclick="window.print()" class="btn btn-primary">📄 Descargar PDF</button>
-        <a href="/english-mastery/" class="btn btn-secondary">🚀 Descargar SpeakFast App</a>
-    </div>
-</div>
-
-<!-- CONTENT (se imprime) -->
 <div class="container">
-    <!-- HEADER PRINT -->
-    <div class="print-header">
-        <h1>1000 Palabras Más Comunes en Inglés</h1>
-        <p>Organizado por frecuencia de uso • Inglés → Español</p>
-        <p style="font-size:0.85rem; margin-top:10px;">🚀 Descarga SpeakFast para aprender todas estas palabras con flashcards y quizzes<br>myappsmaster.com/english-mastery</p>
-    </div>
+    <nav class="breadcrumb no-print">
+        <a href="/">AppsMaster</a> → <a href="/english-mastery/">SpeakFast</a> → 1000 Palabras
+    </nav>
     
-    <!-- SECTION 1-100 -->
-    <div class="section">
-        <h2>Palabras 1-100 (Las Más Esenciales)</h2>
-        <div class="words-grid">
-            <div class="word-item"><span class="word-en">the</span><span class="word-es">el/la/los/las</span></div>
-            <div class="word-item"><span class="word-en">be</span><span class="word-es">ser/estar</span></div>
-            <div class="word-item"><span class="word-en">to</span><span class="word-es">a/para</span></div>
-            <div class="word-item"><span class="word-en">of</span><span class="word-es">de</span></div>
-            <div class="word-item"><span class="word-en">and</span><span class="word-es">y</span></div>
-            <div class="word-item"><span class="word-en">a</span><span class="word-es">un/una</span></div>
-            <div class="word-item"><span class="word-en">in</span><span class="word-es">en</span></div>
-            <div class="word-item"><span class="word-en">that</span><span class="word-es">que/ese</span></div>
-            <div class="word-item"><span class="word-en">have</span><span class="word-es">tener</span></div>
-            <div class="word-item"><span class="word-en">I</span><span class="word-es">yo</span></div>
-            <div class="word-item"><span class="word-en">it</span><span class="word-es">eso/lo</span></div>
-            <div class="word-item"><span class="word-en">for</span><span class="word-es">para/por</span></div>
-            <div class="word-item"><span class="word-en">not</span><span class="word-es">no</span></div>
-            <div class="word-item"><span class="word-en">on</span><span class="word-es">en/sobre</span></div>
-            <div class="word-item"><span class="word-en">with</span><span class="word-es">con</span></div>
-            <div class="word-item"><span class="word-en">he</span><span class="word-es">él</span></div>
-            <div class="word-item"><span class="word-en">as</span><span class="word-es">como</span></div>
-            <div class="word-item"><span class="word-en">you</span><span class="word-es">tú/usted</span></div>
-            <div class="word-item"><span class="word-en">do</span><span class="word-es">hacer</span></div>
-            <div class="word-item"><span class="word-en">at</span><span class="word-es">en/a</span></div>
-            <div class="word-item"><span class="word-en">this</span><span class="word-es">esto/este</span></div>
-            <div class="word-item"><span class="word-en">but</span><span class="word-es">pero</span></div>
-            <div class="word-item"><span class="word-en">his</span><span class="word-es">su (de él)</span></div>
-            <div class="word-item"><span class="word-en">by</span><span class="word-es">por</span></div>
-            <div class="word-item"><span class="word-en">from</span><span class="word-es">de/desde</span></div>
-            <div class="word-item"><span class="word-en">they</span><span class="word-es">ellos/ellas</span></div>
-            <div class="word-item"><span class="word-en">we</span><span class="word-es">nosotros</span></div>
-            <div class="word-item"><span class="word-en">say</span><span class="word-es">decir</span></div>
-            <div class="word-item"><span class="word-en">her</span><span class="word-es">su/ella</span></div>
-            <div class="word-item"><span class="word-en">she</span><span class="word-es">ella</span></div>
-            <div class="word-item"><span class="word-en">or</span><span class="word-es">o</span></div>
-            <div class="word-item"><span class="word-en">an</span><span class="word-es">un/una</span></div>
-            <div class="word-item"><span class="word-en">will</span><span class="word-es">voluntad/futuro</span></div>
-            <div class="word-item"><span class="word-en">my</span><span class="word-es">mi</span></div>
-            <div class="word-item"><span class="word-en">one</span><span class="word-es">uno</span></div>
-            <div class="word-item"><span class="word-en">all</span><span class="word-es">todo</span></div>
-            <div class="word-item"><span class="word-en">would</span><span class="word-es">condicional</span></div>
-            <div class="word-item"><span class="word-en">there</span><span class="word-es">allí/hay</span></div>
-            <div class="word-item"><span class="word-en">their</span><span class="word-es">su (de ellos)</span></div>
-            <div class="word-item"><span class="word-en">what</span><span class="word-es">qué</span></div>
-            <div class="word-item"><span class="word-en">so</span><span class="word-es">tan/así</span></div>
-            <div class="word-item"><span class="word-en">up</span><span class="word-es">arriba</span></div>
-            <div class="word-item"><span class="word-en">out</span><span class="word-es">fuera</span></div>
-            <div class="word-item"><span class="word-en">if</span><span class="word-es">si</span></div>
-            <div class="word-item"><span class="word-en">about</span><span class="word-es">acerca de</span></div>
-            <div class="word-item"><span class="word-en">who</span><span class="word-es">quién</span></div>
-            <div class="word-item"><span class="word-en">get</span><span class="word-es">obtener</span></div>
-            <div class="word-item"><span class="word-en">which</span><span class="word-es">cuál</span></div>
-            <div class="word-item"><span class="word-en">go</span><span class="word-es">ir</span></div>
-            <div class="word-item"><span class="word-en">me</span><span class="word-es">me/mí</span></div>
-            <div class="word-item"><span class="word-en">when</span><span class="word-es">cuándo</span></div>
-            <div class="word-item"><span class="word-en">make</span><span class="word-es">hacer</span></div>
-            <div class="word-item"><span class="word-en">can</span><span class="word-es">poder</span></div>
-            <div class="word-item"><span class="word-en">like</span><span class="word-es">gustar/como</span></div>
-            <div class="word-item"><span class="word-en">time</span><span class="word-es">tiempo</span></div>
-            <div class="word-item"><span class="word-en">no</span><span class="word-es">no</span></div>
-            <div class="word-item"><span class="word-en">just</span><span class="word-es">solo/justo</span></div>
-            <div class="word-item"><span class="word-en">him</span><span class="word-es">él/lo</span></div>
-            <div class="word-item"><span class="word-en">know</span><span class="word-es">saber/conocer</span></div>
-            <div class="word-item"><span class="word-en">take</span><span class="word-es">tomar</span></div>
-            <div class="word-item"><span class="word-en">people</span><span class="word-es">gente</span></div>
-            <div class="word-item"><span class="word-en">into</span><span class="word-es">dentro de</span></div>
-            <div class="word-item"><span class="word-en">year</span><span class="word-es">año</span></div>
-            <div class="word-item"><span class="word-en">your</span><span class="word-es">tu/su</span></div>
-            <div class="word-item"><span class="word-en">good</span><span class="word-es">bueno</span></div>
-            <div class="word-item"><span class="word-en">some</span><span class="word-es">algo/alguno</span></div>
-            <div class="word-item"><span class="word-en">could</span><span class="word-es">podría</span></div>
-            <div class="word-item"><span class="word-en">them</span><span class="word-es">ellos/les</span></div>
-            <div class="word-item"><span class="word-en">see</span><span class="word-es">ver</span></div>
-            <div class="word-item"><span class="word-en">other</span><span class="word-es">otro</span></div>
-            <div class="word-item"><span class="word-en">than</span><span class="word-es">que/de</span></div>
-            <div class="word-item"><span class="word-en">then</span><span class="word-es">entonces</span></div>
-            <div class="word-item"><span class="word-en">now</span><span class="word-es">ahora</span></div>
-            <div class="word-item"><span class="word-en">look</span><span class="word-es">mirar</span></div>
-            <div class="word-item"><span class="word-en">only</span><span class="word-es">solo</span></div>
-            <div class="word-item"><span class="word-en">come</span><span class="word-es">venir</span></div>
-            <div class="word-item"><span class="word-en">its</span><span class="word-es">su (de eso)</span></div>
-            <div class="word-item"><span class="word-en">over</span><span class="word-es">sobre/encima</span></div>
-            <div class="word-item"><span class="word-en">think</span><span class="word-es">pensar</span></div>
-            <div class="word-item"><span class="word-en">also</span><span class="word-es">también</span></div>
-            <div class="word-item"><span class="word-en">back</span><span class="word-es">atrás</span></div>
-            <div class="word-item"><span class="word-en">after</span><span class="word-es">después</span></div>
-            <div class="word-item"><span class="word-en">use</span><span class="word-es">usar</span></div>
-            <div class="word-item"><span class="word-en">two</span><span class="word-es">dos</span></div>
-            <div class="word-item"><span class="word-en">how</span><span class="word-es">cómo</span></div>
-            <div class="word-item"><span class="word-en">our</span><span class="word-es">nuestro</span></div>
-            <div class="word-item"><span class="word-en">work</span><span class="word-es">trabajo/trabajar</span></div>
-            <div class="word-item"><span class="word-en">first</span><span class="word-es">primero</span></div>
-            <div class="word-item"><span class="word-en">well</span><span class="word-es">bien</span></div>
-            <div class="word-item"><span class="word-en">way</span><span class="word-es">camino/manera</span></div>
-            <div class="word-item"><span class="word-en">even</span><span class="word-es">incluso</span></div>
-            <div class="word-item"><span class="word-en">new</span><span class="word-es">nuevo</span></div>
-            <div class="word-item"><span class="word-en">want</span><span class="word-es">querer</span></div>
-            <div class="word-item"><span class="word-en">because</span><span class="word-es">porque</span></div>
-            <div class="word-item"><span class="word-en">any</span><span class="word-es">cualquier</span></div>
-            <div class="word-item"><span class="word-en">these</span><span class="word-es">estos</span></div>
-            <div class="word-item"><span class="word-en">give</span><span class="word-es">dar</span></div>
-            <div class="word-item"><span class="word-en">day</span><span class="word-es">día</span></div>
-            <div class="word-item"><span class="word-en">most</span><span class="word-es">la mayoría</span></div>
-            <div class="word-item"><span class="word-en">us</span><span class="word-es">nosotros</span></div>
+    <header class="page-header">
+        <h1>Las <span class="grad">1000 Palabras</span> Más Comunes en Inglés</h1>
+        <p>Lista completa con traducción al español, organizadas por frecuencia de uso. Estas palabras representan ~85% del inglés cotidiano.</p>
+    </header>
+    
+    <div class="cta-row no-print">
+        <button class="btn btn-secondary" onclick="window.print()">📄 Descargar PDF</button>
+        <a href="/english-mastery/app.html" class="btn btn-primary">🚀 Aprender con SpeakFast</a>
+    </div>
+
+
+    <h2 class="section-label">📖 Palabras 1 - 100</h2>
+    <table class="word-table">
+        <thead><tr><th>#</th><th>Inglés</th><th>Español</th></tr></thead>
+        <tbody>
+        <tr><td class="num">1</td><td class="en">the</td><td class="es">el/la</td></tr>
+        <tr><td class="num">2</td><td class="en">be</td><td class="es">ser/estar</td></tr>
+        <tr><td class="num">3</td><td class="en">to</td><td class="es">a/para</td></tr>
+        <tr><td class="num">4</td><td class="en">of</td><td class="es">de</td></tr>
+        <tr><td class="num">5</td><td class="en">and</td><td class="es">y</td></tr>
+        <tr><td class="num">6</td><td class="en">a</td><td class="es">un/una</td></tr>
+        <tr><td class="num">7</td><td class="en">in</td><td class="es">en</td></tr>
+        <tr><td class="num">8</td><td class="en">that</td><td class="es">que/eso</td></tr>
+        <tr><td class="num">9</td><td class="en">have</td><td class="es">tener</td></tr>
+        <tr><td class="num">10</td><td class="en">I</td><td class="es">yo</td></tr>
+        <tr><td class="num">11</td><td class="en">it</td><td class="es">ello</td></tr>
+        <tr><td class="num">12</td><td class="en">for</td><td class="es">para/por</td></tr>
+        <tr><td class="num">13</td><td class="en">not</td><td class="es">no</td></tr>
+        <tr><td class="num">14</td><td class="en">on</td><td class="es">en/sobre</td></tr>
+        <tr><td class="num">15</td><td class="en">with</td><td class="es">con</td></tr>
+        <tr><td class="num">16</td><td class="en">he</td><td class="es">él</td></tr>
+        <tr><td class="num">17</td><td class="en">as</td><td class="es">como</td></tr>
+        <tr><td class="num">18</td><td class="en">you</td><td class="es">tú/usted</td></tr>
+        <tr><td class="num">19</td><td class="en">do</td><td class="es">hacer</td></tr>
+        <tr><td class="num">20</td><td class="en">at</td><td class="es">en</td></tr>
+        <tr><td class="num">21</td><td class="en">this</td><td class="es">esto</td></tr>
+        <tr><td class="num">22</td><td class="en">but</td><td class="es">pero</td></tr>
+        <tr><td class="num">23</td><td class="en">his</td><td class="es">su (de él)</td></tr>
+        <tr><td class="num">24</td><td class="en">by</td><td class="es">por</td></tr>
+        <tr><td class="num">25</td><td class="en">from</td><td class="es">de/desde</td></tr>
+        <tr><td class="num">26</td><td class="en">they</td><td class="es">ellos</td></tr>
+        <tr><td class="num">27</td><td class="en">we</td><td class="es">nosotros</td></tr>
+        <tr><td class="num">28</td><td class="en">say</td><td class="es">decir</td></tr>
+        <tr><td class="num">29</td><td class="en">her</td><td class="es">su (de ella)</td></tr>
+        <tr><td class="num">30</td><td class="en">she</td><td class="es">ella</td></tr>
+        <tr><td class="num">31</td><td class="en">or</td><td class="es">o</td></tr>
+        <tr><td class="num">32</td><td class="en">an</td><td class="es">un/una</td></tr>
+        <tr><td class="num">33</td><td class="en">will</td><td class="es">voluntad/futuro</td></tr>
+        <tr><td class="num">34</td><td class="en">my</td><td class="es">mi</td></tr>
+        <tr><td class="num">35</td><td class="en">one</td><td class="es">uno</td></tr>
+        <tr><td class="num">36</td><td class="en">all</td><td class="es">todo</td></tr>
+        <tr><td class="num">37</td><td class="en">would</td><td class="es">haría</td></tr>
+        <tr><td class="num">38</td><td class="en">there</td><td class="es">ahí/allí</td></tr>
+        <tr><td class="num">39</td><td class="en">their</td><td class="es">su (de ellos)</td></tr>
+        <tr><td class="num">40</td><td class="en">what</td><td class="es">qué</td></tr>
+        <tr><td class="num">41</td><td class="en">so</td><td class="es">así/entonces</td></tr>
+        <tr><td class="num">42</td><td class="en">up</td><td class="es">arriba</td></tr>
+        <tr><td class="num">43</td><td class="en">out</td><td class="es">fuera</td></tr>
+        <tr><td class="num">44</td><td class="en">if</td><td class="es">si</td></tr>
+        <tr><td class="num">45</td><td class="en">about</td><td class="es">sobre/acerca de</td></tr>
+        <tr><td class="num">46</td><td class="en">who</td><td class="es">quién</td></tr>
+        <tr><td class="num">47</td><td class="en">get</td><td class="es">obtener</td></tr>
+        <tr><td class="num">48</td><td class="en">which</td><td class="es">cuál</td></tr>
+        <tr><td class="num">49</td><td class="en">go</td><td class="es">ir</td></tr>
+        <tr><td class="num">50</td><td class="en">me</td><td class="es">me/mí</td></tr>
+        <tr><td class="num">51</td><td class="en">when</td><td class="es">cuándo</td></tr>
+        <tr><td class="num">52</td><td class="en">make</td><td class="es">hacer/fabricar</td></tr>
+        <tr><td class="num">53</td><td class="en">can</td><td class="es">poder</td></tr>
+        <tr><td class="num">54</td><td class="en">like</td><td class="es">gustar/como</td></tr>
+        <tr><td class="num">55</td><td class="en">time</td><td class="es">tiempo</td></tr>
+        <tr><td class="num">56</td><td class="en">no</td><td class="es">no</td></tr>
+        <tr><td class="num">57</td><td class="en">just</td><td class="es">solo/justo</td></tr>
+        <tr><td class="num">58</td><td class="en">him</td><td class="es">él/lo</td></tr>
+        <tr><td class="num">59</td><td class="en">know</td><td class="es">saber/conocer</td></tr>
+        <tr><td class="num">60</td><td class="en">take</td><td class="es">tomar</td></tr>
+        <tr><td class="num">61</td><td class="en">people</td><td class="es">gente/personas</td></tr>
+        <tr><td class="num">62</td><td class="en">into</td><td class="es">dentro de</td></tr>
+        <tr><td class="num">63</td><td class="en">year</td><td class="es">año</td></tr>
+        <tr><td class="num">64</td><td class="en">your</td><td class="es">tu/su</td></tr>
+        <tr><td class="num">65</td><td class="en">good</td><td class="es">bueno</td></tr>
+        <tr><td class="num">66</td><td class="en">some</td><td class="es">algunos</td></tr>
+        <tr><td class="num">67</td><td class="en">could</td><td class="es">podría</td></tr>
+        <tr><td class="num">68</td><td class="en">them</td><td class="es">ellos/los</td></tr>
+        <tr><td class="num">69</td><td class="en">see</td><td class="es">ver</td></tr>
+        <tr><td class="num">70</td><td class="en">other</td><td class="es">otro</td></tr>
+        <tr><td class="num">71</td><td class="en">than</td><td class="es">que (comparativo)</td></tr>
+        <tr><td class="num">72</td><td class="en">then</td><td class="es">entonces</td></tr>
+        <tr><td class="num">73</td><td class="en">now</td><td class="es">ahora</td></tr>
+        <tr><td class="num">74</td><td class="en">look</td><td class="es">mirar</td></tr>
+        <tr><td class="num">75</td><td class="en">only</td><td class="es">solo/únicamente</td></tr>
+        <tr><td class="num">76</td><td class="en">come</td><td class="es">venir</td></tr>
+        <tr><td class="num">77</td><td class="en">its</td><td class="es">su (de ello)</td></tr>
+        <tr><td class="num">78</td><td class="en">over</td><td class="es">sobre/encima</td></tr>
+        <tr><td class="num">79</td><td class="en">think</td><td class="es">pensar</td></tr>
+        <tr><td class="num">80</td><td class="en">also</td><td class="es">también</td></tr>
+        <tr><td class="num">81</td><td class="en">back</td><td class="es">atrás/espalda</td></tr>
+        <tr><td class="num">82</td><td class="en">after</td><td class="es">después</td></tr>
+        <tr><td class="num">83</td><td class="en">use</td><td class="es">usar</td></tr>
+        <tr><td class="num">84</td><td class="en">two</td><td class="es">dos</td></tr>
+        <tr><td class="num">85</td><td class="en">how</td><td class="es">cómo</td></tr>
+        <tr><td class="num">86</td><td class="en">our</td><td class="es">nuestro</td></tr>
+        <tr><td class="num">87</td><td class="en">work</td><td class="es">trabajo/trabajar</td></tr>
+        <tr><td class="num">88</td><td class="en">first</td><td class="es">primero</td></tr>
+        <tr><td class="num">89</td><td class="en">well</td><td class="es">bien/pozo</td></tr>
+        <tr><td class="num">90</td><td class="en">way</td><td class="es">camino/manera</td></tr>
+        <tr><td class="num">91</td><td class="en">even</td><td class="es">incluso/par</td></tr>
+        <tr><td class="num">92</td><td class="en">new</td><td class="es">nuevo</td></tr>
+        <tr><td class="num">93</td><td class="en">want</td><td class="es">querer</td></tr>
+        <tr><td class="num">94</td><td class="en">because</td><td class="es">porque</td></tr>
+        <tr><td class="num">95</td><td class="en">any</td><td class="es">cualquier</td></tr>
+        <tr><td class="num">96</td><td class="en">these</td><td class="es">estos</td></tr>
+        <tr><td class="num">97</td><td class="en">give</td><td class="es">dar</td></tr>
+        <tr><td class="num">98</td><td class="en">day</td><td class="es">día</td></tr>
+        <tr><td class="num">99</td><td class="en">most</td><td class="es">más/mayoría</td></tr>
+        <tr><td class="num">100</td><td class="en">us</td><td class="es">nos/nosotros</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-label">📖 Palabras 101 - 200</h2>
+    <table class="word-table">
+        <thead><tr><th>#</th><th>Inglés</th><th>Español</th></tr></thead>
+        <tbody>
+        <tr><td class="num">101</td><td class="en">great</td><td class="es">genial/grande</td></tr>
+        <tr><td class="num">102</td><td class="en">between</td><td class="es">entre</td></tr>
+        <tr><td class="num">103</td><td class="en">need</td><td class="es">necesitar</td></tr>
+        <tr><td class="num">104</td><td class="en">large</td><td class="es">grande</td></tr>
+        <tr><td class="num">105</td><td class="en">under</td><td class="es">debajo</td></tr>
+        <tr><td class="num">106</td><td class="en">never</td><td class="es">nunca</td></tr>
+        <tr><td class="num">107</td><td class="en">each</td><td class="es">cada</td></tr>
+        <tr><td class="num">108</td><td class="en">right</td><td class="es">derecho/correcto</td></tr>
+        <tr><td class="num">109</td><td class="en">last</td><td class="es">último</td></tr>
+        <tr><td class="num">110</td><td class="en">own</td><td class="es">propio</td></tr>
+        <tr><td class="num">111</td><td class="en">old</td><td class="es">viejo</td></tr>
+        <tr><td class="num">112</td><td class="en">still</td><td class="es">todavía/quieto</td></tr>
+        <tr><td class="num">113</td><td class="en">find</td><td class="es">encontrar</td></tr>
+        <tr><td class="num">114</td><td class="en">here</td><td class="es">aquí</td></tr>
+        <tr><td class="num">115</td><td class="en">thing</td><td class="es">cosa</td></tr>
+        <tr><td class="num">116</td><td class="en">many</td><td class="es">muchos</td></tr>
+        <tr><td class="num">117</td><td class="en">long</td><td class="es">largo</td></tr>
+        <tr><td class="num">118</td><td class="en">tell</td><td class="es">decir/contar</td></tr>
+        <tr><td class="num">119</td><td class="en">ask</td><td class="es">preguntar</td></tr>
+        <tr><td class="num">120</td><td class="en">world</td><td class="es">mundo</td></tr>
+        <tr><td class="num">121</td><td class="en">very</td><td class="es">muy</td></tr>
+        <tr><td class="num">122</td><td class="en">much</td><td class="es">mucho</td></tr>
+        <tr><td class="num">123</td><td class="en">hand</td><td class="es">mano</td></tr>
+        <tr><td class="num">124</td><td class="en">high</td><td class="es">alto</td></tr>
+        <tr><td class="num">125</td><td class="en">keep</td><td class="es">mantener/guardar</td></tr>
+        <tr><td class="num">126</td><td class="en">place</td><td class="es">lugar</td></tr>
+        <tr><td class="num">127</td><td class="en">start</td><td class="es">empezar</td></tr>
+        <tr><td class="num">128</td><td class="en">where</td><td class="es">dónde</td></tr>
+        <tr><td class="num">129</td><td class="en">too</td><td class="es">también/demasiado</td></tr>
+        <tr><td class="num">130</td><td class="en">before</td><td class="es">antes</td></tr>
+        <tr><td class="num">131</td><td class="en">must</td><td class="es">deber</td></tr>
+        <tr><td class="num">132</td><td class="en">through</td><td class="es">a través de</td></tr>
+        <tr><td class="num">133</td><td class="en">change</td><td class="es">cambiar/cambio</td></tr>
+        <tr><td class="num">134</td><td class="en">big</td><td class="es">grande</td></tr>
+        <tr><td class="num">135</td><td class="en">move</td><td class="es">mover</td></tr>
+        <tr><td class="num">136</td><td class="en">home</td><td class="es">hogar/casa</td></tr>
+        <tr><td class="num">137</td><td class="en">small</td><td class="es">pequeño</td></tr>
+        <tr><td class="num">138</td><td class="en">end</td><td class="es">fin/terminar</td></tr>
+        <tr><td class="num">139</td><td class="en">show</td><td class="es">mostrar/espectáculo</td></tr>
+        <tr><td class="num">140</td><td class="en">try</td><td class="es">intentar</td></tr>
+        <tr><td class="num">141</td><td class="en">head</td><td class="es">cabeza</td></tr>
+        <tr><td class="num">142</td><td class="en">turn</td><td class="es">girar/turno</td></tr>
+        <tr><td class="num">143</td><td class="en">play</td><td class="es">jugar/tocar</td></tr>
+        <tr><td class="num">144</td><td class="en">run</td><td class="es">correr</td></tr>
+        <tr><td class="num">145</td><td class="en">close</td><td class="es">cerrar/cerca</td></tr>
+        <tr><td class="num">146</td><td class="en">help</td><td class="es">ayudar/ayuda</td></tr>
+        <tr><td class="num">147</td><td class="en">house</td><td class="es">casa</td></tr>
+        <tr><td class="num">148</td><td class="en">number</td><td class="es">número</td></tr>
+        <tr><td class="num">149</td><td class="en">night</td><td class="es">noche</td></tr>
+        <tr><td class="num">150</td><td class="en">point</td><td class="es">punto</td></tr>
+        <tr><td class="num">151</td><td class="en">live</td><td class="es">vivir</td></tr>
+        <tr><td class="num">152</td><td class="en">school</td><td class="es">escuela</td></tr>
+        <tr><td class="num">153</td><td class="en">city</td><td class="es">ciudad</td></tr>
+        <tr><td class="num">154</td><td class="en">family</td><td class="es">familia</td></tr>
+        <tr><td class="num">155</td><td class="en">water</td><td class="es">agua</td></tr>
+        <tr><td class="num">156</td><td class="en">open</td><td class="es">abrir/abierto</td></tr>
+        <tr><td class="num">157</td><td class="en">story</td><td class="es">historia</td></tr>
+        <tr><td class="num">158</td><td class="en">while</td><td class="es">mientras</td></tr>
+        <tr><td class="num">159</td><td class="en">study</td><td class="es">estudiar</td></tr>
+        <tr><td class="num">160</td><td class="en">stop</td><td class="es">parar/detener</td></tr>
+        <tr><td class="num">161</td><td class="en">let</td><td class="es">dejar/permitir</td></tr>
+        <tr><td class="num">162</td><td class="en">late</td><td class="es">tarde</td></tr>
+        <tr><td class="num">163</td><td class="en">side</td><td class="es">lado</td></tr>
+        <tr><td class="num">164</td><td class="en">life</td><td class="es">vida</td></tr>
+        <tr><td class="num">165</td><td class="en">seem</td><td class="es">parecer</td></tr>
+        <tr><td class="num">166</td><td class="en">begin</td><td class="es">empezar</td></tr>
+        <tr><td class="num">167</td><td class="en">country</td><td class="es">país</td></tr>
+        <tr><td class="num">168</td><td class="en">call</td><td class="es">llamar/llamada</td></tr>
+        <tr><td class="num">169</td><td class="en">name</td><td class="es">nombre</td></tr>
+        <tr><td class="num">170</td><td class="en">might</td><td class="es">podría</td></tr>
+        <tr><td class="num">171</td><td class="en">leave</td><td class="es">dejar/salir</td></tr>
+        <tr><td class="num">172</td><td class="en">same</td><td class="es">mismo</td></tr>
+        <tr><td class="num">173</td><td class="en">part</td><td class="es">parte</td></tr>
+        <tr><td class="num">174</td><td class="en">man</td><td class="es">hombre</td></tr>
+        <tr><td class="num">175</td><td class="en">woman</td><td class="es">mujer</td></tr>
+        <tr><td class="num">176</td><td class="en">really</td><td class="es">realmente</td></tr>
+        <tr><td class="num">177</td><td class="en">always</td><td class="es">siempre</td></tr>
+        <tr><td class="num">178</td><td class="en">say</td><td class="es">decir</td></tr>
+        <tr><td class="num">179</td><td class="en">few</td><td class="es">pocos</td></tr>
+        <tr><td class="num">180</td><td class="en">group</td><td class="es">grupo</td></tr>
+        <tr><td class="num">181</td><td class="en">child</td><td class="es">niño</td></tr>
+        <tr><td class="num">182</td><td class="en">since</td><td class="es">desde</td></tr>
+        <tr><td class="num">183</td><td class="en">every</td><td class="es">cada</td></tr>
+        <tr><td class="num">184</td><td class="en">money</td><td class="es">dinero</td></tr>
+        <tr><td class="num">185</td><td class="en">put</td><td class="es">poner</td></tr>
+        <tr><td class="num">186</td><td class="en">different</td><td class="es">diferente</td></tr>
+        <tr><td class="num">187</td><td class="en">state</td><td class="es">estado</td></tr>
+        <tr><td class="num">188</td><td class="en">fact</td><td class="es">hecho</td></tr>
+        <tr><td class="num">189</td><td class="en">away</td><td class="es">lejos</td></tr>
+        <tr><td class="num">190</td><td class="en">off</td><td class="es">fuera/apagado</td></tr>
+        <tr><td class="num">191</td><td class="en">talk</td><td class="es">hablar</td></tr>
+        <tr><td class="num">192</td><td class="en">stand</td><td class="es">estar de pie</td></tr>
+        <tr><td class="num">193</td><td class="en">question</td><td class="es">pregunta</td></tr>
+        <tr><td class="num">194</td><td class="en">power</td><td class="es">poder/energía</td></tr>
+        <tr><td class="num">195</td><td class="en">set</td><td class="es">conjunto/poner</td></tr>
+        <tr><td class="num">196</td><td class="en">problem</td><td class="es">problema</td></tr>
+        <tr><td class="num">197</td><td class="en">important</td><td class="es">importante</td></tr>
+        <tr><td class="num">198</td><td class="en">body</td><td class="es">cuerpo</td></tr>
+        <tr><td class="num">199</td><td class="en">read</td><td class="es">leer</td></tr>
+        <tr><td class="num">200</td><td class="en">system</td><td class="es">sistema</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-label">📖 Palabras 201 - 300</h2>
+    <table class="word-table">
+        <thead><tr><th>#</th><th>Inglés</th><th>Español</th></tr></thead>
+        <tbody>
+        <tr><td class="num">201</td><td class="en">line</td><td class="es">línea</td></tr>
+        <tr><td class="num">202</td><td class="en">food</td><td class="es">comida</td></tr>
+        <tr><td class="num">203</td><td class="en">write</td><td class="es">escribir</td></tr>
+        <tr><td class="num">204</td><td class="en">happen</td><td class="es">suceder</td></tr>
+        <tr><td class="num">205</td><td class="en">young</td><td class="es">joven</td></tr>
+        <tr><td class="num">206</td><td class="en">another</td><td class="es">otro</td></tr>
+        <tr><td class="num">207</td><td class="en">against</td><td class="es">contra</td></tr>
+        <tr><td class="num">208</td><td class="en">face</td><td class="es">cara/rostro</td></tr>
+        <tr><td class="num">209</td><td class="en">enough</td><td class="es">suficiente</td></tr>
+        <tr><td class="num">210</td><td class="en">level</td><td class="es">nivel</td></tr>
+        <tr><td class="num">211</td><td class="en">person</td><td class="es">persona</td></tr>
+        <tr><td class="num">212</td><td class="en">sure</td><td class="es">seguro</td></tr>
+        <tr><td class="num">213</td><td class="en">idea</td><td class="es">idea</td></tr>
+        <tr><td class="num">214</td><td class="en">program</td><td class="es">programa</td></tr>
+        <tr><td class="num">215</td><td class="en">create</td><td class="es">crear</td></tr>
+        <tr><td class="num">216</td><td class="en">second</td><td class="es">segundo</td></tr>
+        <tr><td class="num">217</td><td class="en">market</td><td class="es">mercado</td></tr>
+        <tr><td class="num">218</td><td class="en">order</td><td class="es">orden/pedido</td></tr>
+        <tr><td class="num">219</td><td class="en">real</td><td class="es">real</td></tr>
+        <tr><td class="num">220</td><td class="en">build</td><td class="es">construir</td></tr>
+        <tr><td class="num">221</td><td class="en">hold</td><td class="es">sostener</td></tr>
+        <tr><td class="num">222</td><td class="en">cause</td><td class="es">causar/causa</td></tr>
+        <tr><td class="num">223</td><td class="en">become</td><td class="es">volverse/hacerse</td></tr>
+        <tr><td class="num">224</td><td class="en">car</td><td class="es">carro/auto</td></tr>
+        <tr><td class="num">225</td><td class="en">book</td><td class="es">libro</td></tr>
+        <tr><td class="num">226</td><td class="en">develop</td><td class="es">desarrollar</td></tr>
+        <tr><td class="num">227</td><td class="en">room</td><td class="es">habitación/cuarto</td></tr>
+        <tr><td class="num">228</td><td class="en">area</td><td class="es">área</td></tr>
+        <tr><td class="num">229</td><td class="en">result</td><td class="es">resultado</td></tr>
+        <tr><td class="num">230</td><td class="en">game</td><td class="es">juego</td></tr>
+        <tr><td class="num">231</td><td class="en">war</td><td class="es">guerra</td></tr>
+        <tr><td class="num">232</td><td class="en">remember</td><td class="es">recordar</td></tr>
+        <tr><td class="num">233</td><td class="en">word</td><td class="es">palabra</td></tr>
+        <tr><td class="num">234</td><td class="en">grow</td><td class="es">crecer</td></tr>
+        <tr><td class="num">235</td><td class="en">social</td><td class="es">social</td></tr>
+        <tr><td class="num">236</td><td class="en">company</td><td class="es">compañía/empresa</td></tr>
+        <tr><td class="num">237</td><td class="en">case</td><td class="es">caso</td></tr>
+        <tr><td class="num">238</td><td class="en">report</td><td class="es">reporte/informe</td></tr>
+        <tr><td class="num">239</td><td class="en">today</td><td class="es">hoy</td></tr>
+        <tr><td class="num">240</td><td class="en">job</td><td class="es">trabajo/empleo</td></tr>
+        <tr><td class="num">241</td><td class="en">believe</td><td class="es">creer</td></tr>
+        <tr><td class="num">242</td><td class="en">service</td><td class="es">servicio</td></tr>
+        <tr><td class="num">243</td><td class="en">plan</td><td class="es">plan/planear</td></tr>
+        <tr><td class="num">244</td><td class="en">health</td><td class="es">salud</td></tr>
+        <tr><td class="num">245</td><td class="en">week</td><td class="es">semana</td></tr>
+        <tr><td class="num">246</td><td class="en">offer</td><td class="es">ofrecer/oferta</td></tr>
+        <tr><td class="num">247</td><td class="en">friend</td><td class="es">amigo</td></tr>
+        <tr><td class="num">248</td><td class="en">sense</td><td class="es">sentido</td></tr>
+        <tr><td class="num">249</td><td class="en">parent</td><td class="es">padre/madre</td></tr>
+        <tr><td class="num">250</td><td class="en">bring</td><td class="es">traer</td></tr>
+        <tr><td class="num">251</td><td class="en">class</td><td class="es">clase</td></tr>
+        <tr><td class="num">252</td><td class="en">next</td><td class="es">siguiente</td></tr>
+        <tr><td class="num">253</td><td class="en">door</td><td class="es">puerta</td></tr>
+        <tr><td class="num">254</td><td class="en">figure</td><td class="es">figura/cifra</td></tr>
+        <tr><td class="num">255</td><td class="en">anything</td><td class="es">algo/cualquier cosa</td></tr>
+        <tr><td class="num">256</td><td class="en">early</td><td class="es">temprano</td></tr>
+        <tr><td class="num">257</td><td class="en">watch</td><td class="es">reloj/mirar</td></tr>
+        <tr><td class="num">258</td><td class="en">morning</td><td class="es">mañana</td></tr>
+        <tr><td class="num">259</td><td class="en">table</td><td class="es">mesa</td></tr>
+        <tr><td class="num">260</td><td class="en">possible</td><td class="es">posible</td></tr>
+        <tr><td class="num">261</td><td class="en">mind</td><td class="es">mente</td></tr>
+        <tr><td class="num">262</td><td class="en">reason</td><td class="es">razón</td></tr>
+        <tr><td class="num">263</td><td class="en">reach</td><td class="es">alcanzar</td></tr>
+        <tr><td class="num">264</td><td class="en">land</td><td class="es">tierra</td></tr>
+        <tr><td class="num">265</td><td class="en">form</td><td class="es">forma/formulario</td></tr>
+        <tr><td class="num">266</td><td class="en">pay</td><td class="es">pagar</td></tr>
+        <tr><td class="num">267</td><td class="en">already</td><td class="es">ya</td></tr>
+        <tr><td class="num">268</td><td class="en">hard</td><td class="es">duro/difícil</td></tr>
+        <tr><td class="num">269</td><td class="en">meet</td><td class="es">conocer/reunirse</td></tr>
+        <tr><td class="num">270</td><td class="en">record</td><td class="es">registro/grabar</td></tr>
+        <tr><td class="num">271</td><td class="en">continue</td><td class="es">continuar</td></tr>
+        <tr><td class="num">272</td><td class="en">member</td><td class="es">miembro</td></tr>
+        <tr><td class="num">273</td><td class="en">heart</td><td class="es">corazón</td></tr>
+        <tr><td class="num">274</td><td class="en">sit</td><td class="es">sentarse</td></tr>
+        <tr><td class="num">275</td><td class="en">car</td><td class="es">carro/automóvil</td></tr>
+        <tr><td class="num">276</td><td class="en">white</td><td class="es">blanco</td></tr>
+        <tr><td class="num">277</td><td class="en">free</td><td class="es">libre/gratis</td></tr>
+        <tr><td class="num">278</td><td class="en">break</td><td class="es">romper/descanso</td></tr>
+        <tr><td class="num">279</td><td class="en">maybe</td><td class="es">quizás</td></tr>
+        <tr><td class="num">280</td><td class="en">son</td><td class="es">hijo</td></tr>
+        <tr><td class="num">281</td><td class="en">age</td><td class="es">edad</td></tr>
+        <tr><td class="num">282</td><td class="en">produce</td><td class="es">producir</td></tr>
+        <tr><td class="num">283</td><td class="en">president</td><td class="es">presidente</td></tr>
+        <tr><td class="num">284</td><td class="en">team</td><td class="es">equipo</td></tr>
+        <tr><td class="num">285</td><td class="en">eye</td><td class="es">ojo</td></tr>
+        <tr><td class="num">286</td><td class="en">listen</td><td class="es">escuchar</td></tr>
+        <tr><td class="num">287</td><td class="en">thought</td><td class="es">pensamiento</td></tr>
+        <tr><td class="num">288</td><td class="en">best</td><td class="es">mejor</td></tr>
+        <tr><td class="num">289</td><td class="en">true</td><td class="es">verdadero</td></tr>
+        <tr><td class="num">290</td><td class="en">teacher</td><td class="es">maestro</td></tr>
+        <tr><td class="num">291</td><td class="en">interest</td><td class="es">interés</td></tr>
+        <tr><td class="num">292</td><td class="en">road</td><td class="es">camino/carretera</td></tr>
+        <tr><td class="num">293</td><td class="en">cut</td><td class="es">cortar</td></tr>
+        <tr><td class="num">294</td><td class="en">hour</td><td class="es">hora</td></tr>
+        <tr><td class="num">295</td><td class="en">kind</td><td class="es">tipo/amable</td></tr>
+        <tr><td class="num">296</td><td class="en">several</td><td class="es">varios</td></tr>
+        <tr><td class="num">297</td><td class="en">among</td><td class="es">entre</td></tr>
+        <tr><td class="num">298</td><td class="en">until</td><td class="es">hasta</td></tr>
+        <tr><td class="num">299</td><td class="en">deal</td><td class="es">trato/tratar</td></tr>
+        <tr><td class="num">300</td><td class="en">lose</td><td class="es">perder</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-label">📖 Palabras 301 - 400</h2>
+    <table class="word-table">
+        <thead><tr><th>#</th><th>Inglés</th><th>Español</th></tr></thead>
+        <tbody>
+        <tr><td class="num">301</td><td class="en">wife</td><td class="es">esposa</td></tr>
+        <tr><td class="num">302</td><td class="en">behind</td><td class="es">detrás</td></tr>
+        <tr><td class="num">303</td><td class="en">whole</td><td class="es">entero/todo</td></tr>
+        <tr><td class="num">304</td><td class="en">air</td><td class="es">aire</td></tr>
+        <tr><td class="num">305</td><td class="en">million</td><td class="es">millón</td></tr>
+        <tr><td class="num">306</td><td class="en">death</td><td class="es">muerte</td></tr>
+        <tr><td class="num">307</td><td class="en">window</td><td class="es">ventana</td></tr>
+        <tr><td class="num">308</td><td class="en">student</td><td class="es">estudiante</td></tr>
+        <tr><td class="num">309</td><td class="en">bit</td><td class="es">poco/bit</td></tr>
+        <tr><td class="num">310</td><td class="en">office</td><td class="es">oficina</td></tr>
+        <tr><td class="num">311</td><td class="en">moment</td><td class="es">momento</td></tr>
+        <tr><td class="num">312</td><td class="en">above</td><td class="es">encima</td></tr>
+        <tr><td class="num">313</td><td class="en">rest</td><td class="es">descanso/resto</td></tr>
+        <tr><td class="num">314</td><td class="en">dog</td><td class="es">perro</td></tr>
+        <tr><td class="num">315</td><td class="en">drive</td><td class="es">conducir</td></tr>
+        <tr><td class="num">316</td><td class="en">strong</td><td class="es">fuerte</td></tr>
+        <tr><td class="num">317</td><td class="en">fight</td><td class="es">pelear/luchar</td></tr>
+        <tr><td class="num">318</td><td class="en">mean</td><td class="es">significar/malo</td></tr>
+        <tr><td class="num">319</td><td class="en">computer</td><td class="es">computadora</td></tr>
+        <tr><td class="num">320</td><td class="en">deep</td><td class="es">profundo</td></tr>
+        <tr><td class="num">321</td><td class="en">month</td><td class="es">mes</td></tr>
+        <tr><td class="num">322</td><td class="en">market</td><td class="es">mercado</td></tr>
+        <tr><td class="num">323</td><td class="en">animal</td><td class="es">animal</td></tr>
+        <tr><td class="num">324</td><td class="en">music</td><td class="es">música</td></tr>
+        <tr><td class="num">325</td><td class="en">field</td><td class="es">campo</td></tr>
+        <tr><td class="num">326</td><td class="en">carry</td><td class="es">llevar/cargar</td></tr>
+        <tr><td class="num">327</td><td class="en">ground</td><td class="es">suelo/tierra</td></tr>
+        <tr><td class="num">328</td><td class="en">test</td><td class="es">prueba/examen</td></tr>
+        <tr><td class="num">329</td><td class="en">easy</td><td class="es">fácil</td></tr>
+        <tr><td class="num">330</td><td class="en">past</td><td class="es">pasado</td></tr>
+        <tr><td class="num">331</td><td class="en">full</td><td class="es">lleno/completo</td></tr>
+        <tr><td class="num">332</td><td class="en">street</td><td class="es">calle</td></tr>
+        <tr><td class="num">333</td><td class="en">color</td><td class="es">color</td></tr>
+        <tr><td class="num">334</td><td class="en">voice</td><td class="es">voz</td></tr>
+        <tr><td class="num">335</td><td class="en">art</td><td class="es">arte</td></tr>
+        <tr><td class="num">336</td><td class="en">pass</td><td class="es">pasar</td></tr>
+        <tr><td class="num">337</td><td class="en">bed</td><td class="es">cama</td></tr>
+        <tr><td class="num">338</td><td class="en">condition</td><td class="es">condición</td></tr>
+        <tr><td class="num">339</td><td class="en">wall</td><td class="es">pared/muro</td></tr>
+        <tr><td class="num">340</td><td class="en">future</td><td class="es">futuro</td></tr>
+        <tr><td class="num">341</td><td class="en">beautiful</td><td class="es">hermoso/bello</td></tr>
+        <tr><td class="num">342</td><td class="en">wrong</td><td class="es">equivocado/mal</td></tr>
+        <tr><td class="num">343</td><td class="en">daughter</td><td class="es">hija</td></tr>
+        <tr><td class="num">344</td><td class="en">step</td><td class="es">paso</td></tr>
+        <tr><td class="num">345</td><td class="en">paper</td><td class="es">papel</td></tr>
+        <tr><td class="num">346</td><td class="en">picture</td><td class="es">imagen/foto</td></tr>
+        <tr><td class="num">347</td><td class="en">clear</td><td class="es">claro/limpiar</td></tr>
+        <tr><td class="num">348</td><td class="en">together</td><td class="es">juntos</td></tr>
+        <tr><td class="num">349</td><td class="en">foot</td><td class="es">pie</td></tr>
+        <tr><td class="num">350</td><td class="en">love</td><td class="es">amor/amar</td></tr>
+        <tr><td class="num">351</td><td class="en">center</td><td class="es">centro</td></tr>
+        <tr><td class="num">352</td><td class="en">bank</td><td class="es">banco</td></tr>
+        <tr><td class="num">353</td><td class="en">least</td><td class="es">menos/mínimo</td></tr>
+        <tr><td class="num">354</td><td class="en">total</td><td class="es">total</td></tr>
+        <tr><td class="num">355</td><td class="en">five</td><td class="es">cinco</td></tr>
+        <tr><td class="num">356</td><td class="en">girl</td><td class="es">niña/chica</td></tr>
+        <tr><td class="num">357</td><td class="en">cover</td><td class="es">cubrir/portada</td></tr>
+        <tr><td class="num">358</td><td class="en">final</td><td class="es">final</td></tr>
+        <tr><td class="num">359</td><td class="en">material</td><td class="es">material</td></tr>
+        <tr><td class="num">360</td><td class="en">fall</td><td class="es">caer/otoño</td></tr>
+        <tr><td class="num">361</td><td class="en">dark</td><td class="es">oscuro</td></tr>
+        <tr><td class="num">362</td><td class="en">simple</td><td class="es">simple</td></tr>
+        <tr><td class="num">363</td><td class="en">role</td><td class="es">papel/rol</td></tr>
+        <tr><td class="num">364</td><td class="en">hot</td><td class="es">caliente</td></tr>
+        <tr><td class="num">365</td><td class="en">wish</td><td class="es">desear/deseo</td></tr>
+        <tr><td class="num">366</td><td class="en">common</td><td class="es">común</td></tr>
+        <tr><td class="num">367</td><td class="en">whether</td><td class="es">si (condicional)</td></tr>
+        <tr><td class="num">368</td><td class="en">south</td><td class="es">sur</td></tr>
+        <tr><td class="num">369</td><td class="en">north</td><td class="es">norte</td></tr>
+        <tr><td class="num">370</td><td class="en">west</td><td class="es">oeste</td></tr>
+        <tr><td class="num">371</td><td class="en">cold</td><td class="es">frío</td></tr>
+        <tr><td class="num">372</td><td class="en">human</td><td class="es">humano</td></tr>
+        <tr><td class="num">373</td><td class="en">low</td><td class="es">bajo</td></tr>
+        <tr><td class="num">374</td><td class="en">fire</td><td class="es">fuego</td></tr>
+        <tr><td class="num">375</td><td class="en">special</td><td class="es">especial</td></tr>
+        <tr><td class="num">376</td><td class="en">summer</td><td class="es">verano</td></tr>
+        <tr><td class="num">377</td><td class="en">experience</td><td class="es">experiencia</td></tr>
+        <tr><td class="num">378</td><td class="en">cost</td><td class="es">costo/costar</td></tr>
+        <tr><td class="num">379</td><td class="en">return</td><td class="es">regresar/devolver</td></tr>
+        <tr><td class="num">380</td><td class="en">happy</td><td class="es">feliz</td></tr>
+        <tr><td class="num">381</td><td class="en">war</td><td class="es">guerra</td></tr>
+        <tr><td class="num">382</td><td class="en">nice</td><td class="es">agradable/bonito</td></tr>
+        <tr><td class="num">383</td><td class="en">local</td><td class="es">local</td></tr>
+        <tr><td class="num">384</td><td class="en">single</td><td class="es">soltero/solo</td></tr>
+        <tr><td class="num">385</td><td class="en">rule</td><td class="es">regla</td></tr>
+        <tr><td class="num">386</td><td class="en">force</td><td class="es">fuerza/forzar</td></tr>
+        <tr><td class="num">387</td><td class="en">police</td><td class="es">policía</td></tr>
+        <tr><td class="num">388</td><td class="en">east</td><td class="es">este</td></tr>
+        <tr><td class="num">389</td><td class="en">save</td><td class="es">guardar/salvar</td></tr>
+        <tr><td class="num">390</td><td class="en">type</td><td class="es">tipo/teclear</td></tr>
+        <tr><td class="num">391</td><td class="en">visit</td><td class="es">visitar/visita</td></tr>
+        <tr><td class="num">392</td><td class="en">energy</td><td class="es">energía</td></tr>
+        <tr><td class="num">393</td><td class="en">per</td><td class="es">por</td></tr>
+        <tr><td class="num">394</td><td class="en">model</td><td class="es">modelo</td></tr>
+        <tr><td class="num">395</td><td class="en">song</td><td class="es">canción</td></tr>
+        <tr><td class="num">396</td><td class="en">hair</td><td class="es">cabello/pelo</td></tr>
+        <tr><td class="num">397</td><td class="en">sell</td><td class="es">vender</td></tr>
+        <tr><td class="num">398</td><td class="en">green</td><td class="es">verde</td></tr>
+        <tr><td class="num">399</td><td class="en">manage</td><td class="es">manejar/gestionar</td></tr>
+        <tr><td class="num">400</td><td class="en">college</td><td class="es">universidad</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-label">📖 Palabras 401 - 500</h2>
+    <table class="word-table">
+        <thead><tr><th>#</th><th>Inglés</th><th>Español</th></tr></thead>
+        <tbody>
+        <tr><td class="num">401</td><td class="en">ball</td><td class="es">pelota/balón</td></tr>
+        <tr><td class="num">402</td><td class="en">safe</td><td class="es">seguro</td></tr>
+        <tr><td class="num">403</td><td class="en">season</td><td class="es">temporada</td></tr>
+        <tr><td class="num">404</td><td class="en">fail</td><td class="es">fallar</td></tr>
+        <tr><td class="num">405</td><td class="en">attention</td><td class="es">atención</td></tr>
+        <tr><td class="num">406</td><td class="en">nation</td><td class="es">nación</td></tr>
+        <tr><td class="num">407</td><td class="en">brother</td><td class="es">hermano</td></tr>
+        <tr><td class="num">408</td><td class="en">space</td><td class="es">espacio</td></tr>
+        <tr><td class="num">409</td><td class="en">event</td><td class="es">evento</td></tr>
+        <tr><td class="num">410</td><td class="en">subject</td><td class="es">tema/sujeto</td></tr>
+        <tr><td class="num">411</td><td class="en">dead</td><td class="es">muerto</td></tr>
+        <tr><td class="num">412</td><td class="en">natural</td><td class="es">natural</td></tr>
+        <tr><td class="num">413</td><td class="en">physical</td><td class="es">físico</td></tr>
+        <tr><td class="num">414</td><td class="en">pain</td><td class="es">dolor</td></tr>
+        <tr><td class="num">415</td><td class="en">blood</td><td class="es">sangre</td></tr>
+        <tr><td class="num">416</td><td class="en">rise</td><td class="es">subir/levantarse</td></tr>
+        <tr><td class="num">417</td><td class="en">practice</td><td class="es">práctica/practicar</td></tr>
+        <tr><td class="num">418</td><td class="en">stone</td><td class="es">piedra</td></tr>
+        <tr><td class="num">419</td><td class="en">red</td><td class="es">rojo</td></tr>
+        <tr><td class="num">420</td><td class="en">position</td><td class="es">posición</td></tr>
+        <tr><td class="num">421</td><td class="en">accept</td><td class="es">aceptar</td></tr>
+        <tr><td class="num">422</td><td class="en">detail</td><td class="es">detalle</td></tr>
+        <tr><td class="num">423</td><td class="en">chance</td><td class="es">oportunidad</td></tr>
+        <tr><td class="num">424</td><td class="en">nor</td><td class="es">ni</td></tr>
+        <tr><td class="num">425</td><td class="en">blue</td><td class="es">azul</td></tr>
+        <tr><td class="num">426</td><td class="en">finger</td><td class="es">dedo</td></tr>
+        <tr><td class="num">427</td><td class="en">note</td><td class="es">nota</td></tr>
+        <tr><td class="num">428</td><td class="en">film</td><td class="es">película</td></tr>
+        <tr><td class="num">429</td><td class="en">phone</td><td class="es">teléfono</td></tr>
+        <tr><td class="num">430</td><td class="en">garden</td><td class="es">jardín</td></tr>
+        <tr><td class="num">431</td><td class="en">modern</td><td class="es">moderno</td></tr>
+        <tr><td class="num">432</td><td class="en">fear</td><td class="es">miedo</td></tr>
+        <tr><td class="num">433</td><td class="en">train</td><td class="es">tren/entrenar</td></tr>
+        <tr><td class="num">434</td><td class="en">wonder</td><td class="es">preguntarse/maravilla</td></tr>
+        <tr><td class="num">435</td><td class="en">view</td><td class="es">vista/ver</td></tr>
+        <tr><td class="num">436</td><td class="en">travel</td><td class="es">viajar/viaje</td></tr>
+        <tr><td class="num">437</td><td class="en">street</td><td class="es">calle</td></tr>
+        <tr><td class="num">438</td><td class="en">major</td><td class="es">mayor/importante</td></tr>
+        <tr><td class="num">439</td><td class="en">key</td><td class="es">llave/clave</td></tr>
+        <tr><td class="num">440</td><td class="en">miss</td><td class="es">extrañar/perder</td></tr>
+        <tr><td class="num">441</td><td class="en">industry</td><td class="es">industria</td></tr>
+        <tr><td class="num">442</td><td class="en">measure</td><td class="es">medir/medida</td></tr>
+        <tr><td class="num">443</td><td class="en">direction</td><td class="es">dirección</td></tr>
+        <tr><td class="num">444</td><td class="en">century</td><td class="es">siglo</td></tr>
+        <tr><td class="num">445</td><td class="en">middle</td><td class="es">medio/centro</td></tr>
+        <tr><td class="num">446</td><td class="en">half</td><td class="es">mitad</td></tr>
+        <tr><td class="num">447</td><td class="en">goal</td><td class="es">meta/gol</td></tr>
+        <tr><td class="num">448</td><td class="en">fish</td><td class="es">pez/pescado</td></tr>
+        <tr><td class="num">449</td><td class="en">plant</td><td class="es">planta/plantar</td></tr>
+        <tr><td class="num">450</td><td class="en">trade</td><td class="es">comercio</td></tr>
+        <tr><td class="num">451</td><td class="en">public</td><td class="es">público</td></tr>
+        <tr><td class="num">452</td><td class="en">explain</td><td class="es">explicar</td></tr>
+        <tr><td class="num">453</td><td class="en">enter</td><td class="es">entrar</td></tr>
+        <tr><td class="num">454</td><td class="en">current</td><td class="es">actual/corriente</td></tr>
+        <tr><td class="num">455</td><td class="en">oil</td><td class="es">aceite/petróleo</td></tr>
+        <tr><td class="num">456</td><td class="en">church</td><td class="es">iglesia</td></tr>
+        <tr><td class="num">457</td><td class="en">attack</td><td class="es">ataque/atacar</td></tr>
+        <tr><td class="num">458</td><td class="en">glass</td><td class="es">vidrio/vaso</td></tr>
+        <tr><td class="num">459</td><td class="en">arm</td><td class="es">brazo</td></tr>
+        <tr><td class="num">460</td><td class="en">check</td><td class="es">revisar/cheque</td></tr>
+        <tr><td class="num">461</td><td class="en">sign</td><td class="es">señal/firmar</td></tr>
+        <tr><td class="num">462</td><td class="en">complete</td><td class="es">completar</td></tr>
+        <tr><td class="num">463</td><td class="en">race</td><td class="es">raza/carrera</td></tr>
+        <tr><td class="num">464</td><td class="en">decision</td><td class="es">decisión</td></tr>
+        <tr><td class="num">465</td><td class="en">wear</td><td class="es">usar/vestir</td></tr>
+        <tr><td class="num">466</td><td class="en">weight</td><td class="es">peso</td></tr>
+        <tr><td class="num">467</td><td class="en">unit</td><td class="es">unidad</td></tr>
+        <tr><td class="num">468</td><td class="en">rock</td><td class="es">roca/rock</td></tr>
+        <tr><td class="num">469</td><td class="en">speed</td><td class="es">velocidad</td></tr>
+        <tr><td class="num">470</td><td class="en">fly</td><td class="es">volar/mosca</td></tr>
+        <tr><td class="num">471</td><td class="en">lead</td><td class="es">liderar/plomo</td></tr>
+        <tr><td class="num">472</td><td class="en">star</td><td class="es">estrella</td></tr>
+        <tr><td class="num">473</td><td class="en">island</td><td class="es">isla</td></tr>
+        <tr><td class="num">474</td><td class="en">imagine</td><td class="es">imaginar</td></tr>
+        <tr><td class="num">475</td><td class="en">lie</td><td class="es">mentir/acostarse</td></tr>
+        <tr><td class="num">476</td><td class="en">act</td><td class="es">actuar/acto</td></tr>
+        <tr><td class="num">477</td><td class="en">box</td><td class="es">caja</td></tr>
+        <tr><td class="num">478</td><td class="en">remain</td><td class="es">permanecer</td></tr>
+        <tr><td class="num">479</td><td class="en">press</td><td class="es">prensa/presionar</td></tr>
+        <tr><td class="num">480</td><td class="en">pick</td><td class="es">escoger</td></tr>
+        <tr><td class="num">481</td><td class="en">hang</td><td class="es">colgar</td></tr>
+        <tr><td class="num">482</td><td class="en">seat</td><td class="es">asiento</td></tr>
+        <tr><td class="num">483</td><td class="en">dress</td><td class="es">vestido/vestir</td></tr>
+        <tr><td class="num">484</td><td class="en">yard</td><td class="es">patio/yarda</td></tr>
+        <tr><td class="num">485</td><td class="en">push</td><td class="es">empujar</td></tr>
+        <tr><td class="num">486</td><td class="en">born</td><td class="es">nacido</td></tr>
+        <tr><td class="num">487</td><td class="en">rain</td><td class="es">lluvia</td></tr>
+        <tr><td class="num">488</td><td class="en">lady</td><td class="es">dama/señora</td></tr>
+        <tr><td class="num">489</td><td class="en">pain</td><td class="es">dolor</td></tr>
+        <tr><td class="num">490</td><td class="en">shape</td><td class="es">forma</td></tr>
+        <tr><td class="num">491</td><td class="en">doctor</td><td class="es">doctor</td></tr>
+        <tr><td class="num">492</td><td class="en">trouble</td><td class="es">problema</td></tr>
+        <tr><td class="num">493</td><td class="en">surprise</td><td class="es">sorpresa</td></tr>
+        <tr><td class="num">494</td><td class="en">protect</td><td class="es">proteger</td></tr>
+        <tr><td class="num">495</td><td class="en">wide</td><td class="es">ancho/amplio</td></tr>
+        <tr><td class="num">496</td><td class="en">sea</td><td class="es">mar</td></tr>
+        <tr><td class="num">497</td><td class="en">bed</td><td class="es">cama</td></tr>
+        <tr><td class="num">498</td><td class="en">cell</td><td class="es">celda/célula</td></tr>
+        <tr><td class="num">499</td><td class="en">store</td><td class="es">tienda/almacenar</td></tr>
+        <tr><td class="num">500</td><td class="en">skin</td><td class="es">piel</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-label">📖 Palabras 501 - 600</h2>
+    <table class="word-table">
+        <thead><tr><th>#</th><th>Inglés</th><th>Español</th></tr></thead>
+        <tbody>
+        <tr><td class="num">501</td><td class="en">shoulder</td><td class="es">hombro</td></tr>
+        <tr><td class="num">502</td><td class="en">smile</td><td class="es">sonrisa/sonreír</td></tr>
+        <tr><td class="num">503</td><td class="en">quiet</td><td class="es">tranquilo/silencioso</td></tr>
+        <tr><td class="num">504</td><td class="en">forget</td><td class="es">olvidar</td></tr>
+        <tr><td class="num">505</td><td class="en">heavy</td><td class="es">pesado</td></tr>
+        <tr><td class="num">506</td><td class="en">prove</td><td class="es">probar/demostrar</td></tr>
+        <tr><td class="num">507</td><td class="en">citizen</td><td class="es">ciudadano</td></tr>
+        <tr><td class="num">508</td><td class="en">poor</td><td class="es">pobre</td></tr>
+        <tr><td class="num">509</td><td class="en">contain</td><td class="es">contener</td></tr>
+        <tr><td class="num">510</td><td class="en">dark</td><td class="es">oscuro</td></tr>
+        <tr><td class="num">511</td><td class="en">rich</td><td class="es">rico</td></tr>
+        <tr><td class="num">512</td><td class="en">laugh</td><td class="es">reír</td></tr>
+        <tr><td class="num">513</td><td class="en">edge</td><td class="es">borde/orilla</td></tr>
+        <tr><td class="num">514</td><td class="en">involve</td><td class="es">involucrar</td></tr>
+        <tr><td class="num">515</td><td class="en">success</td><td class="es">éxito</td></tr>
+        <tr><td class="num">516</td><td class="en">thank</td><td class="es">agradecer</td></tr>
+        <tr><td class="num">517</td><td class="en">teach</td><td class="es">enseñar</td></tr>
+        <tr><td class="num">518</td><td class="en">affect</td><td class="es">afectar</td></tr>
+        <tr><td class="num">519</td><td class="en">worker</td><td class="es">trabajador</td></tr>
+        <tr><td class="num">520</td><td class="en">occur</td><td class="es">ocurrir</td></tr>
+        <tr><td class="num">521</td><td class="en">receive</td><td class="es">recibir</td></tr>
+        <tr><td class="num">522</td><td class="en">agree</td><td class="es">estar de acuerdo</td></tr>
+        <tr><td class="num">523</td><td class="en">support</td><td class="es">apoyar/apoyo</td></tr>
+        <tr><td class="num">524</td><td class="en">consider</td><td class="es">considerar</td></tr>
+        <tr><td class="num">525</td><td class="en">reduce</td><td class="es">reducir</td></tr>
+        <tr><td class="num">526</td><td class="en">media</td><td class="es">medios</td></tr>
+        <tr><td class="num">527</td><td class="en">culture</td><td class="es">cultura</td></tr>
+        <tr><td class="num">528</td><td class="en">effort</td><td class="es">esfuerzo</td></tr>
+        <tr><td class="num">529</td><td class="en">behavior</td><td class="es">comportamiento</td></tr>
+        <tr><td class="num">530</td><td class="en">theory</td><td class="es">teoría</td></tr>
+        <tr><td class="num">531</td><td class="en">mouth</td><td class="es">boca</td></tr>
+        <tr><td class="num">532</td><td class="en">relate</td><td class="es">relacionar</td></tr>
+        <tr><td class="num">533</td><td class="en">population</td><td class="es">población</td></tr>
+        <tr><td class="num">534</td><td class="en">realize</td><td class="es">darse cuenta</td></tr>
+        <tr><td class="num">535</td><td class="en">avoid</td><td class="es">evitar</td></tr>
+        <tr><td class="num">536</td><td class="en">technology</td><td class="es">tecnología</td></tr>
+        <tr><td class="num">537</td><td class="en">movement</td><td class="es">movimiento</td></tr>
+        <tr><td class="num">538</td><td class="en">design</td><td class="es">diseño/diseñar</td></tr>
+        <tr><td class="num">539</td><td class="en">speech</td><td class="es">discurso</td></tr>
+        <tr><td class="num">540</td><td class="en">share</td><td class="es">compartir</td></tr>
+        <tr><td class="num">541</td><td class="en">activity</td><td class="es">actividad</td></tr>
+        <tr><td class="num">542</td><td class="en">despite</td><td class="es">a pesar de</td></tr>
+        <tr><td class="num">543</td><td class="en">focus</td><td class="es">enfoque/enfocar</td></tr>
+        <tr><td class="num">544</td><td class="en">require</td><td class="es">requerir</td></tr>
+        <tr><td class="num">545</td><td class="en">beyond</td><td class="es">más allá</td></tr>
+        <tr><td class="num">546</td><td class="en">throw</td><td class="es">lanzar/tirar</td></tr>
+        <tr><td class="num">547</td><td class="en">kitchen</td><td class="es">cocina</td></tr>
+        <tr><td class="num">548</td><td class="en">shoulder</td><td class="es">hombro</td></tr>
+        <tr><td class="num">549</td><td class="en">exactly</td><td class="es">exactamente</td></tr>
+        <tr><td class="num">550</td><td class="en">quickly</td><td class="es">rápidamente</td></tr>
+        <tr><td class="num">551</td><td class="en">debate</td><td class="es">debate/debatir</td></tr>
+        <tr><td class="num">552</td><td class="en">majority</td><td class="es">mayoría</td></tr>
+        <tr><td class="num">553</td><td class="en">recently</td><td class="es">recientemente</td></tr>
+        <tr><td class="num">554</td><td class="en">respond</td><td class="es">responder</td></tr>
+        <tr><td class="num">555</td><td class="en">structure</td><td class="es">estructura</td></tr>
+        <tr><td class="num">556</td><td class="en">reflect</td><td class="es">reflejar</td></tr>
+        <tr><td class="num">557</td><td class="en">PM</td><td class="es">PM/tarde</td></tr>
+        <tr><td class="num">558</td><td class="en">compare</td><td class="es">comparar</td></tr>
+        <tr><td class="num">559</td><td class="en">approach</td><td class="es">enfoque/acercarse</td></tr>
+        <tr><td class="num">560</td><td class="en">generation</td><td class="es">generación</td></tr>
+        <tr><td class="num">561</td><td class="en">commercial</td><td class="es">comercial</td></tr>
+        <tr><td class="num">562</td><td class="en">maintain</td><td class="es">mantener</td></tr>
+        <tr><td class="num">563</td><td class="en">operation</td><td class="es">operación</td></tr>
+        <tr><td class="num">564</td><td class="en">opportunity</td><td class="es">oportunidad</td></tr>
+        <tr><td class="num">565</td><td class="en">score</td><td class="es">puntuación</td></tr>
+        <tr><td class="num">566</td><td class="en">analysis</td><td class="es">análisis</td></tr>
+        <tr><td class="num">567</td><td class="en">environment</td><td class="es">medio ambiente</td></tr>
+        <tr><td class="num">568</td><td class="en">perform</td><td class="es">realizar</td></tr>
+        <tr><td class="num">569</td><td class="en">style</td><td class="es">estilo</td></tr>
+        <tr><td class="num">570</td><td class="en">audience</td><td class="es">audiencia</td></tr>
+        <tr><td class="num">571</td><td class="en">election</td><td class="es">elección</td></tr>
+        <tr><td class="num">572</td><td class="en">imagine</td><td class="es">imaginar</td></tr>
+        <tr><td class="num">573</td><td class="en">apply</td><td class="es">aplicar</td></tr>
+        <tr><td class="num">574</td><td class="en">resource</td><td class="es">recurso</td></tr>
+        <tr><td class="num">575</td><td class="en">claim</td><td class="es">reclamar</td></tr>
+        <tr><td class="num">576</td><td class="en">source</td><td class="es">fuente</td></tr>
+        <tr><td class="num">577</td><td class="en">section</td><td class="es">sección</td></tr>
+        <tr><td class="num">578</td><td class="en">identify</td><td class="es">identificar</td></tr>
+        <tr><td class="num">579</td><td class="en">establish</td><td class="es">establecer</td></tr>
+        <tr><td class="num">580</td><td class="en">financial</td><td class="es">financiero</td></tr>
+        <tr><td class="num">581</td><td class="en">standard</td><td class="es">estándar</td></tr>
+        <tr><td class="num">582</td><td class="en">prevent</td><td class="es">prevenir</td></tr>
+        <tr><td class="num">583</td><td class="en">customer</td><td class="es">cliente</td></tr>
+        <tr><td class="num">584</td><td class="en">campaign</td><td class="es">campaña</td></tr>
+        <tr><td class="num">585</td><td class="en">series</td><td class="es">serie</td></tr>
+        <tr><td class="num">586</td><td class="en">collection</td><td class="es">colección</td></tr>
+        <tr><td class="num">587</td><td class="en">popular</td><td class="es">popular</td></tr>
+        <tr><td class="num">588</td><td class="en">PM</td><td class="es">tarde</td></tr>
+        <tr><td class="num">589</td><td class="en">region</td><td class="es">región</td></tr>
+        <tr><td class="num">590</td><td class="en">executive</td><td class="es">ejecutivo</td></tr>
+        <tr><td class="num">591</td><td class="en">employee</td><td class="es">empleado</td></tr>
+        <tr><td class="num">592</td><td class="en">organization</td><td class="es">organización</td></tr>
+        <tr><td class="num">593</td><td class="en">professional</td><td class="es">profesional</td></tr>
+        <tr><td class="num">594</td><td class="en">traditional</td><td class="es">tradicional</td></tr>
+        <tr><td class="num">595</td><td class="en">economy</td><td class="es">economía</td></tr>
+        <tr><td class="num">596</td><td class="en">strategy</td><td class="es">estrategia</td></tr>
+        <tr><td class="num">597</td><td class="en">challenge</td><td class="es">desafío</td></tr>
+        <tr><td class="num">598</td><td class="en">agency</td><td class="es">agencia</td></tr>
+        <tr><td class="num">599</td><td class="en">demand</td><td class="es">demanda/exigir</td></tr>
+        <tr><td class="num">600</td><td class="en">significant</td><td class="es">significativo</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-label">📖 Palabras 601 - 700</h2>
+    <table class="word-table">
+        <thead><tr><th>#</th><th>Inglés</th><th>Español</th></tr></thead>
+        <tbody>
+        <tr><td class="num">601</td><td class="en">candidate</td><td class="es">candidato</td></tr>
+        <tr><td class="num">602</td><td class="en">audience</td><td class="es">audiencia</td></tr>
+        <tr><td class="num">603</td><td class="en">opinion</td><td class="es">opinión</td></tr>
+        <tr><td class="num">604</td><td class="en">authority</td><td class="es">autoridad</td></tr>
+        <tr><td class="num">605</td><td class="en">quality</td><td class="es">calidad</td></tr>
+        <tr><td class="num">606</td><td class="en">image</td><td class="es">imagen</td></tr>
+        <tr><td class="num">607</td><td class="en">respond</td><td class="es">responder</td></tr>
+        <tr><td class="num">608</td><td class="en">investment</td><td class="es">inversión</td></tr>
+        <tr><td class="num">609</td><td class="en">project</td><td class="es">proyecto</td></tr>
+        <tr><td class="num">610</td><td class="en">management</td><td class="es">gestión</td></tr>
+        <tr><td class="num">611</td><td class="en">benefit</td><td class="es">beneficio</td></tr>
+        <tr><td class="num">612</td><td class="en">document</td><td class="es">documento</td></tr>
+        <tr><td class="num">613</td><td class="en">purpose</td><td class="es">propósito</td></tr>
+        <tr><td class="num">614</td><td class="en">knowledge</td><td class="es">conocimiento</td></tr>
+        <tr><td class="num">615</td><td class="en">evidence</td><td class="es">evidencia</td></tr>
+        <tr><td class="num">616</td><td class="en">specific</td><td class="es">específico</td></tr>
+        <tr><td class="num">617</td><td class="en">available</td><td class="es">disponible</td></tr>
+        <tr><td class="num">618</td><td class="en">security</td><td class="es">seguridad</td></tr>
+        <tr><td class="num">619</td><td class="en">process</td><td class="es">proceso</td></tr>
+        <tr><td class="num">620</td><td class="en">feature</td><td class="es">característica</td></tr>
+        <tr><td class="num">621</td><td class="en">define</td><td class="es">definir</td></tr>
+        <tr><td class="num">622</td><td class="en">budget</td><td class="es">presupuesto</td></tr>
+        <tr><td class="num">623</td><td class="en">access</td><td class="es">acceso</td></tr>
+        <tr><td class="num">624</td><td class="en">critical</td><td class="es">crítico</td></tr>
+        <tr><td class="num">625</td><td class="en">conference</td><td class="es">conferencia</td></tr>
+        <tr><td class="num">626</td><td class="en">proposal</td><td class="es">propuesta</td></tr>
+        <tr><td class="num">627</td><td class="en">assume</td><td class="es">asumir</td></tr>
+        <tr><td class="num">628</td><td class="en">content</td><td class="es">contenido</td></tr>
+        <tr><td class="num">629</td><td class="en">ability</td><td class="es">habilidad</td></tr>
+        <tr><td class="num">630</td><td class="en">professor</td><td class="es">profesor</td></tr>
+        <tr><td class="num">631</td><td class="en">impact</td><td class="es">impacto</td></tr>
+        <tr><td class="num">632</td><td class="en">negative</td><td class="es">negativo</td></tr>
+        <tr><td class="num">633</td><td class="en">positive</td><td class="es">positivo</td></tr>
+        <tr><td class="num">634</td><td class="en">network</td><td class="es">red</td></tr>
+        <tr><td class="num">635</td><td class="en">solution</td><td class="es">solución</td></tr>
+        <tr><td class="num">636</td><td class="en">category</td><td class="es">categoría</td></tr>
+        <tr><td class="num">637</td><td class="en">option</td><td class="es">opción</td></tr>
+        <tr><td class="num">638</td><td class="en">response</td><td class="es">respuesta</td></tr>
+        <tr><td class="num">639</td><td class="en">reference</td><td class="es">referencia</td></tr>
+        <tr><td class="num">640</td><td class="en">associate</td><td class="es">asociar</td></tr>
+        <tr><td class="num">641</td><td class="en">previous</td><td class="es">previo/anterior</td></tr>
+        <tr><td class="num">642</td><td class="en">effective</td><td class="es">efectivo</td></tr>
+        <tr><td class="num">643</td><td class="en">individual</td><td class="es">individual</td></tr>
+        <tr><td class="num">644</td><td class="en">institute</td><td class="es">instituto</td></tr>
+        <tr><td class="num">645</td><td class="en">credit</td><td class="es">crédito</td></tr>
+        <tr><td class="num">646</td><td class="en">description</td><td class="es">descripción</td></tr>
+        <tr><td class="num">647</td><td class="en">primary</td><td class="es">primario</td></tr>
+        <tr><td class="num">648</td><td class="en">version</td><td class="es">versión</td></tr>
+        <tr><td class="num">649</td><td class="en">commission</td><td class="es">comisión</td></tr>
+        <tr><td class="num">650</td><td class="en">review</td><td class="es">revisión</td></tr>
+        <tr><td class="num">651</td><td class="en">annual</td><td class="es">anual</td></tr>
+        <tr><td class="num">652</td><td class="en">monitor</td><td class="es">monitor/monitorear</td></tr>
+        <tr><td class="num">653</td><td class="en">reform</td><td class="es">reforma</td></tr>
+        <tr><td class="num">654</td><td class="en">entire</td><td class="es">entero/completo</td></tr>
+        <tr><td class="num">655</td><td class="en">technical</td><td class="es">técnico</td></tr>
+        <tr><td class="num">656</td><td class="en">revenue</td><td class="es">ingresos</td></tr>
+        <tr><td class="num">657</td><td class="en">contribute</td><td class="es">contribuir</td></tr>
+        <tr><td class="num">658</td><td class="en">expense</td><td class="es">gasto</td></tr>
+        <tr><td class="num">659</td><td class="en">statement</td><td class="es">declaración</td></tr>
+        <tr><td class="num">660</td><td class="en">account</td><td class="es">cuenta</td></tr>
+        <tr><td class="num">661</td><td class="en">demonstrate</td><td class="es">demostrar</td></tr>
+        <tr><td class="num">662</td><td class="en">estimate</td><td class="es">estimar</td></tr>
+        <tr><td class="num">663</td><td class="en">approve</td><td class="es">aprobar</td></tr>
+        <tr><td class="num">664</td><td class="en">contract</td><td class="es">contrato</td></tr>
+        <tr><td class="num">665</td><td class="en">resolve</td><td class="es">resolver</td></tr>
+        <tr><td class="num">666</td><td class="en">negotiate</td><td class="es">negociar</td></tr>
+        <tr><td class="num">667</td><td class="en">generate</td><td class="es">generar</td></tr>
+        <tr><td class="num">668</td><td class="en">acquire</td><td class="es">adquirir</td></tr>
+        <tr><td class="num">669</td><td class="en">release</td><td class="es">liberar/lanzar</td></tr>
+        <tr><td class="num">670</td><td class="en">capacity</td><td class="es">capacidad</td></tr>
+        <tr><td class="num">671</td><td class="en">pursue</td><td class="es">perseguir</td></tr>
+        <tr><td class="num">672</td><td class="en">complaint</td><td class="es">queja</td></tr>
+        <tr><td class="num">673</td><td class="en">framework</td><td class="es">marco</td></tr>
+        <tr><td class="num">674</td><td class="en">priority</td><td class="es">prioridad</td></tr>
+        <tr><td class="num">675</td><td class="en">status</td><td class="es">estado/estatus</td></tr>
+        <tr><td class="num">676</td><td class="en">conference</td><td class="es">conferencia</td></tr>
+        <tr><td class="num">677</td><td class="en">sector</td><td class="es">sector</td></tr>
+        <tr><td class="num">678</td><td class="en">household</td><td class="es">hogar</td></tr>
+        <tr><td class="num">679</td><td class="en">urban</td><td class="es">urbano</td></tr>
+        <tr><td class="num">680</td><td class="en">domestic</td><td class="es">doméstico</td></tr>
+        <tr><td class="num">681</td><td class="en">welfare</td><td class="es">bienestar</td></tr>
+        <tr><td class="num">682</td><td class="en">revenue</td><td class="es">ingresos</td></tr>
+        <tr><td class="num">683</td><td class="en">infrastructure</td><td class="es">infraestructura</td></tr>
+        <tr><td class="num">684</td><td class="en">regulation</td><td class="es">regulación</td></tr>
+        <tr><td class="num">685</td><td class="en">legislation</td><td class="es">legislación</td></tr>
+        <tr><td class="num">686</td><td class="en">implement</td><td class="es">implementar</td></tr>
+        <tr><td class="num">687</td><td class="en">acquire</td><td class="es">adquirir</td></tr>
+        <tr><td class="num">688</td><td class="en">assess</td><td class="es">evaluar</td></tr>
+        <tr><td class="num">689</td><td class="en">facility</td><td class="es">instalación</td></tr>
+        <tr><td class="num">690</td><td class="en">asset</td><td class="es">activo</td></tr>
+        <tr><td class="num">691</td><td class="en">profit</td><td class="es">ganancia/beneficio</td></tr>
+        <tr><td class="num">692</td><td class="en">quarter</td><td class="es">trimestre/cuarto</td></tr>
+        <tr><td class="num">693</td><td class="en">margin</td><td class="es">margen</td></tr>
+        <tr><td class="num">694</td><td class="en">corporate</td><td class="es">corporativo</td></tr>
+        <tr><td class="num">695</td><td class="en">insurance</td><td class="es">seguro</td></tr>
+        <tr><td class="num">696</td><td class="en">pension</td><td class="es">pensión</td></tr>
+        <tr><td class="num">697</td><td class="en">commission</td><td class="es">comisión</td></tr>
+        <tr><td class="num">698</td><td class="en">agenda</td><td class="es">agenda</td></tr>
+        <tr><td class="num">699</td><td class="en">confirm</td><td class="es">confirmar</td></tr>
+        <tr><td class="num">700</td><td class="en">schedule</td><td class="es">horario/programar</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-label">📖 Palabras 701 - 800</h2>
+    <table class="word-table">
+        <thead><tr><th>#</th><th>Inglés</th><th>Español</th></tr></thead>
+        <tbody>
+        <tr><td class="num">701</td><td class="en">permit</td><td class="es">permiso/permitir</td></tr>
+        <tr><td class="num">702</td><td class="en">rural</td><td class="es">rural</td></tr>
+        <tr><td class="num">703</td><td class="en">promote</td><td class="es">promover</td></tr>
+        <tr><td class="num">704</td><td class="en">expand</td><td class="es">expandir</td></tr>
+        <tr><td class="num">705</td><td class="en">liberal</td><td class="es">liberal</td></tr>
+        <tr><td class="num">706</td><td class="en">capable</td><td class="es">capaz</td></tr>
+        <tr><td class="num">707</td><td class="en">labor</td><td class="es">labor/trabajo</td></tr>
+        <tr><td class="num">708</td><td class="en">impose</td><td class="es">imponer</td></tr>
+        <tr><td class="num">709</td><td class="en">intellectual</td><td class="es">intelectual</td></tr>
+        <tr><td class="num">710</td><td class="en">fundamental</td><td class="es">fundamental</td></tr>
+        <tr><td class="num">711</td><td class="en">comprehensive</td><td class="es">comprensivo/completo</td></tr>
+        <tr><td class="num">712</td><td class="en">initial</td><td class="es">inicial</td></tr>
+        <tr><td class="num">713</td><td class="en">outcome</td><td class="es">resultado</td></tr>
+        <tr><td class="num">714</td><td class="en">restrict</td><td class="es">restringir</td></tr>
+        <tr><td class="num">715</td><td class="en">evaluate</td><td class="es">evaluar</td></tr>
+        <tr><td class="num">716</td><td class="en">guarantee</td><td class="es">garantía</td></tr>
+        <tr><td class="num">717</td><td class="en">perspective</td><td class="es">perspectiva</td></tr>
+        <tr><td class="num">718</td><td class="en">regime</td><td class="es">régimen</td></tr>
+        <tr><td class="num">719</td><td class="en">approve</td><td class="es">aprobar</td></tr>
+        <tr><td class="num">720</td><td class="en">invest</td><td class="es">invertir</td></tr>
+        <tr><td class="num">721</td><td class="en">interview</td><td class="es">entrevista</td></tr>
+        <tr><td class="num">722</td><td class="en">investigate</td><td class="es">investigar</td></tr>
+        <tr><td class="num">723</td><td class="en">proportion</td><td class="es">proporción</td></tr>
+        <tr><td class="num">724</td><td class="en">rural</td><td class="es">rural</td></tr>
+        <tr><td class="num">725</td><td class="en">afford</td><td class="es">permitirse</td></tr>
+        <tr><td class="num">726</td><td class="en">comment</td><td class="es">comentario</td></tr>
+        <tr><td class="num">727</td><td class="en">publish</td><td class="es">publicar</td></tr>
+        <tr><td class="num">728</td><td class="en">phenomenon</td><td class="es">fenómeno</td></tr>
+        <tr><td class="num">729</td><td class="en">appeal</td><td class="es">apelación/apelar</td></tr>
+        <tr><td class="num">730</td><td class="en">revolution</td><td class="es">revolución</td></tr>
+        <tr><td class="num">731</td><td class="en">crisis</td><td class="es">crisis</td></tr>
+        <tr><td class="num">732</td><td class="en">psychological</td><td class="es">psicológico</td></tr>
+        <tr><td class="num">733</td><td class="en">intellectual</td><td class="es">intelectual</td></tr>
+        <tr><td class="num">734</td><td class="en">liberal</td><td class="es">liberal</td></tr>
+        <tr><td class="num">735</td><td class="en">enormous</td><td class="es">enorme</td></tr>
+        <tr><td class="num">736</td><td class="en">depression</td><td class="es">depresión</td></tr>
+        <tr><td class="num">737</td><td class="en">brilliant</td><td class="es">brillante</td></tr>
+        <tr><td class="num">738</td><td class="en">conservative</td><td class="es">conservador</td></tr>
+        <tr><td class="num">739</td><td class="en">cognitive</td><td class="es">cognitivo</td></tr>
+        <tr><td class="num">740</td><td class="en">phenomenon</td><td class="es">fenómeno</td></tr>
+        <tr><td class="num">741</td><td class="en">dramatic</td><td class="es">dramático</td></tr>
+        <tr><td class="num">742</td><td class="en">contemporary</td><td class="es">contemporáneo</td></tr>
+        <tr><td class="num">743</td><td class="en">territory</td><td class="es">territorio</td></tr>
+        <tr><td class="num">744</td><td class="en">constitute</td><td class="es">constituir</td></tr>
+        <tr><td class="num">745</td><td class="en">impose</td><td class="es">imponer</td></tr>
+        <tr><td class="num">746</td><td class="en">convert</td><td class="es">convertir</td></tr>
+        <tr><td class="num">747</td><td class="en">province</td><td class="es">provincia</td></tr>
+        <tr><td class="num">748</td><td class="en">regime</td><td class="es">régimen</td></tr>
+        <tr><td class="num">749</td><td class="en">launch</td><td class="es">lanzar/lanzamiento</td></tr>
+        <tr><td class="num">750</td><td class="en">survival</td><td class="es">supervivencia</td></tr>
+        <tr><td class="num">751</td><td class="en">criterion</td><td class="es">criterio</td></tr>
+        <tr><td class="num">752</td><td class="en">controversy</td><td class="es">controversia</td></tr>
+        <tr><td class="num">753</td><td class="en">supplement</td><td class="es">suplemento</td></tr>
+        <tr><td class="num">754</td><td class="en">encounter</td><td class="es">encuentro/encontrar</td></tr>
+        <tr><td class="num">755</td><td class="en">moderate</td><td class="es">moderado</td></tr>
+        <tr><td class="num">756</td><td class="en">crucial</td><td class="es">crucial</td></tr>
+        <tr><td class="num">757</td><td class="en">accumulate</td><td class="es">acumular</td></tr>
+        <tr><td class="num">758</td><td class="en">intervene</td><td class="es">intervenir</td></tr>
+        <tr><td class="num">759</td><td class="en">abandon</td><td class="es">abandonar</td></tr>
+        <tr><td class="num">760</td><td class="en">elaborate</td><td class="es">elaborar</td></tr>
+        <tr><td class="num">761</td><td class="en">explicit</td><td class="es">explícito</td></tr>
+        <tr><td class="num">762</td><td class="en">inevitable</td><td class="es">inevitable</td></tr>
+        <tr><td class="num">763</td><td class="en">colleague</td><td class="es">colega</td></tr>
+        <tr><td class="num">764</td><td class="en">coincide</td><td class="es">coincidir</td></tr>
+        <tr><td class="num">765</td><td class="en">obstacle</td><td class="es">obstáculo</td></tr>
+        <tr><td class="num">766</td><td class="en">protocol</td><td class="es">protocolo</td></tr>
+        <tr><td class="num">767</td><td class="en">innovation</td><td class="es">innovación</td></tr>
+        <tr><td class="num">768</td><td class="en">formula</td><td class="es">fórmula</td></tr>
+        <tr><td class="num">769</td><td class="en">distribute</td><td class="es">distribuir</td></tr>
+        <tr><td class="num">770</td><td class="en">commodity</td><td class="es">producto</td></tr>
+        <tr><td class="num">771</td><td class="en">ultimate</td><td class="es">último/definitivo</td></tr>
+        <tr><td class="num">772</td><td class="en">landscape</td><td class="es">paisaje</td></tr>
+        <tr><td class="num">773</td><td class="en">portion</td><td class="es">porción</td></tr>
+        <tr><td class="num">774</td><td class="en">privilege</td><td class="es">privilegio</td></tr>
+        <tr><td class="num">775</td><td class="en">database</td><td class="es">base de datos</td></tr>
+        <tr><td class="num">776</td><td class="en">relevant</td><td class="es">relevante</td></tr>
+        <tr><td class="num">777</td><td class="en">adequate</td><td class="es">adecuado</td></tr>
+        <tr><td class="num">778</td><td class="en">framework</td><td class="es">marco</td></tr>
+        <tr><td class="num">779</td><td class="en">exploit</td><td class="es">explotar</td></tr>
+        <tr><td class="num">780</td><td class="en">straightforward</td><td class="es">sencillo</td></tr>
+        <tr><td class="num">781</td><td class="en">dramatic</td><td class="es">dramático</td></tr>
+        <tr><td class="num">782</td><td class="en">evolve</td><td class="es">evolucionar</td></tr>
+        <tr><td class="num">783</td><td class="en">assumption</td><td class="es">suposición</td></tr>
+        <tr><td class="num">784</td><td class="en">controversy</td><td class="es">controversia</td></tr>
+        <tr><td class="num">785</td><td class="en">sustainable</td><td class="es">sustentable</td></tr>
+        <tr><td class="num">786</td><td class="en">headline</td><td class="es">titular</td></tr>
+        <tr><td class="num">787</td><td class="en">convince</td><td class="es">convencer</td></tr>
+        <tr><td class="num">788</td><td class="en">negotiate</td><td class="es">negociar</td></tr>
+        <tr><td class="num">789</td><td class="en">database</td><td class="es">base de datos</td></tr>
+        <tr><td class="num">790</td><td class="en">initiative</td><td class="es">iniciativa</td></tr>
+        <tr><td class="num">791</td><td class="en">mechanism</td><td class="es">mecanismo</td></tr>
+        <tr><td class="num">792</td><td class="en">substantial</td><td class="es">sustancial</td></tr>
+        <tr><td class="num">793</td><td class="en">tremendous</td><td class="es">tremendo</td></tr>
+        <tr><td class="num">794</td><td class="en">cooperate</td><td class="es">cooperar</td></tr>
+        <tr><td class="num">795</td><td class="en">perceive</td><td class="es">percibir</td></tr>
+        <tr><td class="num">796</td><td class="en">transform</td><td class="es">transformar</td></tr>
+        <tr><td class="num">797</td><td class="en">parameter</td><td class="es">parámetro</td></tr>
+        <tr><td class="num">798</td><td class="en">anticipate</td><td class="es">anticipar</td></tr>
+        <tr><td class="num">799</td><td class="en">undergo</td><td class="es">someterse</td></tr>
+        <tr><td class="num">800</td><td class="en">illustrate</td><td class="es">ilustrar</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-label">📖 Palabras 801 - 900</h2>
+    <table class="word-table">
+        <thead><tr><th>#</th><th>Inglés</th><th>Español</th></tr></thead>
+        <tbody>
+        <tr><td class="num">801</td><td class="en">accommodate</td><td class="es">acomodar</td></tr>
+        <tr><td class="num">802</td><td class="en">consensus</td><td class="es">consenso</td></tr>
+        <tr><td class="num">803</td><td class="en">dimension</td><td class="es">dimensión</td></tr>
+        <tr><td class="num">804</td><td class="en">eliminate</td><td class="es">eliminar</td></tr>
+        <tr><td class="num">805</td><td class="en">equation</td><td class="es">ecuación</td></tr>
+        <tr><td class="num">806</td><td class="en">hypothesis</td><td class="es">hipótesis</td></tr>
+        <tr><td class="num">807</td><td class="en">facilitate</td><td class="es">facilitar</td></tr>
+        <tr><td class="num">808</td><td class="en">contradict</td><td class="es">contradecir</td></tr>
+        <tr><td class="num">809</td><td class="en">diminish</td><td class="es">disminuir</td></tr>
+        <tr><td class="num">810</td><td class="en">differentiate</td><td class="es">diferenciar</td></tr>
+        <tr><td class="num">811</td><td class="en">manipulate</td><td class="es">manipular</td></tr>
+        <tr><td class="num">812</td><td class="en">predominantly</td><td class="es">predominantemente</td></tr>
+        <tr><td class="num">813</td><td class="en">preliminary</td><td class="es">preliminar</td></tr>
+        <tr><td class="num">814</td><td class="en">simultaneously</td><td class="es">simultáneamente</td></tr>
+        <tr><td class="num">815</td><td class="en">inevitable</td><td class="es">inevitable</td></tr>
+        <tr><td class="num">816</td><td class="en">ambiguous</td><td class="es">ambiguo</td></tr>
+        <tr><td class="num">817</td><td class="en">comprehensive</td><td class="es">comprensivo</td></tr>
+        <tr><td class="num">818</td><td class="en">fluctuate</td><td class="es">fluctuar</td></tr>
+        <tr><td class="num">819</td><td class="en">implement</td><td class="es">implementar</td></tr>
+        <tr><td class="num">820</td><td class="en">integrate</td><td class="es">integrar</td></tr>
+        <tr><td class="num">821</td><td class="en">maximize</td><td class="es">maximizar</td></tr>
+        <tr><td class="num">822</td><td class="en">minimize</td><td class="es">minimizar</td></tr>
+        <tr><td class="num">823</td><td class="en">modify</td><td class="es">modificar</td></tr>
+        <tr><td class="num">824</td><td class="en">reinforce</td><td class="es">reforzar</td></tr>
+        <tr><td class="num">825</td><td class="en">regulate</td><td class="es">regular</td></tr>
+        <tr><td class="num">826</td><td class="en">simulate</td><td class="es">simular</td></tr>
+        <tr><td class="num">827</td><td class="en">substitute</td><td class="es">sustituir</td></tr>
+        <tr><td class="num">828</td><td class="en">supplement</td><td class="es">complementar</td></tr>
+        <tr><td class="num">829</td><td class="en">coordinate</td><td class="es">coordinar</td></tr>
+        <tr><td class="num">830</td><td class="en">demonstrate</td><td class="es">demostrar</td></tr>
+        <tr><td class="num">831</td><td class="en">accumulate</td><td class="es">acumular</td></tr>
+        <tr><td class="num">832</td><td class="en">acknowledge</td><td class="es">reconocer</td></tr>
+        <tr><td class="num">833</td><td class="en">appreciate</td><td class="es">apreciar</td></tr>
+        <tr><td class="num">834</td><td class="en">communicate</td><td class="es">comunicar</td></tr>
+        <tr><td class="num">835</td><td class="en">concentrate</td><td class="es">concentrar</td></tr>
+        <tr><td class="num">836</td><td class="en">contribute</td><td class="es">contribuir</td></tr>
+        <tr><td class="num">837</td><td class="en">cooperate</td><td class="es">cooperar</td></tr>
+        <tr><td class="num">838</td><td class="en">dominate</td><td class="es">dominar</td></tr>
+        <tr><td class="num">839</td><td class="en">eliminate</td><td class="es">eliminar</td></tr>
+        <tr><td class="num">840</td><td class="en">emphasize</td><td class="es">enfatizar</td></tr>
+        <tr><td class="num">841</td><td class="en">evaluate</td><td class="es">evaluar</td></tr>
+        <tr><td class="num">842</td><td class="en">guarantee</td><td class="es">garantizar</td></tr>
+        <tr><td class="num">843</td><td class="en">illustrate</td><td class="es">ilustrar</td></tr>
+        <tr><td class="num">844</td><td class="en">investigate</td><td class="es">investigar</td></tr>
+        <tr><td class="num">845</td><td class="en">justify</td><td class="es">justificar</td></tr>
+        <tr><td class="num">846</td><td class="en">manufacture</td><td class="es">fabricar</td></tr>
+        <tr><td class="num">847</td><td class="en">negotiate</td><td class="es">negociar</td></tr>
+        <tr><td class="num">848</td><td class="en">participate</td><td class="es">participar</td></tr>
+        <tr><td class="num">849</td><td class="en">specify</td><td class="es">especificar</td></tr>
+        <tr><td class="num">850</td><td class="en">summarize</td><td class="es">resumir</td></tr>
+        <tr><td class="num">851</td><td class="en">analyze</td><td class="es">analizar</td></tr>
+        <tr><td class="num">852</td><td class="en">calculate</td><td class="es">calcular</td></tr>
+        <tr><td class="num">853</td><td class="en">classify</td><td class="es">clasificar</td></tr>
+        <tr><td class="num">854</td><td class="en">criticize</td><td class="es">criticar</td></tr>
+        <tr><td class="num">855</td><td class="en">distinguish</td><td class="es">distinguir</td></tr>
+        <tr><td class="num">856</td><td class="en">estimate</td><td class="es">estimar</td></tr>
+        <tr><td class="num">857</td><td class="en">export</td><td class="es">exportar</td></tr>
+        <tr><td class="num">858</td><td class="en">import</td><td class="es">importar</td></tr>
+        <tr><td class="num">859</td><td class="en">interpret</td><td class="es">interpretar</td></tr>
+        <tr><td class="num">860</td><td class="en">memorize</td><td class="es">memorizar</td></tr>
+        <tr><td class="num">861</td><td class="en">motivate</td><td class="es">motivar</td></tr>
+        <tr><td class="num">862</td><td class="en">navigate</td><td class="es">navegar</td></tr>
+        <tr><td class="num">863</td><td class="en">organize</td><td class="es">organizar</td></tr>
+        <tr><td class="num">864</td><td class="en">recognize</td><td class="es">reconocer</td></tr>
+        <tr><td class="num">865</td><td class="en">recommend</td><td class="es">recomendar</td></tr>
+        <tr><td class="num">866</td><td class="en">schedule</td><td class="es">programar</td></tr>
+        <tr><td class="num">867</td><td class="en">translate</td><td class="es">traducir</td></tr>
+        <tr><td class="num">868</td><td class="en">volunteer</td><td class="es">voluntario</td></tr>
+        <tr><td class="num">869</td><td class="en">advertise</td><td class="es">anunciar</td></tr>
+        <tr><td class="num">870</td><td class="en">broadcast</td><td class="es">transmitir</td></tr>
+        <tr><td class="num">871</td><td class="en">celebrate</td><td class="es">celebrar</td></tr>
+        <tr><td class="num">872</td><td class="en">challenge</td><td class="es">desafiar</td></tr>
+        <tr><td class="num">873</td><td class="en">concentrate</td><td class="es">concentrar</td></tr>
+        <tr><td class="num">874</td><td class="en">confirm</td><td class="es">confirmar</td></tr>
+        <tr><td class="num">875</td><td class="en">decorate</td><td class="es">decorar</td></tr>
+        <tr><td class="num">876</td><td class="en">deliver</td><td class="es">entregar</td></tr>
+        <tr><td class="num">877</td><td class="en">discover</td><td class="es">descubrir</td></tr>
+        <tr><td class="num">878</td><td class="en">encourage</td><td class="es">animar</td></tr>
+        <tr><td class="num">879</td><td class="en">experiment</td><td class="es">experimentar</td></tr>
+        <tr><td class="num">880</td><td class="en">graduate</td><td class="es">graduarse</td></tr>
+        <tr><td class="num">881</td><td class="en">guarantee</td><td class="es">garantizar</td></tr>
+        <tr><td class="num">882</td><td class="en">harvest</td><td class="es">cosechar</td></tr>
+        <tr><td class="num">883</td><td class="en">hesitate</td><td class="es">dudar</td></tr>
+        <tr><td class="num">884</td><td class="en">interrupt</td><td class="es">interrumpir</td></tr>
+        <tr><td class="num">885</td><td class="en">maintain</td><td class="es">mantener</td></tr>
+        <tr><td class="num">886</td><td class="en">breakfast</td><td class="es">desayuno</td></tr>
+        <tr><td class="num">887</td><td class="en">lunch</td><td class="es">almuerzo</td></tr>
+        <tr><td class="num">888</td><td class="en">dinner</td><td class="es">cena</td></tr>
+        <tr><td class="num">889</td><td class="en">kitchen</td><td class="es">cocina</td></tr>
+        <tr><td class="num">890</td><td class="en">bathroom</td><td class="es">baño</td></tr>
+        <tr><td class="num">891</td><td class="en">bedroom</td><td class="es">dormitorio</td></tr>
+        <tr><td class="num">892</td><td class="en">garden</td><td class="es">jardín</td></tr>
+        <tr><td class="num">893</td><td class="en">bridge</td><td class="es">puente</td></tr>
+        <tr><td class="num">894</td><td class="en">mountain</td><td class="es">montaña</td></tr>
+        <tr><td class="num">895</td><td class="en">river</td><td class="es">río</td></tr>
+        <tr><td class="num">896</td><td class="en">ocean</td><td class="es">océano</td></tr>
+        <tr><td class="num">897</td><td class="en">forest</td><td class="es">bosque</td></tr>
+        <tr><td class="num">898</td><td class="en">desert</td><td class="es">desierto</td></tr>
+        <tr><td class="num">899</td><td class="en">valley</td><td class="es">valle</td></tr>
+        <tr><td class="num">900</td><td class="en">beach</td><td class="es">playa</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-label">📖 Palabras 901 - 1000</h2>
+    <table class="word-table">
+        <thead><tr><th>#</th><th>Inglés</th><th>Español</th></tr></thead>
+        <tbody>
+        <tr><td class="num">901</td><td class="en">weather</td><td class="es">clima</td></tr>
+        <tr><td class="num">902</td><td class="en">storm</td><td class="es">tormenta</td></tr>
+        <tr><td class="num">903</td><td class="en">temperature</td><td class="es">temperatura</td></tr>
+        <tr><td class="num">904</td><td class="en">degree</td><td class="es">grado</td></tr>
+        <tr><td class="num">905</td><td class="en">cloud</td><td class="es">nube</td></tr>
+        <tr><td class="num">906</td><td class="en">airport</td><td class="es">aeropuerto</td></tr>
+        <tr><td class="num">907</td><td class="en">station</td><td class="es">estación</td></tr>
+        <tr><td class="num">908</td><td class="en">hospital</td><td class="es">hospital</td></tr>
+        <tr><td class="num">909</td><td class="en">restaurant</td><td class="es">restaurante</td></tr>
+        <tr><td class="num">910</td><td class="en">hotel</td><td class="es">hotel</td></tr>
+        <tr><td class="num">911</td><td class="en">market</td><td class="es">mercado</td></tr>
+        <tr><td class="num">912</td><td class="en">library</td><td class="es">biblioteca</td></tr>
+        <tr><td class="num">913</td><td class="en">museum</td><td class="es">museo</td></tr>
+        <tr><td class="num">914</td><td class="en">theater</td><td class="es">teatro</td></tr>
+        <tr><td class="num">915</td><td class="en">stadium</td><td class="es">estadio</td></tr>
+        <tr><td class="num">916</td><td class="en">guitar</td><td class="es">guitarra</td></tr>
+        <tr><td class="num">917</td><td class="en">piano</td><td class="es">piano</td></tr>
+        <tr><td class="num">918</td><td class="en">camera</td><td class="es">cámara</td></tr>
+        <tr><td class="num">919</td><td class="en">ticket</td><td class="es">boleto</td></tr>
+        <tr><td class="num">920</td><td class="en">passport</td><td class="es">pasaporte</td></tr>
+        <tr><td class="num">921</td><td class="en">luggage</td><td class="es">equipaje</td></tr>
+        <tr><td class="num">922</td><td class="en">schedule</td><td class="es">horario</td></tr>
+        <tr><td class="num">923</td><td class="en">delay</td><td class="es">retraso/retrasar</td></tr>
+        <tr><td class="num">924</td><td class="en">cancel</td><td class="es">cancelar</td></tr>
+        <tr><td class="num">925</td><td class="en">confirm</td><td class="es">confirmar</td></tr>
+        <tr><td class="num">926</td><td class="en">recipe</td><td class="es">receta</td></tr>
+        <tr><td class="num">927</td><td class="en">ingredient</td><td class="es">ingrediente</td></tr>
+        <tr><td class="num">928</td><td class="en">flavor</td><td class="es">sabor</td></tr>
+        <tr><td class="num">929</td><td class="en">spicy</td><td class="es">picante</td></tr>
+        <tr><td class="num">930</td><td class="en">delicious</td><td class="es">delicioso</td></tr>
+        <tr><td class="num">931</td><td class="en">healthy</td><td class="es">saludable</td></tr>
+        <tr><td class="num">932</td><td class="en">exercise</td><td class="es">ejercicio</td></tr>
+        <tr><td class="num">933</td><td class="en">muscle</td><td class="es">músculo</td></tr>
+        <tr><td class="num">934</td><td class="en">symptom</td><td class="es">síntoma</td></tr>
+        <tr><td class="num">935</td><td class="en">medicine</td><td class="es">medicina</td></tr>
+        <tr><td class="num">936</td><td class="en">surgery</td><td class="es">cirugía</td></tr>
+        <tr><td class="num">937</td><td class="en">therapy</td><td class="es">terapia</td></tr>
+        <tr><td class="num">938</td><td class="en">infection</td><td class="es">infección</td></tr>
+        <tr><td class="num">939</td><td class="en">vaccine</td><td class="es">vacuna</td></tr>
+        <tr><td class="num">940</td><td class="en">diagnosis</td><td class="es">diagnóstico</td></tr>
+        <tr><td class="num">941</td><td class="en">software</td><td class="es">software</td></tr>
+        <tr><td class="num">942</td><td class="en">hardware</td><td class="es">hardware</td></tr>
+        <tr><td class="num">943</td><td class="en">network</td><td class="es">red</td></tr>
+        <tr><td class="num">944</td><td class="en">password</td><td class="es">contraseña</td></tr>
+        <tr><td class="num">945</td><td class="en">download</td><td class="es">descargar</td></tr>
+        <tr><td class="num">946</td><td class="en">upload</td><td class="es">subir/cargar</td></tr>
+        <tr><td class="num">947</td><td class="en">website</td><td class="es">sitio web</td></tr>
+        <tr><td class="num">948</td><td class="en">browser</td><td class="es">navegador</td></tr>
+        <tr><td class="num">949</td><td class="en">keyboard</td><td class="es">teclado</td></tr>
+        <tr><td class="num">950</td><td class="en">screen</td><td class="es">pantalla</td></tr>
+        <tr><td class="num">951</td><td class="en">battery</td><td class="es">batería</td></tr>
+        <tr><td class="num">952</td><td class="en">charger</td><td class="es">cargador</td></tr>
+        <tr><td class="num">953</td><td class="en">speaker</td><td class="es">bocina/altavoz</td></tr>
+        <tr><td class="num">954</td><td class="en">wireless</td><td class="es">inalámbrico</td></tr>
+        <tr><td class="num">955</td><td class="en">digital</td><td class="es">digital</td></tr>
+        <tr><td class="num">956</td><td class="en">budget</td><td class="es">presupuesto</td></tr>
+        <tr><td class="num">957</td><td class="en">salary</td><td class="es">salario</td></tr>
+        <tr><td class="num">958</td><td class="en">profit</td><td class="es">ganancia</td></tr>
+        <tr><td class="num">959</td><td class="en">expense</td><td class="es">gasto</td></tr>
+        <tr><td class="num">960</td><td class="en">investment</td><td class="es">inversión</td></tr>
+        <tr><td class="num">961</td><td class="en">loan</td><td class="es">préstamo</td></tr>
+        <tr><td class="num">962</td><td class="en">debt</td><td class="es">deuda</td></tr>
+        <tr><td class="num">963</td><td class="en">tax</td><td class="es">impuesto</td></tr>
+        <tr><td class="num">964</td><td class="en">receipt</td><td class="es">recibo</td></tr>
+        <tr><td class="num">965</td><td class="en">discount</td><td class="es">descuento</td></tr>
+        <tr><td class="num">966</td><td class="en">interview</td><td class="es">entrevista</td></tr>
+        <tr><td class="num">967</td><td class="en">resume</td><td class="es">currículum</td></tr>
+        <tr><td class="num">968</td><td class="en">deadline</td><td class="es">fecha límite</td></tr>
+        <tr><td class="num">969</td><td class="en">colleague</td><td class="es">colega</td></tr>
+        <tr><td class="num">970</td><td class="en">feedback</td><td class="es">retroalimentación</td></tr>
+        <tr><td class="num">971</td><td class="en">meeting</td><td class="es">reunión/junta</td></tr>
+        <tr><td class="num">972</td><td class="en">presentation</td><td class="es">presentación</td></tr>
+        <tr><td class="num">973</td><td class="en">workshop</td><td class="es">taller</td></tr>
+        <tr><td class="num">974</td><td class="en">conference</td><td class="es">conferencia</td></tr>
+        <tr><td class="num">975</td><td class="en">seminar</td><td class="es">seminario</td></tr>
+        <tr><td class="num">976</td><td class="en">essay</td><td class="es">ensayo</td></tr>
+        <tr><td class="num">977</td><td class="en">paragraph</td><td class="es">párrafo</td></tr>
+        <tr><td class="num">978</td><td class="en">vocabulary</td><td class="es">vocabulario</td></tr>
+        <tr><td class="num">979</td><td class="en">grammar</td><td class="es">gramática</td></tr>
+        <tr><td class="num">980</td><td class="en">pronunciation</td><td class="es">pronunciación</td></tr>
+        <tr><td class="num">981</td><td class="en">fluent</td><td class="es">fluido</td></tr>
+        <tr><td class="num">982</td><td class="en">bilingual</td><td class="es">bilingüe</td></tr>
+        <tr><td class="num">983</td><td class="en">translate</td><td class="es">traducir</td></tr>
+        <tr><td class="num">984</td><td class="en">language</td><td class="es">idioma</td></tr>
+        <tr><td class="num">985</td><td class="en">conversation</td><td class="es">conversación</td></tr>
+        <tr><td class="num">986</td><td class="en">accent</td><td class="es">acento</td></tr>
+        <tr><td class="num">987</td><td class="en">abroad</td><td class="es">en el extranjero</td></tr>
+        <tr><td class="num">988</td><td class="en">achieve</td><td class="es">lograr</td></tr>
+        <tr><td class="num">989</td><td class="en">advice</td><td class="es">consejo</td></tr>
+        <tr><td class="num">990</td><td class="en">ancient</td><td class="es">antiguo</td></tr>
+        <tr><td class="num">991</td><td class="en">anxious</td><td class="es">ansioso</td></tr>
+        <tr><td class="num">992</td><td class="en">arrange</td><td class="es">organizar</td></tr>
+        <tr><td class="num">993</td><td class="en">attempt</td><td class="es">intentar</td></tr>
+        <tr><td class="num">994</td><td class="en">attract</td><td class="es">atraer</td></tr>
+        <tr><td class="num">995</td><td class="en">capable</td><td class="es">capaz</td></tr>
+        <tr><td class="num">996</td><td class="en">combine</td><td class="es">combinar</td></tr>
+        <tr><td class="num">997</td><td class="en">compete</td><td class="es">competir</td></tr>
+        <tr><td class="num">998</td><td class="en">consist</td><td class="es">consistir</td></tr>
+        <tr><td class="num">999</td><td class="en">familiar</td><td class="es">familiar</td></tr>
+        <tr><td class="num">1000</td><td class="en">journey</td><td class="es">viaje/travesía</td></tr>
+        </tbody>
+    </table>
+
+    <!-- Final CTA -->
+    <div style="background:var(--card);border:2px solid var(--accent);border-radius:20px;padding:32px;text-align:center;margin:40px 0" class="no-print">
+        <h2 style="font-family:'Space Grotesk',sans-serif;font-size:1.4rem;margin-bottom:8px">🎯 Aprende estas 1000 palabras con SpeakFast</h2>
+        <p style="color:var(--dim);margin-bottom:20px;font-size:0.9rem">Flashcards interactivas, quizzes adaptativos y progreso trackeable. 15,000 palabras en total.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+            <a href="/english-mastery/app.html" class="btn btn-primary">🚀 Empezar Gratis</a>
+            <a href="/english-mastery/#pricing" class="btn btn-secondary">Ver Plan Premium</a>
         </div>
     </div>
 
-    <!-- Nota: Por razones de espacio, incluyo las primeras 100 palabras. 
-         El archivo completo tendría las 1000 palabras organizadas en secciones -->
-    
-    <div class="section">
-        <h2>📖 Nota Importante</h2>
-        <p style="line-height:1.8; color:#4b5563;">
-            Esta lista contiene las 100 palabras más comunes del inglés, que representan aproximadamente el <strong>50% de todo el inglés escrito y hablado</strong>. Dominar estas palabras es esencial para comunicarte en inglés.<br><br>
-            
-            <strong>🚀 ¿Quieres aprender las 1000 palabras completas de manera interactiva?</strong><br>
-            Descarga <strong>SpeakFast</strong> - nuestra app con 15,000 palabras en inglés, flashcards interactivas, quizzes y seguimiento de progreso.<br><br>
-            
-            ✅ Gratis para las primeras 2,588 palabras (A1-A2)<br>
-            ✅ Funciona 100% offline<br>
-            ✅ Pronunciación incluida<br>
-            ✅ Ejemplos bilingües<br><br>
-            
-            👉 <strong>myappsmaster.com/english-mastery</strong>
-        </p>
-    </div>
-    
-    <div class="section no-print" style="background:#f3f4f6; padding:30px; border-radius:12px; text-align:center;">
-        <h2 style="color:#1f2937; border:none;">🎯 Aprende las 1000 Palabras con SpeakFast</h2>
-        <p style="margin:15px 0; color:#6b7280;">Flashcards interactivas • Quizzes adaptativos • Progreso trackeable</p>
-        <a href="/english-mastery/" class="btn btn-primary" style="margin-top:10px;">Descargar SpeakFast Gratis</a>
-    </div>
+    <footer class="page-footer">
+        <p>© 2025 <a href="/">AppsMaster</a> · <a href="/english-mastery/">SpeakFast</a></p>
+        <p style="margin-top:8px">Lista actualizada · 1000 palabras más frecuentes del idioma inglés</p>
+    </footer>
+</div>
+
+<!-- Sticky CTA -->
+<div class="sticky-cta no-print">
+    <a href="/english-mastery/app.html" class="btn btn-primary">🚀 Aprende con SpeakFast — Gratis</a>
 </div>
 
 </body>
