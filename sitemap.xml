@@ -4,7 +4,7 @@
   <!-- Landing principal MyAppsMaster -->
   <url>
     <loc>https://myappsmaster.com/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,7 +12,7 @@
   <!-- SpeakFast Landing -->
   <url>
     <loc>https://myappsmaster.com/english-mastery/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -20,9 +20,17 @@
   <!-- SpeakFast App -->
   <url>
     <loc>https://myappsmaster.com/english-mastery/app.html</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- Lead Magnet: 1000 Palabras en Inglés -->
+  <url>
+    <loc>https://myappsmaster.com/english-mastery/recursos/1000-palabras-ingles.html</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
