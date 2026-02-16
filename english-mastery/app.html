@@ -2,6 +2,138 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMEEV58M8L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FMEEV58M8L');
+    </script>
+    <!-- End Google Analytics -->
+
+    <!-- EVENTOS DE GOOGLE ANALYTICS PARA SPEAKFAST -->
+    <script>
+    // Función helper para enviar eventos
+    function trackEvent(eventName, params = {}) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', eventName, params);
+        console.log('📊 Event tracked:', eventName, params);
+    }
+    }
+
+    // 1. EVENTO: App cargada
+    window.addEventListener('load', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const version = urlParams.get('v') || 'v1';
+    const userType = localStorage.getItem('licenseKey') ? 'premium' : 'free';
+    
+    trackEvent('app_loaded', {
+        version: version,
+        user_type: userType,
+        timestamp: new Date().toISOString()
+    });
+    });
+
+    // 2. EVENTO: Versión seleccionada
+    // Llama esta función cuando el usuario selecciona una versión
+    function trackVersionSelected(versionNumber) {
+    trackEvent('version_selected', {
+        version: versionNumber,
+        timestamp: new Date().toISOString()
+    });
+    }
+
+    // 3. EVENTO: Quiz iniciado
+    function trackQuizStarted(versionNumber, category) {
+    trackEvent('quiz_started', {
+        version: versionNumber,
+        category: category || 'all',
+        timestamp: new Date().toISOString()
+    });
+    }
+
+    // 4. EVENTO: Quiz completado
+    function trackQuizCompleted(versionNumber, score, totalQuestions) {
+    const percentage = Math.round((score / totalQuestions) * 100);
+    
+    trackEvent('quiz_completed', {
+        version: versionNumber,
+        score: score,
+        total_questions: totalQuestions,
+        percentage: percentage,
+        passed: percentage >= 70,
+        timestamp: new Date().toISOString()
+    });
+    }
+
+    // 5. EVENTO: Sesión de flashcards
+    function trackFlashcardSession(versionNumber, cardsReviewed) {
+    trackEvent('flashcard_session', {
+        version: versionNumber,
+        cards_reviewed: cardsReviewed,
+        timestamp: new Date().toISOString()
+    });
+    }
+
+    // 6. EVENTO: Código demo activado
+    function trackDemoCodeActivated(code) {
+    trackEvent('demo_code_activated', {
+        code_length: code.length,
+        timestamp: new Date().toISOString()
+    });
+    }
+
+    // 7. EVENTO: Licencia activada
+    function trackLicenseActivated(licenseKey) {
+    trackEvent('license_activated', {
+        key_length: licenseKey.length,
+        timestamp: new Date().toISOString()
+    });
+    }
+
+    // 8. EVENTO: Email registrado
+    function trackEmailRegistered(emailDomain) {
+    trackEvent('email_registered', {
+        email_domain: emailDomain,
+        timestamp: new Date().toISOString()
+    });
+    }
+
+    // 9. EVENTO: Milestone de progreso
+    function trackProgressMilestone(wordsLearned) {
+    if (wordsLearned % 10 === 0) {
+        trackEvent('progress_milestone', {
+        words_learned: wordsLearned,
+        milestone: wordsLearned,
+        timestamp: new Date().toISOString()
+        });
+    }
+    }
+
+    // 10. EVENTO: Intención de compra
+    function trackPurchaseIntent(version) {
+    trackEvent('purchase_intent', {
+        version: version,
+        timestamp: new Date().toISOString()
+    });
+    }
+
+    // Hacer las funciones globales para que puedas usarlas desde cualquier parte
+    window.trackVersionSelected = trackVersionSelected;
+    window.trackQuizStarted = trackQuizStarted;
+    window.trackQuizCompleted = trackQuizCompleted;
+    window.trackFlashcardSession = trackFlashcardSession;
+    window.trackDemoCodeActivated = trackDemoCodeActivated;
+    window.trackLicenseActivated = trackLicenseActivated;
+    window.trackEmailRegistered = trackEmailRegistered;
+    window.trackProgressMilestone = trackProgressMilestone;
+    window.trackPurchaseIntent = trackPurchaseIntent;
+    </script>
+    <!-- FIN EVENTOS GA -->
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>SpeakFast Pro - Domina inglés rápido</title>
     <!-- PWA Meta Tags -->
@@ -15755,6 +15887,8 @@ var VERSION_INFO = {
 
 var LICENSE_KEY = "emPro2024Lic";
 var unlockedVers = ["v1"];
+var currentActiveVersion = "v1";  // ← NUEVA LÍNEA
+
 
 function loadLicense() {
     try {
@@ -15789,6 +15923,9 @@ function renderVersionCards() {
 
 function pickVersion(v) {
     if (unlockedVers.indexOf(v) === -1) { openLicModal(); return; }
+        // Track version selection
+    currentActiveVersion = v;
+    trackVersionSelected(v);
     VOCABULARY = ALL_VOCAB[v];
     var info = VERSION_INFO[v];
     document.querySelector(".logo").textContent = "SpeakFast " + v.toUpperCase();
@@ -15899,15 +16036,20 @@ setInterval(function() {
 // Manejador del formulario de email
 document.addEventListener('DOMContentLoaded', function() {
     var emailForm = document.getElementById('emailForm');
-    if (emailForm) {
         emailForm.addEventListener('submit', function(e) {
+            // Track email registration
+            var emailInput = document.getElementById('emailInput');
+            if (emailInput && emailInput.value) {
+                var email = emailInput.value;
+                var domain = email.split('@')[1];
+                trackEmailRegistered(domain);
+            }
+            
             // El formulario se enviará a FormSubmit en nueva pestaña
             setTimeout(function() {
                 closeEmailPopup();
             }, 500);
         });
-    }
-});
 
 function checkRegistration() {
     // Acceso directo - sin registro obligatorio
@@ -15924,6 +16066,7 @@ function openLemonSqueezy() {
     if (reg && reg.email) {
         checkoutUrl += "?checkout[email]=" + encodeURIComponent(reg.email) + "&checkout[name]=" + encodeURIComponent(reg.name);
     }
+    trackPurchaseIntent('premium');
     window.open(checkoutUrl, "_blank");
 }
 
@@ -15957,6 +16100,7 @@ async function doActivate() {
         localStorage.setItem("emLicenseKey", code);
         renderVersionCards();
         closeLicModal();
+        trackDemoCodeActivated(code);
         alert("✅ Código de prueba activado correctamente\n\nAcceso desbloqueado a: " + DEMO_CODES[code].map(v => v.toUpperCase()).join(", "));
         return;
     }
@@ -15973,6 +16117,7 @@ async function doActivate() {
         localStorage.setItem("emLicenseKey", code);
         renderVersionCards();
         closeLicModal();
+        trackLicenseActivated(code);
         alert("✅ ¡Licencia activada! Todas las versiones premium desbloqueadas.");
     } else {
         alert("❌ Código inválido. Verifica tu código de licencia e intenta de nuevo.");
@@ -16064,6 +16209,8 @@ function startVocab(){
 
 function displayCard(){
     if(vocabIndex>=vocabCards.length){
+        // Track flashcard session
+        trackFlashcardSession(currentActiveVersion, vocabCards.length);
         document.getElementById('vocabContent').style.display='none';
         document.getElementById('vocabEmpty').style.display='flex';
         return
@@ -16146,6 +16293,7 @@ function generateQuiz(category){
 }
 
 function startQuiz(){
+    trackQuizStarted(currentActiveVersion, selectedCategory);
     const category=document.getElementById('quizCategory').value;
     quizQuestions=generateQuiz(category);
     if(!quizQuestions.length){alert('No hay suficientes palabras. Selecciona otra categoría.');return}
@@ -16194,7 +16342,10 @@ function showQuizResults(){
     document.getElementById('resultIcon').textContent=pct>=90?'🏆':pct>=70?'🎉':pct>=50?'👍':'💪';
     document.getElementById('resultTitle').textContent=pct>=90?'¡Perfecto!':pct>=70?'¡Muy bien!':pct>=50?'¡Buen esfuerzo!':'Sigue practicando';
     addXP(quizScore);
-    
+
+    // Track quiz completion
+    trackQuizCompleted(currentActiveVersion, correct, quizQuestions.length);
+      
     // Trigger para popup de email
     EMAIL_TRIGGERS.quizzesCompleted++;
     checkEmailPopupTriggers();
