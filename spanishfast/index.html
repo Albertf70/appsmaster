@@ -1,0 +1,553 @@
+<!-- FILE: index.html | LOCATION: /spanishfast/ | PAGE: Landing SpanishFast -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMEEV58M8L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FMEEV58M8L');
+    </script>
+    <!-- End Google Analytics -->
+     
+    <!-- SEO Metadata -->
+    <title>Learn Spanish - 15,000 Words A1 to C1 - SpanishFast</title>
+    <meta name="description" content="Spanish vocabulary app for English speakers. 15,000 words, flashcards and quizzes. Free version available. $299 MXN/year, no ads.">
+    <meta name="keywords" content="learn Spanish, Spanish vocabulary, Spanish English app, Spanish flashcards, Spanish quiz, A1 A2 B1 B2 C1, DELE, Spanish for beginners">
+    <meta name="theme-color" content="#0f0f1a">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%230f0f1a' width='32' height='32' rx='6'/><text x='16' y='24' font-size='22' text-anchor='middle'>🇪🇸</text></svg>" type="image/svg+xml">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="SpanishFast - Master Spanish Fast with 15,000 Words">
+    <meta property="og:description" content="Spanish vocabulary app for English speakers. 15,000 words, flashcards and quizzes. Free version available. $299 MXN/year.">
+    <meta property="og:image" content="https://myappsmaster.com/spanishfast/spanishfast-og-image.png">
+    <meta property="og:url" content="https://myappsmaster.com/spanishfast/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SpanishFast - Master Spanish Fast">
+    <meta name="twitter:description" content="15,000 Spanish words. A1 to C1. $299 MXN/year.">
+    <meta name="twitter:image" content="https://myappsmaster.com/spanishfast/spanishfast-og-image.png">
+    
+    <!-- Schema.org for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SpanishFast - Master Spanish Fast",
+      "operatingSystem": "Web",
+      "applicationCategory": "EducationalApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "299",
+        "priceCurrency": "MXN"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "8"
+      }
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f0f1a;
+            --bg-card: #171728;
+            --bg-elevated: #1e1e35;
+            --accent: #6366f1;
+            --accent-light: #818cf8;
+            --green: #22c55e;
+            --yellow: #eab308;
+            --red: #ef4444;
+            --text: #f1f5f9;
+            --text-dim: #94a3b8;
+            --text-muted: #64748b;
+            --border: rgba(99,102,241,0.15);
+            --glow: 0 0 40px rgba(99,102,241,0.15);
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            background: var(--bg); color: var(--text);
+            line-height: 1.6; min-height: 100vh;
+        }
+        body::before {
+            content: '';
+            position: fixed; inset: 0;
+            background: radial-gradient(ellipse at 30% 0%, rgba(99,102,241,0.08), transparent 60%),
+                        radial-gradient(ellipse at 70% 100%, rgba(34,197,94,0.05), transparent 50%);
+            pointer-events: none; z-index: -1;
+        }
+        .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        .header {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 18px 0;
+        }
+        .header-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem; font-weight: 700;
+            color: var(--text-dim); text-decoration: none;
+            transition: color 0.3s;
+        }
+        .header-logo:hover { color: var(--text); }
+        .header-nav { display: flex; gap: 16px; align-items: center; }
+        .header-nav a {
+            color: var(--text-muted); text-decoration: none; font-size: 0.85rem;
+            font-weight: 500; transition: color 0.3s;
+        }
+        .header-nav a:hover { color: var(--text); }
+        .btn-sm {
+            padding: 10px 22px; border-radius: 8px; border: 2px solid var(--accent-light);
+            background: var(--accent); color: #ffffff !important;
+            font-size: 0.85rem; font-weight: 700;
+            text-decoration: none; cursor: pointer;
+            transition: all 0.3s; display: inline-block; box-shadow: 0 0 15px rgba(99,102,241,0.4);
+        }
+        .btn-sm:hover { background: var(--accent-light); box-shadow: 0 0 25px rgba(99,102,241,0.6); }
+
+        /* Hero */
+        .hero {
+            padding: 60px 0 50px; text-align: center;
+        }
+        .hero-flags {
+            font-size: 2.8rem; margin-bottom: 16px;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+        }
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800; line-height: 1.15; margin-bottom: 14px;
+        }
+        .hero h1 .grad {
+            background: linear-gradient(135deg, var(--accent-light), #a78bfa, var(--green));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .hero-sub {
+            color: var(--text-dim); font-size: 1.05rem;
+            max-width: 540px; margin: 0 auto 28px;
+        }
+        .hero-cta {
+            display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+        }
+        .btn-big {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 28px; border-radius: 14px; border: none;
+            font-size: 1rem; font-weight: 700;
+            text-decoration: none; cursor: pointer;
+            transition: all 0.3s; box-shadow: 0 0 15px rgba(99,102,241,0.4);
+        }
+        .btn-big:hover { transform: translateY(-2px); }
+        .btn-big.primary {
+            background: linear-gradient(135deg, var(--accent), #7c3aed);
+            color: white;
+            box-shadow: 0 4px 20px rgba(99,102,241,0.3);
+        }
+        .btn-big.secondary {
+            background: var(--bg-card); color: var(--text-dim);
+            border: 1px solid var(--border);
+        }
+        .btn-big.secondary:hover { border-color: var(--accent); color: var(--text); }
+
+        /* Stats Bar */
+        .stats-row {
+            display: grid; grid-template-columns: repeat(4, 1fr);
+            gap: 12px; padding: 40px 0;
+        }
+        .stat-box {
+            text-align: center; padding: 20px 12px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 14px;
+        }
+        .stat-num {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem; font-weight: 800;
+            color: var(--accent-light);
+        }
+        .stat-lbl {
+            font-size: 0.72rem; color: var(--text-muted);
+            text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px;
+        }
+
+        /* Versions */
+        .versions-section { padding: 40px 0; }
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.6rem; font-weight: 800;
+            text-align: center; margin-bottom: 8px;
+        }
+        .section-sub {
+            text-align: center; color: var(--text-dim);
+            font-size: 0.95rem; margin-bottom: 32px;
+        }
+        .versions-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 14px;
+        }
+        .ver-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 16px; padding: 24px 20px; text-align: center;
+            transition: all 0.3s; position: relative; cursor: pointer;
+        }
+        .ver-card:hover {
+            border-color: var(--accent);
+            box-shadow: var(--glow);
+            transform: translateY(-3px);
+        }
+        .ver-card.free:hover { border-color: var(--green); box-shadow: 0 0 30px rgba(34,197,94,0.2); }
+        .ver-card.free { border-color: rgba(34,197,94,0.3); }
+        .ver-card.free .ver-price { color: var(--green); }
+        .ver-card .ver-icon { font-size: 2rem; margin-bottom: 8px; }
+        .ver-card .ver-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700; font-size: 1rem; margin-bottom: 4px;
+        }
+        .ver-card .ver-level { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 6px; }
+        .ver-card .ver-words { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 10px; }
+        .ver-card .ver-price { font-family: 'Space Grotesk', sans-serif; font-weight: 800; font-size: 1.1rem; }
+        .ver-card .ver-lock { font-size: 0.7rem; color: var(--text-muted); margin-top: 4px; }
+
+        /* Features */
+        .features-section { padding: 50px 0; }
+        .features-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+        .feat-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 14px; padding: 24px;
+            transition: border-color 0.3s;
+        }
+        .feat-card:hover { border-color: var(--accent); }
+        .feat-card .feat-icon { font-size: 1.8rem; margin-bottom: 12px; }
+        .feat-card .feat-title { font-weight: 700; margin-bottom: 6px; }
+        .feat-card .feat-desc { color: var(--text-dim); font-size: 0.88rem; }
+
+        /* Pricing */
+        .pricing-section { padding: 50px 0; }
+        .pricing-card {
+            background: var(--bg-card);
+            border: 2px solid var(--accent);
+            border-radius: 24px;
+            padding: 40px 32px; text-align: center;
+            max-width: 480px; margin: 0 auto;
+            position: relative; overflow: hidden;
+        }
+        .pricing-card::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--green), var(--accent));
+        }
+        .pricing-badge {
+            display: inline-block; padding: 4px 14px; border-radius: 12px;
+            background: rgba(34,197,94,0.12); color: var(--green);
+            font-size: 0.78rem; font-weight: 700; margin-bottom: 16px;
+        }
+        .pricing-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem; font-weight: 800; margin-bottom: 8px;
+        }
+        .pricing-desc {
+            color: var(--text-dim); font-size: 0.9rem; margin-bottom: 20px;
+        }
+        .pricing-amount {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem; font-weight: 800; margin-bottom: 4px;
+        }
+        .pricing-amount span { font-size: 1rem; font-weight: 500; color: var(--text-muted); }
+        .pricing-monthly {
+            color: var(--text-muted); font-size: 0.88rem; margin-bottom: 24px;
+        }
+        .pricing-features {
+            text-align: left; margin-bottom: 28px;
+        }
+        .pricing-feat {
+            display: flex; align-items: center; gap: 10px;
+            padding: 8px 0; color: var(--text-dim); font-size: 0.9rem;
+        }
+        .pricing-feat span:first-child { color: var(--green); font-size: 1.1rem; }
+        .btn-checkout {
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            width: 100%; padding: 16px; border-radius: 14px; border: none;
+            background: linear-gradient(135deg, #7c3aed, #2563eb);
+            color: white; font-size: 1.05rem; font-weight: 800;
+            cursor: pointer; transition: all 0.3s; box-shadow: 0 0 15px rgba(99,102,241,0.4);
+            text-decoration: none;
+        }
+        .btn-checkout:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(99,102,241,0.35);
+        }
+        .pricing-note {
+            color: var(--text-muted); font-size: 0.75rem; margin-top: 16px;
+        }
+        .pricing-free-note {
+            margin-top: 20px; padding: 16px; border-radius: 12px;
+            background: rgba(34,197,94,0.06); border: 1px solid rgba(34,197,94,0.15);
+            color: var(--text-dim); font-size: 0.88rem;
+        }
+
+        /* FAQ */
+        .faq-section { padding: 50px 0; }
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+        }
+        .faq-q {
+            font-weight: 700; font-size: 1rem; margin-bottom: 8px;
+            cursor: pointer;
+        }
+        .faq-a { color: var(--text-dim); font-size: 0.9rem; }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            display: flex; align-items: center; justify-content: space-between;
+            flex-wrap: wrap; gap: 16px;
+        }
+        .footer-copy { color: var(--text-muted); font-size: 0.8rem; }
+        .footer-links { display: flex; gap: 20px; }
+        .footer-links a {
+            color: var(--text-muted); text-decoration: none; font-size: 0.8rem;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover { color: var(--text); }
+
+        @media (max-width: 600px) {
+            .container { padding: 0 16px; }
+            .header { gap: 8px; padding: 14px 0; }
+            .header-logo { font-size: 0.95rem; }
+            .header-nav { gap: 12px; }
+            .header-nav a:not(.btn-sm) { font-size: 0.8rem; }
+            .btn-sm { padding: 8px 16px; font-size: 0.8rem; }
+            .hero { padding: 40px 0 30px; }
+            .stats-row { grid-template-columns: repeat(2, 1fr); }
+            .hero-cta { flex-direction: column; align-items: center; }
+            .btn-big { width: 100%; justify-content: center; }
+            .versions-grid { grid-template-columns: repeat(2, 1fr); }
+            footer { flex-direction: column; text-align: center; }
+        }
+        @media (max-width: 380px) {
+            .header-nav a:not(.btn-sm) { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <a href="/" class="header-logo">⚡ AppsMaster</a>
+        <nav class="header-nav">
+            <a href="#pricing">Pricing</a>
+            <a href="https://wa.me/522205575636">Contact</a>
+            <a href="app.html" class="btn-sm">Open App</a>
+        </nav>
+    </header>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-flags">🇪🇸 <img src="https://flagcdn.com/w40/es.png" alt="Spain" style="height:22px;border-radius:3px;vertical-align:middle;margin:0 2px;"> <img src="https://flagcdn.com/w40/mx.png" alt="Mexico" style="height:22px;border-radius:3px;vertical-align:middle;margin:0 2px;"></div>
+        <h1>Master Spanish with<br><span class="grad">15,000 words</span></h1>
+        <p class="hero-sub">4 progressive levels · From A1 to C1 + Business Spanish · Flashcards, quizzes and progress tracking — all offline on your phone.</p>
+        <div class="hero-cta">
+            <a href="app.html" class="btn-big primary">🚀 Start Free</a>
+            <a href="#pricing" class="btn-big secondary">See Premium Pricing</a>
+        </div>
+    </div>
+</section>
+
+<!-- Stats -->
+<div class="container">
+    <div class="stats-row">
+        <div class="stat-box">
+            <div class="stat-num">15,000</div>
+            <div class="stat-lbl">Words</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-num">4</div>
+            <div class="stat-lbl">Levels</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-num">28</div>
+            <div class="stat-lbl">Categories</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-num">100%</div>
+            <div class="stat-lbl">Offline</div>
+        </div>
+    </div>
+</div>
+
+<!-- Versions -->
+<section class="versions-section">
+    <div class="container">
+        <div class="section-title">4 Progressive Levels</div>
+        <div class="section-sub">Start free with V1 Basic and unlock everything when you're ready</div>
+        <div class="versions-grid">
+            <a href="app.html" class="ver-card free" style="text-decoration:none;color:inherit;">
+                <div class="ver-icon">📗</div>
+                <div class="ver-name">V1 Basic</div>
+                <div class="ver-level">A1-A2</div>
+                <div class="ver-words">2,588 words</div>
+                <div class="ver-price">FREE</div>
+                <div class="ver-cta" style="margin-top:8px;color:var(--green);font-weight:700;font-size:0.85rem;">▶ Open Free App</div>
+            </a>
+            <a href="https://appsmaster.lemonsqueezy.com/checkout/buy/1d8e0569-1433-4d04-a6d3-26d6eb2399f8" target="_blank" class="ver-card" style="text-decoration:none;color:inherit;">
+                <div class="ver-icon">📘</div>
+                <div class="ver-name">V2 Intermediate</div>
+                <div class="ver-level">B1-B2</div>
+                <div class="ver-words">4,138 words</div>
+                <div class="ver-price">Included in Premium</div>
+                <div class="ver-lock">🔒 Subscription required</div>
+                <div class="ver-cta" style="margin-top:8px;color:var(--accent-light);font-weight:700;font-size:0.85rem;">💳 Subscribe</div>
+            </a>
+            <a href="https://appsmaster.lemonsqueezy.com/checkout/buy/1d8e0569-1433-4d04-a6d3-26d6eb2399f8" target="_blank" class="ver-card" style="text-decoration:none;color:inherit;">
+                <div class="ver-icon">📙</div>
+                <div class="ver-name">V3 Advanced</div>
+                <div class="ver-level">C1</div>
+                <div class="ver-words">4,138 words</div>
+                <div class="ver-price">Included in Premium</div>
+                <div class="ver-lock">🔒 Subscription required</div>
+                <div class="ver-cta" style="margin-top:8px;color:var(--accent-light);font-weight:700;font-size:0.85rem;">💳 Subscribe</div>
+            </a>
+            <a href="https://appsmaster.lemonsqueezy.com/checkout/buy/1d8e0569-1433-4d04-a6d3-26d6eb2399f8" target="_blank" class="ver-card" style="text-decoration:none;color:inherit;">
+                <div class="ver-icon">📕</div>
+                <div class="ver-name">V4 Business</div>
+                <div class="ver-level">B2-C1</div>
+                <div class="ver-words">4,138 words</div>
+                <div class="ver-price">Included in Premium</div>
+                <div class="ver-lock">🔒 Subscription required</div>
+                <div class="ver-cta" style="margin-top:8px;color:var(--accent-light);font-weight:700;font-size:0.85rem;">💳 Subscribe</div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="features-section">
+    <div class="container">
+        <div class="section-title">What's Included?</div>
+        <div class="section-sub">Everything you need to learn Spanish vocabulary</div>
+        <div class="features-grid">
+            <div class="feat-card">
+                <div class="feat-icon">🎴</div>
+                <div class="feat-title">Interactive Flashcards</div>
+                <div class="feat-desc">Swipe to learn. Each word with translation, example sentence in both languages.</div>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">🎯</div>
+                <div class="feat-title">Adaptive Quizzes</div>
+                <div class="feat-desc">Multiple choice questions that adapt to your level. Earn XP and keep your daily streak.</div>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">📱</div>
+                <div class="feat-title">Installable App (PWA)</div>
+                <div class="feat-desc">Install it on your phone as a native app. Works 100% offline without internet.</div>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">📊</div>
+                <div class="feat-title">Progress Tracking</div>
+                <div class="feat-desc">Accuracy stats, words learned, streak and cumulative XP.</div>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">💼</div>
+                <div class="feat-title">Business Spanish</div>
+                <div class="feat-desc">Corporate vocabulary, finance, marketing, negotiations, HR and more.</div>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">🌐</div>
+                <div class="feat-title">Spanish → English</div>
+                <div class="feat-desc">Every word with English translation and example sentences in both languages.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing -->
+<section class="pricing-section" id="pricing">
+    <div class="container">
+        <div class="section-title">Premium Plan</div>
+        <div class="section-sub">One subscription, everything unlocked</div>
+
+        <div class="pricing-card">
+            <div class="pricing-badge">🍋 Launch Offer</div>
+            <div class="pricing-title">Complete Premium Pack</div>
+            <div class="pricing-desc">Unlock V2 + V3 + V4 — 12,414 additional words</div>
+            <div class="pricing-amount">$299 MXN <span>/year</span></div>
+            <div class="pricing-monthly">Only $24.90/month · Less than $1 USD/day</div>
+            <div class="pricing-features">
+                <div class="pricing-feat"><span>✅</span><span>V2 Intermediate — 4,138 words (B1-B2)</span></div>
+                <div class="pricing-feat"><span>✅</span><span>V3 Advanced — 4,138 words (C1)</span></div>
+                <div class="pricing-feat"><span>✅</span><span>V4 Business — 4,138 words (B2-C1)</span></div>
+                <div class="pricing-feat"><span>✅</span><span>Unlimited access for 12 months</span></div>
+                <div class="pricing-feat"><span>✅</span><span>All updates included</span></div>
+                <div class="pricing-feat"><span>🔄</span><span>Cancel anytime</span></div>
+            </div>
+            <a href="https://appsmaster.lemonsqueezy.com/checkout/buy/1d8e0569-1433-4d04-a6d3-26d6eb2399f8" class="btn-checkout" target="_blank">🍋 Subscribe — $299 MXN/year</a>
+            <div class="pricing-note">🔒 Secure payments via LemonSqueezy · Cancel anytime</div>
+            <div class="pricing-free-note">
+                💡 <strong>Not sure yet?</strong> Start free with V1 Basic (2,588 words) — no commitment.
+                <a href="app.html" style="color:var(--green);font-weight:600;text-decoration:none"> Try free →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+    <div class="container">
+        <div class="section-title">Frequently Asked Questions</div>
+        <div class="section-sub">Everything you need to know</div>
+
+        <div class="faq-item">
+            <div class="faq-q">Can I try the app for free?</div>
+            <div class="faq-a">Yes. V1 Basic with 2,588 words (A1-A2 level) is completely free. No credit card required.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">How does the subscription work?</div>
+            <div class="faq-a">You pay $299 MXN once a year and V2, V3, and V4 are unlocked immediately. After payment you receive a license key by email that you enter in the app.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Can I cancel?</div>
+            <div class="faq-a">Yes, you can cancel at any time from your LemonSqueezy account. You keep access until your paid period ends.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Does it work offline?</div>
+            <div class="faq-a">Yes. The app is a PWA (Progressive Web App) that installs on your phone and works 100% offline. All vocabulary is included in the app.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">What payment methods do you accept?</div>
+            <div class="faq-a">Through LemonSqueezy we accept credit/debit cards (Visa, Mastercard, Amex) and PayPal.</div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<div class="container">
+    <footer>
+        <div class="footer-copy">© 2025 AppsMaster. All rights reserved.</div>
+        <div class="footer-links">
+            <a href="/">Hub</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+            <a href="https://wa.me/522205575636">WhatsApp</a>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
