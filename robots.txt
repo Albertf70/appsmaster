@@ -1,5 +1,5 @@
-# Robots.txt para MyAppsMaster / SpeakFast
-# Optimizado para indexación completa
+# Robots.txt for MyAppsMaster
+# SpeakFast + SpanishFast + GuíaCanina
 
 User-agent: *
 Allow: /
@@ -7,15 +7,15 @@ Allow: /
 # Sitemap
 Sitemap: https://myappsmaster.com/sitemap.xml
 
-# Bloquear archivos innecesarios (si tienes)
+# Block unnecessary paths
 Disallow: /admin/
 Disallow: /*.json$
 Disallow: /api/
 
-# Permitir indexación de CSS y JS (importante para SEO)
+# Allow CSS and JS for SEO
 Allow: /*.css$
 Allow: /*.js$
 
-# Crawl-delay para bots agresivos
+# Crawl-delay
 User-agent: *
 Crawl-delay: 1
